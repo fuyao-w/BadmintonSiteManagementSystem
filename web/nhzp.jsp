@@ -97,18 +97,20 @@ document.write('<div class="wrap">');
 							<TR>
 								<TD width=20% align=left>
 									<a href="/hinf?id=${hotlist.get(i).getId()}"><IMG height=80 src="${hotlist.get(i).getUrl()}" width=120 onload=makesmallpic(this,120,80); border=0></A>
+									<HR style="border: 0;height: 20px" width="80%"   SIZE=1>
 								</TD>
-								<TD align=left>
+								<TD style="padding-left: 10px" align=left>
 									场地名称：${hotlist.get(i).getTitle()} <br>
 									出租价位：${hotlist.get(i).getDz()} 元/小时  &nbsp;&nbsp;&nbsp;负 责 人：${hotlist.get(i).getYb()}<br>
 									咨询电话：${hotlist.get(i).getDh()}  <br>
 									容纳人数：${hotlist.get(i).getJd()} <br>
 									发布时间：${hotlist.get(i).getAddtime()}
 									&nbsp;&nbsp;<a href="/hinf?id=${hotlist.get(i).getId()}">点击查看详细...</a>
-
+									<HR style="border:1 dashed #2295b9" width="100%" color=#987cb9 SIZE=1>
 								</TD>
 
 							</TR>
+
 
 						</c:forEach>
 

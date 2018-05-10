@@ -84,16 +84,7 @@ public class mController implements Serializable {
 
     }
 
-    @RequestMapping(value = "/hinf", method = RequestMethod.GET)
-    public ModelAndView hinf(int id) {
-        System.out.println("单页" + id);
 
-        sale sale = saleMapper.selByID(id);
-
-
-        return new ModelAndView("hinfo", "sale", sale);
-
-    }
 
     @RequestMapping(value = "/adminLogin", method = RequestMethod.POST)
     public String adminlogin(HttpSession session, @RequestParam("username") String username, @RequestParam("password") String password, Model model) {

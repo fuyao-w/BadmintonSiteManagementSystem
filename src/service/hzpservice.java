@@ -40,9 +40,7 @@ public class hzpservice implements Serializable {
 
 
     static volatile sale msale;
-    private static ReentrantLock lock = new ReentrantLock();
 
-    private static Condition condition = lock.newCondition();
 
     private static ConcurrentHashMap<Integer, sale> hashMap = new ConcurrentHashMap<>();
 

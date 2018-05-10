@@ -1,12 +1,14 @@
 <%@ page language="java" import="java.util.*" contentType="text/html;charset=gb2312" %>
+<%@page isELIgnored="false"%>
 <%@ include file="iframe/head.jsp" %>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" >
 <HTML xmlns="http://www.w3.org/1999/xhtml">
 <HEAD>
 	<LINK href="http://localhost:8081/images/default.css" type=text/css rel=stylesheet>
 	<LINK href="http://localhost:8081/images/css.css" type=text/css rel=stylesheet>
 	<META http-equiv=Content-Type content="text/html; charset=gb2312">
 	<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
 	<STYLE type=text/css>
 		/*.ycbt {*/
 		/*BORDER-RIGHT: #fff 1px solid; BORDER-TOP: #fff 1px solid; PADDING-LEFT: 1.8em; BACKGROUND-COLOR: #EAF2EF; BORDER-LEFT: #fff 1px solid; PADDING-TOP: 7px; BORDER-BOTTOM: #fff 1px solid; HEIGHT: 20px*/
@@ -160,77 +162,74 @@
 			</ul>
 
 		</c:if>
-		<textarea style="width: 100%;height: 43px;"></textarea>
+
+		<textarea id="mes" style="width: 100%;height: 43px;"></textarea>
 		<div style="display: flex;justify-content: flex-end;margin-top: 10px">
-			<button style="width: 58px;height: 20px">评论</button>
+			<button id="sub" style="width: 58px;height: 20px">评论</button>
 		</div>
+
 		<hr />
 		<div class="comment-info">
 			<div class="person-info">
 				<span>
 					<i class="fa fa-comment-o" aria-hidden="true"></i
 				</span>
-				<span>
-					姓名&nbsp;时间
+				<span id="time">
+         ${comment.time}
 				</span>
 			</div>
 			<div class="comment-content">
-				<div>nihoadadasdadadsadasdasdfdsfsdgdgdggdgdgdg</div>
+				<div id="comment"> ${comment.mes} </div>
 			</div>
 		</div>
 	</article>
 </div>
 <div class="col-md-6">
 	<div class="rightpicture" style="background-image: url(${sale.getUrl()})">
-		<%--<img src="<%="http://localhost:8081/"+hotlist.get(2).toString()%>" alt="">--%>
+
 	</div>
 </div>
-<%--<%}%>--%>
+
 </section>
-<%--<TABLE class=dragTable cellSpacing=0 cellPadding=0 width="100%" border=0>--%>
-<%--<TBODY>--%>
-<%--<TR>--%>
-<%--<TD class=head colspan="2">--%>
-<%--<SPAN class=TAG>场地信息</SPAN> --%>
-<%----%>
-<%--</TD>--%>
-<%--</TR>--%>
-<%--<TR>--%>
-<%--<TD  class=middle align="left" >--%>
-<%--<TABLE class=xsnr id=tb1_nr1  cellSpacing=0 cellPadding=0 width="100%" border=0>--%>
-<%--<TBODY>--%>
-<%--<%--%>
-<%--String id=request.getParameter("id").trim();--%>
-<%--List hotlist=tb.getOneTrave(Integer.parseInt(id));--%>
-<%--if(!hotlist.isEmpty()){--%>
-<%--%>--%>
-<%--<TR>--%>
-<%--<TD width=40% align=center>--%>
-<%--<IMG height=150 src="<%="http://localhost:8081/"+hotlist.get(2).toString()%>" width=180 onload=makesmallpic(this,180,150); border=0>--%>
-<%--</TD>--%>
-<%--<TD align=left><br>--%>
-<%--场地名称：<%=hotlist.get(1).toString()%> <br>--%>
-<%--出租价位：<%=hotlist.get(3).toString()%> 元/小时  &nbsp;&nbsp;&nbsp;负 责 人：<%=hotlist.get(4).toString()%><br>--%>
-<%--负 责 人：<%=hotlist.get(5).toString()%>  <br> --%>
-<%--咨询电话：<%=hotlist.get(6).toString()%> <br>--%>
-<%--发布时间：<%=hotlist.get(8).toString()%><br>--%>
-<%--<a href="http://localhost:8081/prepinfo.jsp?id=<%=id%>&title=<%=hotlist.get(1).toString()%>">我要预订该场地</a> （如果您还没有登录，请先登录再进行预订操作！）--%>
-<%--</TD>--%>
-<%--</TR>--%>
-<%--<TR>--%>
-<%--<TD align=center colspan=2><%=hotlist.get(7).toString() %>--%>
-<%--</TD>--%>
-<%--</TR>--%>
-<%--<%}%>--%>
-<%----%>
-<%--</TBODY>--%>
-<%--</TABLE>			--%>
-<%--</TD>--%>
-<%--</TR>--%>
-<%--</TBODY>--%>
-<%--</TABLE>--%>
+
+<script>
+    $("button").click(function () {
+        var json = 'comment='+ $("#mes").val();
 
 
+
+
+        $.ajax({
+            type: 'POST',
+            contentType: 'application/x-www-form-urlencoded',//注意类型
+            /**
+             *(默认: true) 默认情况下，通过data选项传递进来的数据，如果是一个对象(技术上讲只要不是字符串)，
+             * 都会处理转化成一个查询字符串，以配合默认内容类型 "application/x-www-form-urlencoded"。
+             * 如果要发送 DOM 树信息或其它不希望转换的信息，请设置为 false。
+             */
+            processData: false,
+            url: '/comment',
+            dataType: 'json',
+            data: json,
+            success: function (data) {
+                a = data.mes;
+                console.dir(JSON.stringify(data))
+              $("#comment").text(a.mes);
+              $("#time").text(a.time);
+
+
+            },
+            error: function () {
+                alert('请求错误');
+
+            }
+
+        })
+
+    })
+
+
+</script>
 <SCRIPT language=JavaScript>
     <!--//目的是为了做风格方便
     document.write('</div>');
