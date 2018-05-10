@@ -47,7 +47,7 @@ public class hzpservice implements Serializable {
     private static ConcurrentHashMap<Integer, sale> hashMap = new ConcurrentHashMap<>();
 
     private sale getSale(int id) {
-        sale sale = hashMap.get(id);
+         sale sale = hashMap.get(id);
 
 
         if (sale != null) {
@@ -213,11 +213,11 @@ public class hzpservice implements Serializable {
                 System.out.println("取得预订，" + prep.getTitle() + new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(Calendar.getInstance().getTime()));
 
 
-                try {
-                    Thread.sleep(5000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+//                try {
+//                    Thread.sleep(5000);
+//                } catch (InterruptedException e) {
+//                    e.printStackTrace();
+//                }
                 System.out.println("继续处理" + new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(Calendar.getInstance().getTime()));
                 prep.setDdid(String.valueOf(System.currentTimeMillis()));
 
