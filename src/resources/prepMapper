@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.prepMapper">
+  <resultMap id="BaseResultMap" type="bean.prep">
+    <result column="id" jdbcType="INTEGER" property="id" />
+    <result column="title" jdbcType="VARCHAR" property="title" />
+    <result column="rs" jdbcType="INTEGER" property="rs" />
+
+    <result column="sj" jdbcType="VARCHAR" property="sj" />
+    <result column="ts" jdbcType="VARCHAR" property="ts" />
+    <result column="lxr" jdbcType="VARCHAR" property="lxr" />
+    <result column="lxfs" jdbcType="VARCHAR" property="lxfs" />
+    <result column="addtime" jdbcType="TIMESTAMP" property="addtime" />
+    <result column="member" jdbcType="VARCHAR" property="addtime" />
+    <result column="zt" jdbcType="VARCHAR" property="zt" />
+    <result column="ddid" jdbcType="VARCHAR" property="ddid" />
+    <result column="dz" jdbcType="VARCHAR" property="dz" />
+  </resultMap>
+  <select id="getPrep"  resultType="bean.prep">
+     select * from prep ORDER BY id
+  </select>
+  <select id="gettotal"  resultType="bean.prep">
+    SELECT
+	COUNT(*) courts,
+	title
+FROM
+	prep WHERE zt = '未提交'
+GROUP BY
+	title
+  </select>
+
+  <select id="gettotal1"  resultType="bean.prep">
+    SELECT
+    COUNT(*) courts,
+    title
+    FROM
+    prep WHERE zt = '已提交'
+    GROUP BY
+    title
+  </select>
+
+
+  <select id="getPrepByid"  resultType="bean.prep">
+    select * from prep WHERE id = #{id}
+  </select>
+
+  <select id="getxx" parameterType="java.lang.String" resultType="bean.prep">
+   select sale.dz,prep.* from sale,prep where prep.ddid=#{ddid} and prep.title=sale.title order by prep.id desc
+  </select>
+
+
+  <select id="getallprep" parameterType="java.lang.String" resultType="bean.prep">
+   select * from prep where member= #{member} and zt='未提交' order by id desc
+  </select>
+  <insert id="inprep" parameterType="bean.prep" useGeneratedKeys="true" >
+    insert into prep(title,rs,sj,ts,lxr,lxfs,addtime,member,zt,ddid)
+    values(#{title},#{rs},#{sj},#{ts},#{lxr},#{lxfs},#{addtime},#{member},'未提交',#{ddid})
+  </insert>
+  <delete id="delprep" parameterType="java.lang.Integer">
+    DELETE FROM prep WHERE id = #{id}
+  </delete>
+  <update id="upprep" parameterType="bean.prep">
+    UPDATE prep SET rs = #{rs},sj=  #{sj},ts = #{ts},lxr = #{lxr},lxfs= #{lxfs} WHERE id = #{id}
+  </update>
+
+
+  <update id="upzt" parameterType="java.lang.String">
+    UPDATE prep SET zt='已提交' WHERE ddid = #{ddid}
+  </update>
+</mapper>

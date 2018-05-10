@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.adminMapper">
+  <resultMap id="adminMap" type="bean.admin">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="username" jdbcType="VARCHAR" property="username" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="creattime" jdbcType="TIMESTAMP" property="creattime" />
+    <result column="flag" jdbcType="INTEGER" property="flag" />
+    <result column="isuse" jdbcType="INTEGER" property="isuse" />
+    <result column="logintimes" jdbcType="INTEGER" property="logintimes" />
+    <result column="quanxian" jdbcType="INTEGER" property="quanxian" />
+  </resultMap>
+
+
+
+  <select id="selectAdminByame" parameterType="java.lang.String" resultMap="adminMap">
+    select 
+    *
+    from admin
+    where username = #{username} AND isuse ='1'
+  </select>
+  <select id="selectAdminByNameAndPwd"  resultType="java.lang.Integer">
+  select count(*) from admin where username = #{username} and password = #{oldpwd}
+  </select>
+
+  <select id="getAllManager"  resultMap="adminMap">
+     select * from admin where flag !='1' order by id asc
+  </select>
+
+  <select id="selectCount" parameterType="java.lang.String" resultType="java.lang.Integer">
+    select
+    count(*)
+    from admin
+    where username = #{username} AND password = #{password}
+  </select>
+
+  <select id="selectCountByname" parameterType="java.lang.String" resultType="java.lang.Integer">
+    select
+    count(*)
+    from admin
+    where username = #{username,jdbcType=VARCHAR}
+  </select>
+
+
+  <select id="selectAllByame" parameterType="java.lang.String" resultMap="adminMap">
+    select
+    *
+    from admin
+    where username = #{username,jdbcType=VARCHAR} AND isuse ='1'
+  </select>
+
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from admin
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+
+
+
+  <insert id="insert" parameterType="bean.admin">
+    insert into admin (id, username, password, 
+      creattime, flag, isuse, 
+      quanxian)
+    values (#{id,jdbcType=INTEGER}, #{username,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, 
+      #{creattime,jdbcType=TIMESTAMP}, #{flag,jdbcType=INTEGER}, #{isuse,jdbcType=INTEGER}, 
+      '111')
+  </insert>
+
+
+
+
+  <update id="updateUsername"  >
+    update admin SET  password = #{password} where username = #{username}
+  </update>
+
+  <update id="updateTimes" parameterType="java.lang.String">
+    update admin set logintimes = logintimes+1 where username = #{username}
+  </update>
+    <delete id="deladmin" parameterType="java.lang.String" >
+        DELETE FROM admin WHERE username = #{username}
+    </delete>
+
+</mapper>

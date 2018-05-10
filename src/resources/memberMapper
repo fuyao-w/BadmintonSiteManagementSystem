@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.memberMapper">
+  <resultMap id="memberMap" type="bean.member">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="username" jdbcType="VARCHAR" property="username" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="type" jdbcType="VARCHAR" property="type" />
+    <result column="regtime" jdbcType="TIMESTAMP" property="regtime" />
+    <result column="ifuse" jdbcType="INTEGER" property="ifuse" />
+    <result column="logintimes" jdbcType="INTEGER" property="logintimes" />
+    <result column="lasttime" jdbcType="TIMESTAMP" property="lasttime" />
+    <result column="lastip" jdbcType="VARCHAR" property="lastip" />
+  </resultMap>
+  <select id="selByUsername" parameterType="java.lang.String" resultType="java.lang.String">
+    select password from member where username=#{username}
+  </select>
+
+  <select id="getAll"  resultType="bean.member">
+  select * from member ORDER BY id
+  </select>
+
+  <insert id="insert" parameterType="bean.member">
+    insert into member (id, username, password,type,
+    regtime,ifuse,lasttime,lastip)
+    values (#{id}, #{username}, #{password},'person',
+    #{regtime},#{ifuse},#{lasttime},#{lastip})
+  </insert>
+
+  <select id="selByUsernameAndPw"  resultType="bean.member">
+   select * from member where username = #{username} and password = #{password}
+  </select>
+
+  <select id="selall"  resultType="bean.member">
+   select * from member where username= #{username} and password =  #{password} and type= 'person' and ifuse='1'  ;
+  </select>
+
+  <update id="updataPassword" >
+  update member set password = '"+newpwd+"' where username = '"+username+"'";
+</update>
+  <update id="upuse" useGeneratedKeys="true">
+  update member set ifuse = #{ifuse} where id = #{id}
+</update>
+
+  <update id="uppw" >
+    update member set password = #{password} where username = #{username}
+  </update>
+
+  <update id="upnpw" >
+    update member set password = '111111' where username = #{username}
+  </update>
+
+  <delete id="delByID" parameterType="java.lang.Integer">
+    delete from member where id=#{id}
+  </delete>
+</mapper>

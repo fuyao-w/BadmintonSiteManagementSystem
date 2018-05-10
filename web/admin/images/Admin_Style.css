@@ -1,0 +1,141 @@
+A {
+	TEXT-DECORATION: none
+}
+A:link {
+	COLOR: #000000
+}
+A:visited {
+	COLOR: #000000
+}
+A:hover {
+	COLOR: #ff0000; TEXT-DECORATION: underline
+}
+A:active {
+	COLOR: #ff0000
+}
+TD {
+	FONT-SIZE: 11px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+BODY {
+	SCROLLBAR-FACE-COLOR: #ecf3fb; FONT-SIZE: 9pt; SCROLLBAR-HIGHLIGHT-COLOR: #ffffff; SCROLLBAR-SHADOW-COLOR: #cccccc; COLOR: #000000; SCROLLBAR-3DLIGHT-COLOR: buttonface; SCROLLBAR-ARROW-COLOR: #000000; SCROLLBAR-TRACK-COLOR: #eaf0f5; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; SCROLLBAR-DARKSHADOW-COLOR: #ffffff; TEXT-DECORATION: none
+}
+.HeaderSelect {
+	BORDER-RIGHT: #336699 1px inset; BORDER-TOP: #336699 1px inset; BACKGROUND: url(../Images/TopButton/SelectedBg.gif); BORDER-LEFT: #336699 1px inset; CURSOR: default; COLOR: #ffff00; BORDER-BOTTOM: #336699 1px inset
+}
+.HeaderStyle {
+	BORDER-RIGHT: buttonshadow 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: buttonhighlight 1px solid; PADDING-LEFT: 5px; FONT-SIZE: 12px; BACKGROUND: url(../Images/TopButton/bg.gif); BORDER-LEFT: buttonhighlight 1px solid; COLOR: #000000; BORDER-BOTTOM: buttonshadow 1px solid; FONT-STYLE: normal; FONT-FAMILY: "ËÎÌו"
+}
+.TdOver {
+	BORDER-RIGHT: #999999 1px solid; BORDER-TOP: #ffffff 1px solid; BORDER-LEFT: #ffffff 1px solid; CURSOR: default; BORDER-BOTTOM: #999999 1px solid
+}
+.TdDown {
+	BORDER-RIGHT: #ffffff 1px solid; BORDER-TOP: #999999 1px solid; BORDER-LEFT: #999999 1px solid; CURSOR: default; COLOR: red; BORDER-BOTTOM: #ffffff 1px solid
+}
+.TdOut {
+	BORDER-RIGHT: #336699 1px inset; BORDER-TOP: #336699 1px inset; BORDER-LEFT: #336699 1px inset; CURSOR: default; BORDER-BOTTOM: #336699 1px inset
+}
+.MenuBg {
+	BORDER-RIGHT: #ffffff 1px solid; BORDER-TOP: #666666 1px solid; BORDER-LEFT: #666666 1px solid; BORDER-BOTTOM: #ffffff 1px solid; BACKGROUND-COLOR: #ffffff
+}
+.LeftMouseOver {
+	TEXT-DECORATION: underline
+}
+.LeftMouseOut {
+	TEXT-DECORATION: none
+}
+.HighlightItem {
+	PADDING-LEFT: 10px; FONT-SIZE: 9pt; WIDTH: 100%; CURSOR: default; COLOR: white; LINE-HEIGHT: 25px; BACKGROUND-COLOR: highlight
+}
+.sort {
+	BORDER-RIGHT: buttonshadow 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: buttonhighlight 1px solid; PADDING-LEFT: 5px; BACKGROUND: #e0eefd; BORDER-LEFT: buttonhighlight 1px solid; BORDER-BOTTOM: buttonshadow 1px solid
+}
+.sortbutton {
+	BORDER-RIGHT: buttonshadow 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: buttonhighlight 1px solid; PADDING-LEFT: 1px; BACKGROUND: #e0eefd; BORDER-LEFT: buttonhighlight 1px solid; BORDER-BOTTOM: buttonshadow 1px solid
+}
+.topdashed {
+	BACKGROUND: #e0eefd; BORDER-BOTTOM: #000000 1px dashed
+}
+.buttonstyle {
+	BORDER-RIGHT: buttonshadow 0px solid; PADDING-RIGHT: 5px; BORDER-TOP: buttonhighlight 0px solid; PADDING-LEFT: 5px; FONT-SIZE: 9pt; BACKGROUND: url(../Images/Button.gif); BORDER-LEFT: buttonhighlight 0px solid; WIDTH: 60px; BORDER-BOTTOM: buttonshadow 0px solid; HEIGHT: 24px
+}
+.button {
+	BORDER-RIGHT: #a7a7a7 1px solid; PADDING-RIGHT: 1px; BORDER-TOP: #a7a7a7 1px solid; PADDING-LEFT: 12px; FONT-SIZE: 9pt; BACKGROUND: url(../Images/bg_Button.gif); PADDING-BOTTOM: 1px; BORDER-LEFT: #a7a7a7 1px solid; PADDING-TOP: 2px; BORDER-BOTTOM: #a7a7a7 1px solid; HEIGHT: 20px
+}
+.upfile {
+	BORDER-RIGHT: 1px solid; BORDER-TOP: 1px solid; BORDER-LEFT: 1px solid; BORDER-BOTTOM: 1px solid
+}
+.Default {
+	BORDER-RIGHT: black 1px solid; BORDER-TOP: black 1px solid; FONT-SIZE: 12px; BORDER-LEFT: black 1px solid; CURSOR: default; BORDER-BOTTOM: black 1px solid; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif
+}
+.Selected {
+	BORDER-RIGHT: black 1px solid; BORDER-TOP: black 1px solid; FONT-SIZE: 12px; BACKGROUND: url(../Images/PageButton.gif); BORDER-BOTTOM-COLOR: black; BORDER-LEFT: black 1px solid; CURSOR: default; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif
+}
+.ToolBarButtonLine {
+	BORDER-LEFT-COLOR: black; BORDER-TOP-COLOR: black; BORDER-BOTTOM: black 1px solid; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif; BORDER-RIGHT-COLOR: black
+}
+.FolderItem {
+	CURSOR: default
+}
+.FolderSelectItem {
+	CURSOR: default; COLOR: white; BACKGROUND-COLOR: highlight
+}
+.hr {
+	BORDER-TOP: #000000 1px solid; BORDER-BOTTOM: #ffffff 1px solid
+}
+.textbox {
+	BORDER-RIGHT: #666 1px solid; BORDER-TOP: #666 1px solid; FONT-SIZE: 12px; BACKGROUND: #ffffff; BORDER-LEFT: #666 1px solid; COLOR: #000; BORDER-BOTTOM: #666 1px solid
+}
+.FolderSelected {
+	FILTER: Alpha(Opacity=50)
+}
+TD.TableRow1 {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; PADDING-TOP: 5px; BACKGROUND-COLOR: #eeeee6
+}
+.HeaderTDStyle {
+	BORDER-RIGHT: buttonshadow 0px solid; PADDING-RIGHT: 6px; BORDER-TOP: buttonhighlight 0px solid; PADDING-LEFT: 6px; BACKGROUND: #73a2d6; BORDER-LEFT: buttonhighlight 0px solid; BORDER-BOTTOM: buttonshadow 0px solid
+}
+.HeaderFontStyle {
+	FONT-SIZE: 12px; COLOR: #ffffff; FONT-STYLE: normal; FONT-FAMILY: "ËÎÌו"
+}
+.body {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #000000; TEXT-DECORATION: none
+}
+TD.forumHeaderBackgroundAlternate {
+	COLOR: #ffffff; BACKGROUND-COLOR: #9395c0
+}
+A.TableTitleLink {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+A.TableTitleLink:hover {
+	COLOR: #ffffff; TEXT-DECORATION: underline
+}
+TD.Border1 {
+	BACKGROUND-COLOR: #f3f3fa
+}
+TD.forumRow {
+	BACKGROUND-COLOR: #f3f3fa
+}
+TD.forumRowHighlight {
+	BACKGROUND-COLOR: #eaeaf3
+}
+.tableBorder {
+	BORDER-RIGHT: #b1b4d1 1px solid; BORDER-TOP: #b1b4d1 1px solid; FONT-WEIGHT: normal; FONT-SIZE: 12px; BORDER-LEFT: #b1b4d1 1px solid; LINE-HEIGHT: normal; BORDER-BOTTOM: #b1b4d1 1px solid; FONT-STYLE: normal; BACKGROUND-COLOR: #ffffff; FONT-VARIANT: normal
+}
+TD.TableBody1 {
+	BACKGROUND-COLOR: #f3f3fa
+}
+.tableBorder1 {
+	BORDER-RIGHT: #000000 1px solid; BORDER-TOP: #000000 1px solid; BORDER-LEFT: #000000 1px solid; BORDER-BOTTOM: #000000 1px solid; BACKGROUND-COLOR: #f3f3fa
+}
+.Title {
+	FONT-WEIGHT: normal; BACKGROUND: #009ae8; COLOR: #ffffff
+}
+.tdbg {
+	BACKGROUND: #eef8fe
+}
+.tdbgmouseover {
+	BACKGROUND: #ffffff
+}
+.border {
+	BORDER-RIGHT: #449ae8 1px solid; BORDER-TOP: #449ae8 1px solid; BACKGROUND: #ffffff; BORDER-LEFT: #449ae8 1px solid; BORDER-BOTTOM: #449ae8 1px solid
+}

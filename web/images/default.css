@@ -1,0 +1,21 @@
+#listsp {
+	WIDTH: 99%
+}
+#listsp .sptd {
+	PADDING-TOP: 5px; BORDER-BOTTOM: #ccc 1px dotted
+}
+#listsp .pic {
+	PADDING-RIGHT: 1em; PADDING-LEFT: 5px; PADDING-BOTTOM: 0.5em; PADDING-TOP: 3px
+}
+#listsp .title {
+	PADDING-BOTTOM: 0.2em
+}
+#listsp .title A {
+	COLOR: #990000
+}
+#listsp .pic IMG {
+	BORDER-RIGHT: #333 1px solid; BORDER-TOP: #333 1px solid; BORDER-LEFT: #333 1px solid; BORDER-BOTTOM: #333 1px solid
+}
+#spshow .about {
+	COLOR: #990000
+}

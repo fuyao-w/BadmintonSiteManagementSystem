@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Spring MVC-3.2.18.RELEASE" type="spring-mvc">
+    <properties version="3.2.18.RELEASE" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../TEST/lib/spring-websocket-3.2.18.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../TEST/lib/spring-webmvc-3.2.18.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../TEST/lib/spring-web-3.2.18.RELEASE.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

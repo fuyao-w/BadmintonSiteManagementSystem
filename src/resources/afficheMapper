@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.afficheMapper">
+  <resultMap id="afficheMap" type="bean.affiche">
+    <result column="id" jdbcType="INTEGER" property="id" />
+    <result column="title" jdbcType="VARCHAR" property="title" />
+    <result column="content" jdbcType="VARCHAR" property="content" />
+    <result column="addtime" jdbcType="TIMESTAMP" property="addtime" />
+    <result column="adder" jdbcType="VARCHAR" property="adder" />
+    <result column="ifhide" jdbcType="INTEGER" property="ifhide" />
+  </resultMap>
+  <insert id="insert" parameterType="bean.affiche">
+    insert into affiche (id, title, content, 
+      addtime, adder, ifhide
+      )
+    values (#{id,jdbcType=INTEGER}, #{title,jdbcType=VARCHAR}, #{content,jdbcType=VARCHAR}, 
+      #{addtime,jdbcType=TIMESTAMP}, #{adder,jdbcType=VARCHAR}, #{ifhide,jdbcType=INTEGER}
+      )
+  </insert>
+
+
+ <update id="updataAnnounce" parameterMap="afficheMap">
+   update affiche set title = #{title},content=#{content},addtime=#{addtime},adder=#{adder},
+   ifhide=#{ifhide} where id = #{id}
+ </update>
+
+  <delete id="delAnnounce" parameterType="java.lang.Integer">
+    delete from  affiche  where  id = #{id}
+
+  </delete>
+
+  <select id="selOne" parameterType="java.lang.Integer" resultType="bean.affiche">
+    select * from affiche where id =#{id}
+  </select>
+
+  <select id="selAll" parameterType="java.lang.Integer" resultMap="afficheMap">
+    select id,content,addtime from affiche where ifhide='1' order by addtime desc
+  </select>
+
+  <select id="getAllAfficheManage" parameterType="java.lang.Integer" resultMap="afficheMap">
+    select id,title,addtime,adder,ifhide from affiche order by addtime desc
+  </select>
+</mapper>

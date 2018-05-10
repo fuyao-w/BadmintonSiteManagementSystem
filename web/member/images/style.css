@@ -1,0 +1,99 @@
+ {
+	FONT-SIZE: 12px; FONT-FAMILY: Tahoma
+}
+IMG {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px
+}
+BODY {
+	SCROLLBAR-FACE-COLOR: #2b73f1; FONT-SIZE: 12px; BACKGROUND: #fdfdfd; MARGIN: 0px; SCROLLBAR-HIGHLIGHT-COLOR: #0650d2; SCROLLBAR-SHADOW-COLOR: #449ae8; COLOR: #111111; SCROLLBAR-3DLIGHT-COLOR: #449ae8; LINE-HEIGHT: 150%; SCROLLBAR-ARROW-COLOR: #02338a; SCROLLBAR-TRACK-COLOR: #8ebbea; FONT-FAMILY: "ËÎÌו"; SCROLLBAR-DARKSHADOW-COLOR: #0650d2; TEXT-DECORATION: none
+}
+INPUT {
+	BORDER-RIGHT: #cccccc 1px solid; BORDER-TOP: #cccccc 1px solid; BORDER-LEFT: #cccccc 1px solid; COLOR: #222222; BORDER-BOTTOM: #cccccc 1px solid; BACKGROUND-COLOR: #ffffff
+}
+SELECT {
+	BORDER-RIGHT: #cccccc 1px solid; BORDER-TOP: #cccccc 1px solid; BORDER-LEFT: #cccccc 1px solid; COLOR: #222222; BORDER-BOTTOM: #cccccc 1px solid; BACKGROUND-COLOR: #ffffff
+}
+TEXTAREA {
+	BORDER-RIGHT: #cccccc 0px solid; BORDER-TOP: #cccccc 1px solid; SCROLLBAR-FACE-COLOR: #f0f0f0; SCROLLBAR-HIGHLIGHT-COLOR: #ffffff; BORDER-LEFT: #cccccc 1px solid; SCROLLBAR-SHADOW-COLOR: #ffffff; COLOR: #222222; SCROLLBAR-3DLIGHT-COLOR: #cccccc; SCROLLBAR-ARROW-COLOR: #ffffff; SCROLLBAR-TRACK-COLOR: #f9f9f9; BORDER-BOTTOM: #cccccc 1px solid; SCROLLBAR-DARKSHADOW-COLOR: #cccccc; BACKGROUND-COLOR: #ffffff
+}
+A:link {
+	COLOR: #111111; LINE-HEIGHT: 100%; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #111111; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #666666; POSITION: relative; TOP: 0px; TEXT-DECORATION: underline
+}
+TD {
+	FONT: 12px "ËÎÌו"; COLOR: #111111
+}
+TABLE {
+	BORDER-RIGHT: #f3f3f3 0px solid; BORDER-TOP: #f3f3f3 0px solid; BACKGROUND: #ffffff; BORDER-LEFT: #f3f3f3 0px solid; BORDER-BOTTOM: #f3f3f3 0px solid
+}
+.tablewidth {
+	BORDER-RIGHT: #1a5db0 1px solid; BORDER-TOP: #1a5db0 1px solid; BACKGROUND: #efefef; MARGIN-BOTTOM: 8px; BORDER-LEFT: #1a5db0 1px solid; WIDTH: 99%; BORDER-BOTTOM: #1a5db0 1px solid
+}
+.tablewidth TR {
+	BACKGROUND: #fff
+}
+.tablewidth .head {
+	BORDER-RIGHT: #449ae8 0px solid; BORDER-TOP: #449ae8 0px solid; BACKGROUND:  green; BORDER-LEFT: #449ae8 0px solid; COLOR: #fff; BORDER-BOTTOM: #449ae8 0px solid
+}
+.tablewidth .head TD {
+	PADDING-LEFT: 5px; PADDING-TOP: 5px
+}
+.tablewidth .head TD {
+	COLOR: #fff
+}
+.tablewidth .head TD A {
+	COLOR: #fff
+}
+.tdhelp {
+	COLOR: #999
+}
+.map {
+	BORDER-RIGHT: #ccc 1px dotted; BORDER-TOP: #ccc 1px dotted; FLOAT: left; MARGIN: 0px 5px 10px; BORDER-LEFT: #ccc 1px dotted; WIDTH: 48%; BORDER-BOTTOM: #ccc 1px dotted
+}
+.maphead {
+	BORDER-RIGHT: #fff 2px solid; BORDER-TOP: #fff 2px solid; BACKGROUND: #eee; BORDER-LEFT: #fff 2px solid; BORDER-BOTTOM: #fff 2px solid; HEIGHT: 19px
+}
+.map .middle {
+	LINE-HEIGHT: 21px; HEIGHT: 40px
+}
+.c_menu A.chooseModule {
+	FONT-WEIGHT: bold; COLOR: red
+}
+#leftmenu {
+	BORDER-RIGHT: #1a5db0 4px solid; BORDER-TOP: #1a5db0 2px solid; BORDER-LEFT: #1a5db0 2px solid; WIDTH: 164px; BORDER-BOTTOM: #1a5db0 2px solid
+}
+.c_menu TABLE {
+	BORDER-RIGHT: #fff 2px solid; BORDER-TOP: #fff 2px solid; BORDER-LEFT: #fff 2px solid; BORDER-BOTTOM: #fff 1px solid
+}
+.c_menu TD {
+	PADDING-LEFT: 5px; BACKGROUND: #deecf9; BORDER-BOTTOM: #fff 1px solid; HEIGHT: 18px
+}
+.tablewidth_menu {
+	BORDER-TOP: #1a5db0 1px solid; BACKGROUND: #deecf9; WIDTH: 100%
+}
+.tablewidth_menu .head_menu {
+	BORDER-RIGHT: #fff 0px solid; BORDER-TOP: #fff 0px solid; PADDING-LEFT: 5px; BACKGROUND: url(li_14.gif) #1a5db0 no-repeat right 50%; BORDER-LEFT: #fff 0px solid; BORDER-BOTTOM: #fff 0px solid; HEIGHT: 25px
+}
+.tablewidth_menu .head_menu A {
+	FONT-WEIGHT: bold; COLOR: #0f42a6
+}
+.c_menu .leftA {
+	BACKGROUND: #c1e3f0
+}
+.c_menu .leftB {
+	BACKGROUND: #deecf9
+}
+#LeftTop TD {
+	BACKGROUND: url(li_10.gif) #1a5db0 no-repeat right 50%; HEIGHT: 50px
+}
+.trA TD {
+	BACKGROUND: #fff
+}
+.trB TD {
+	BACKGROUND: #eee
+}

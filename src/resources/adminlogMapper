@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.adminlogMapper">
+    <resultMap id="BaseResultMap" type="bean.adminlog">
+        <id column="id" jdbcType="INTEGER" property="id" />
+        <result column="username" jdbcType="VARCHAR" property="username" />
+        <result column="password" jdbcType="VARCHAR" property="password" />
+        <result column="logintime" jdbcType="TIMESTAMP" property="logintime" />
+        <result column="loginip" jdbcType="VARCHAR" property="loginip" />
+        <result column="useros" jdbcType="VARCHAR" property="useros" />
+        <result column="ok" jdbcType="VARCHAR" property="ok" />
+    </resultMap>
+
+</mapper>

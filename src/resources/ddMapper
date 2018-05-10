@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.ddMapper">
+  <resultMap id="BaseResultMap" type="bean.dd">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="ddid" jdbcType="VARCHAR" property="ddid" />
+    <result column="member" jdbcType="VARCHAR" property="member" />
+    <result column="zt" jdbcType="VARCHAR" property="zt" />
+    <result column="fkfs" jdbcType="VARCHAR" property="fkfs" />
+    <result column="addtime" jdbcType="VARCHAR" property="addtime" />
+  </resultMap>
+  <select id="getdds"  resultType="bean.dd">
+    select * from dd where zt="未处理" order by id desc
+  </select>
+  <select id="undd"  resultType="bean.union">
+   SELECT p.ddid,p.title FROM prep  p LEFT JOIN dd d ON p.ddid = d.ddid  WHERE d.id = #{id}
+  </select>
+
+
+  <select id="getfhdds"  resultType="bean.dd">
+    select * from dd where zt="已处理" order by id desc
+  </select>
+  <insert id="indd" parameterType="bean.dd" useGeneratedKeys="true">
+     insert into dd (ddid,member,zt,fkfs,addtime) values( #{ddid},#{member},#{zt},#{fkfs},#{addtime})
+  </insert>
+  <delete id="deldd" parameterType="java.lang.Integer">
+    DELETE FROM dd WHERE id = #{id}
+  </delete>
+
+  <select id="getAllprepdd"  parameterType="java.lang.Integer" resultType="bean.dd">
+    select * from dd where member= #{member} and zt='未处理' order by id desc
+  </select>
+  <select id="getAlldd"  parameterType="java.lang.Integer" resultType="bean.dd">
+    select * from dd where member= #{member} and zt='已处理' order by id desc
+  </select>
+  <update id="setdd" parameterType="java.lang.Integer">
+    UPDATE dd SET zt = '已处理' WHERE id = #{id}
+  </update>
+</mapper>

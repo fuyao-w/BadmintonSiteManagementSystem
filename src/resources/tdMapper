@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.tdMapper">
+  <resultMap id="BaseResultMap" type="bean.td">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="xm" jdbcType="VARCHAR" property="xm" />
+    <result column="xb" jdbcType="VARCHAR" property="xb" />
+    <result column="sfz" jdbcType="VARCHAR" property="sfz" />
+    <result column="dh" jdbcType="VARCHAR" property="dh" />
+    <result column="dz" jdbcType="VARCHAR" property="dz" />
+    <result column="bz" jdbcType="VARCHAR" property="bz" />
+  </resultMap>
+  <select id="gettds"  resultType="bean.td">
+  select * from td order by id desc
+  </select>
+  <select id="gettd" resultType="bean.td">
+     select * from td WHERE id = #{id}
+  </select>
+  <delete id="delgl" parameterType="java.lang.Integer">
+    DELETE FROM td WHERE id = #{id}
+  </delete>
+  
+  <update id="subgl">
+    UPDATE td SET xm=#{xm},xb=#{xb},sfz=#{sfz},dh=#{dh},dz=#{dz},bz=#{bz} WHERE id = #{id}
+  </update>
+
+  <insert id="insert" parameterType="bean.td">
+    INSERT INTO td (xm,xb,sfz,dh,dz,bz) VALUES (#{xm},#{xb},#{sfz},#{dh},#{dz},#{bz})
+  </insert>
+</mapper>

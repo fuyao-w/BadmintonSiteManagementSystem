@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.pmemberMapper">
+    <resultMap id="BaseResultMap" type="bean.pmember">
+        <id column="id" jdbcType="INTEGER" property="id" />
+        <result column="mid" jdbcType="INTEGER" property="mid" />
+        <result column="realname" jdbcType="VARCHAR" property="realname" />
+        <result column="sex" jdbcType="VARCHAR" property="sex" />
+        <result column="bir" jdbcType="VARCHAR" property="bir" />
+        <result column="sheng" jdbcType="VARCHAR" property="sheng" />
+        <result column="city" jdbcType="VARCHAR" property="city" />
+        <result column="telphone" jdbcType="VARCHAR" property="telphone" />
+        <result column="email" jdbcType="VARCHAR" property="email" />
+        <result column="question" jdbcType="VARCHAR" property="question" />
+        <result column="answer" jdbcType="VARCHAR" property="answer" />
+        <result column="address" jdbcType="VARCHAR" property="address" />
+    </resultMap>
+    <sql id="Base_Column_List">
+        id, mid, realname, sex, bir, sheng, city, telphone, email, question, answer, address
+    </sql>
+    <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultType="bean.pmember">
+        select *  from pmember where mid = #{mid}
+    </select>
+
+
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+        delete from pmember
+        where id = #{id,jdbcType=INTEGER}
+    </delete>
+    <insert id="insert" parameterType="bean.pmember">
+        insert into pmember (id, mid, realname,
+        sex, bir, sheng, city,
+        telphone, email, question,
+        answer, address)
+        values (#{id,jdbcType=INTEGER}, #{mid,jdbcType=INTEGER}, #{realname,jdbcType=VARCHAR},
+        #{sex,jdbcType=VARCHAR}, #{bir,jdbcType=VARCHAR}, #{sheng,jdbcType=VARCHAR}, #{city,jdbcType=VARCHAR},
+        #{telphone,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, #{question,jdbcType=VARCHAR},
+        #{answer,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR})
+    </insert>
+    <insert id="insertSelective" parameterType="bean.pmember">
+        insert into pmember
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="mid != null">
+                mid,
+            </if>
+            <if test="realname != null">
+                realname,
+            </if>
+            <if test="sex != null">
+                sex,
+            </if>
+            <if test="bir != null">
+                bir,
+            </if>
+            <if test="sheng != null">
+                sheng,
+            </if>
+            <if test="city != null">
+                city,
+            </if>
+            <if test="telphone != null">
+                telphone,
+            </if>
+            <if test="email != null">
+                email,
+            </if>
+            <if test="question != null">
+                question,
+            </if>
+            <if test="answer != null">
+                answer,
+            </if>
+            <if test="address != null">
+                address,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=INTEGER},
+            </if>
+            <if test="mid != null">
+                #{mid,jdbcType=INTEGER},
+            </if>
+            <if test="realname != null">
+                #{realname,jdbcType=VARCHAR},
+            </if>
+            <if test="sex != null">
+                #{sex,jdbcType=VARCHAR},
+            </if>
+            <if test="bir != null">
+                #{bir,jdbcType=VARCHAR},
+            </if>
+            <if test="sheng != null">
+                #{sheng,jdbcType=VARCHAR},
+            </if>
+            <if test="city != null">
+                #{city,jdbcType=VARCHAR},
+            </if>
+            <if test="telphone != null">
+                #{telphone,jdbcType=VARCHAR},
+            </if>
+            <if test="email != null">
+                #{email,jdbcType=VARCHAR},
+            </if>
+            <if test="question != null">
+                #{question,jdbcType=VARCHAR},
+            </if>
+            <if test="answer != null">
+                #{answer,jdbcType=VARCHAR},
+            </if>
+            <if test="address != null">
+                #{address,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="bean.pmember">
+        update pmember
+        <set>
+            <if test="mid != null">
+                mid = #{mid,jdbcType=INTEGER},
+            </if>
+            <if test="realname != null">
+                realname = #{realname,jdbcType=VARCHAR},
+            </if>
+            <if test="sex != null">
+                sex = #{sex,jdbcType=VARCHAR},
+            </if>
+            <if test="bir != null">
+                bir = #{bir,jdbcType=VARCHAR},
+            </if>
+            <if test="sheng != null">
+                sheng = #{sheng,jdbcType=VARCHAR},
+            </if>
+            <if test="city != null">
+                city = #{city,jdbcType=VARCHAR},
+            </if>
+            <if test="telphone != null">
+                telphone = #{telphone,jdbcType=VARCHAR},
+            </if>
+            <if test="email != null">
+                email = #{email,jdbcType=VARCHAR},
+            </if>
+            <if test="question != null">
+                question = #{question,jdbcType=VARCHAR},
+            </if>
+            <if test="answer != null">
+                answer = #{answer,jdbcType=VARCHAR},
+            </if>
+            <if test="address != null">
+                address = #{address,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where mid = #{mid,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="bean.pmember">
+        update pmember
+        set mid = #{mid,jdbcType=INTEGER},
+        realname = #{realname,jdbcType=VARCHAR},
+        sex = #{sex,jdbcType=VARCHAR},
+        bir = #{bir,jdbcType=VARCHAR},
+        sheng = #{sheng,jdbcType=VARCHAR},
+        city = #{city,jdbcType=VARCHAR},
+        telphone = #{telphone,jdbcType=VARCHAR},
+        email = #{email,jdbcType=VARCHAR},
+        question = #{question,jdbcType=VARCHAR},
+        answer = #{answer,jdbcType=VARCHAR},
+        address = #{address,jdbcType=VARCHAR}
+        where mid = #{mid,jdbcType=INTEGER}
+    </update>
+</mapper>

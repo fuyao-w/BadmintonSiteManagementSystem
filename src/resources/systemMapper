@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.systemMapper">
+  <resultMap id="BaseResultMap" type="bean.system">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="sitename" jdbcType="VARCHAR" property="sitename" />
+    <result column="url" jdbcType="VARCHAR" property="url" />
+    <result column="keyword" jdbcType="VARCHAR" property="keyword" />
+    <result column="description" jdbcType="VARCHAR" property="description" />
+    <result column="email" jdbcType="VARCHAR" property="email" />
+    <result column="state" jdbcType="VARCHAR" property="state" />
+    <result column="reasons" jdbcType="VARCHAR" property="reasons" />
+    <result column="dir" jdbcType="VARCHAR" property="dir" />
+    <result column="record" jdbcType="VARCHAR" property="record" />
+    <result column="copyright" jdbcType="VARCHAR" property="copyright" />
+  </resultMap>
+
+</mapper>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.saleMapper">
+    <resultMap id="saleMap" type="bean.sale">
+        <id column="id" jdbcType="INTEGER" property="id" />
+        <result column="title" jdbcType="VARCHAR" property="title" />
+        <result column="url" jdbcType="VARCHAR" property="url" />
+        <result column="dz" jdbcType="VARCHAR" property="dz" />
+        <result column="yb" jdbcType="VARCHAR" property="yb" />
+        <result column="dh" jdbcType="VARCHAR" property="dh" />
+        <result column="jd" jdbcType="VARCHAR" property="jd" />
+        <result column="content" jdbcType="VARCHAR" property="content" />
+        <result column="addtime" jdbcType="TIMESTAMP" property="addtime" />
+        <result column="dj" jdbcType="INTEGER" property="dj" />
+    </resultMap>
+    <insert id="insertSale" parameterType="bean.sale" keyProperty="id" useGeneratedKeys="true">
+        insert into sale (title,url,dz,yb,dh,jd,addtime,dj) values( #{title},#{url},#{dz},#{yb},#{dh},#{jd},#{addtime},#{dj})
+    </insert>
+
+
+    <select id="selCount" resultType="java.lang.Integer">
+        select count(*) from sale
+    </select>
+
+
+    <select id="selOrderByid" resultType="java.lang.Integer">
+        select * from sale order by id desc
+    </select>
+
+        <select id="seldj" parameterType="java.lang.Integer" resultType="java.lang.Integer">
+        select dj FROM sale WHERE id = #{id}
+    </select>
+
+    <select id="selOrderByType" resultType="bean.sale">
+        select * from type order by id desc
+    </select>
+    <select id="selByID" parameterType="java.lang.Integer"  resultType="bean.sale">
+        select * from sale where id = #{id}
+    </select>
+
+
+    <select id="selByTitle" parameterType="java.lang.String" resultType="bean.sale">
+        select * from type where title =#{title}
+    </select>
+
+    <select id="get10PTrave" resultType="bean.sale">
+        SELECT  * FROM sale order by id desc LIMIT 0,5
+    </select>
+
+    <select id="getallPTrave" resultType="bean.sale">
+        SELECT  * FROM sale order by id desc
+    </select>
+
+    <select id="getall"  resultType="bean.sale">
+        SELECT  * FROM sale order by id
+    </select>
+
+    <delete id="delByID" parameterType="java.lang.Integer">
+        delete from sale where id=#{id}
+    </delete>
+
+    <update id="updj" parameterType="java.lang.Integer" >
+        update sale set dj=0 where id= #{id}
+    </update>
+    <update id="updj1" parameterType="java.lang.Integer" >
+        update sale set dj=1 where id= #{sid}
+    </update>
+
+    <update id="uppdj" >
+        update sale set dj= #{dj} where id= #{id}
+    </update>
+</mapper>

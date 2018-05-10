@@ -1,0 +1,32 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="TEST:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/TEST_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="TEST" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Spring-3.2.18.RELEASE" />
+          <element id="library" level="project" name="Spring MVC-3.2.18.RELEASE" />
+          <element id="file-copy" path="$APPLICATION_HOME_DIR$/lib/mybatis开发工具包/mybatis-3.4.4/mybatis-spring/mybatis-spring-1.2.0.jar" />
+          <element id="file-copy" path="$APPLICATION_HOME_DIR$/lib/commons-dbcp-1.4.jar" />
+          <element id="file-copy" path="$APPLICATION_HOME_DIR$/lib/commons-pool-1.5.5.jar" />
+          <element id="file-copy" path="$APPLICATION_HOME_DIR$/lib/jackson-databind-2.9.4.jar" />
+          <element id="file-copy" path="$APPLICATION_HOME_DIR$/lib/jackson-core-2.9.4.jar" />
+          <element id="file-copy" path="$APPLICATION_HOME_DIR$/lib/jackson-annotations-2.9.4.jar" />
+          <element id="file-copy" path="$APPLICATION_HOME_DIR$/lib/jstl-1.2.jar" />
+          <element id="file-copy" path="$APPLICATION_HOME_DIR$/lib/log4jdbc-1.2.jar" />
+          <element id="file-copy" path="$APPLICATION_HOME_DIR$/lib/mybatis-3.3.1.jar" />
+          <element id="file-copy" path="$APPLICATION_HOME_DIR$/lib/mysql-connector-java-5.1.7-bin.jar" />
+          <element id="file-copy" path="$APPLICATION_HOME_DIR$/lib/standard.jar" />
+          <element id="file-copy" path="$APPLICATION_HOME_DIR$/lib/pagehelper-5.1.2.jar" />
+          <element id="file-copy" path="$APPLICATION_HOME_DIR$/lib/jsqlparser-0.9.5.jar" />
+          <element id="file-copy" path="$APPLICATION_HOME_DIR$/lib/commons-io-1.3.2.jar" />
+          <element id="file-copy" path="$APPLICATION_HOME_DIR$/lib/commons-fileupload-1.2.1.jar" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="TEST/web/Web" />
+    </root>
+  </artifact>
+</component>
