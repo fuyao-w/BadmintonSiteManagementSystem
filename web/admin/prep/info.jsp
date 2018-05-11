@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*"  contentType="text/html;charset=gb2312"%>
+<%@ page language="java" import="java.util.*"  pageEncoding="utf-8" contentType="text/html;charset=UTF-8" %>
 <jsp:useBean id="sn" scope="page" class="com.bean.SystemBean" />
 <jsp:useBean id="tb" scope="page" class="com.bean.HzpBean" />
 <%
@@ -6,7 +6,7 @@ String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 String dir=sn.getDir();
 %>
-<HTML><HEAD><TITLE>��̨������</TITLE>
+<HTML><HEAD><TITLE>后台操作区</TITLE>
 <LINK href="<%=basePath %><%=dir %>/images/Admin_Style.css" type=text/css rel=stylesheet>
 <LINK href="<%=basePath %><%=dir %>/images/style.css" type=text/css rel=stylesheet>
 <SCRIPT language=JavaScript src="<%=basePath %><%=dir %>/images/Common.js"></SCRIPT>
@@ -51,14 +51,14 @@ String message = (String)request.getAttribute("message");
     <TD align="left" vAlign=top >
 <table width='100%' cellspacing='1' cellpadding='3' bgcolor='#CCCCCC' class="tablewidth">
      <tr class="head"> 
-      <td width="10%" align="center">���</td>
-      <td  align="center" width="15%">��������</td>
-      <td  align="center" width="10%">�۸�</td>
-      <td  align="center" width="10%">ԤԼ����</td>
-      <td  align="center" width="15%">ԤԼʱ��</td>
-      <td  align="center" width="20%">��ϵ��ַ</td>
-      <td  align="center" width="10%">��ϵ��</td>
-      <td  align="center" width="10%">��ϵ��ʽ</td>
+      <td width="10%" align="center">编号</td>
+      <td  align="center" width="15%">场地名称</td>
+      <td  align="center" width="10%">价格</td>
+      <td  align="center" width="10%">预约人数</td>
+      <td  align="center" width="15%">预约时间</td>
+      <td  align="center" width="20%">联系地址</td>
+      <td  align="center" width="10%">联系人</td>
+      <td  align="center" width="10%">联系方式</td>
     </tr>
     <% 
 			if(!pagelist3.isEmpty()){

@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*"  contentType="text/html;charset=gb2312"%>
+<%@ page language="java" import="java.util.*"  pageEncoding="utf-8" contentType="text/html;charset=UTF-8" %>
 <%--<jsp:useBean id="sn" scope="page" class="com.bean.SystemBean" />--%>
 <%--<jsp:useBean id="tb" scope="page" class="com.bean.HzpBean" />--%>
 <%
@@ -6,7 +6,7 @@ String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 //String dir=sn.getDir();
 %>
-<HTML><HEAD><TITLE>ºóÌ¨²Ù×÷Çø</TITLE>
+<HTML><HEAD><TITLE>åå°æ“ä½œåŒº</TITLE>
 <LINK href="<%=basePath %>admin/images/Admin_Style.css" type=text/css rel=stylesheet>
 <LINK href="<%=basePath %>admin/images/style.css" type=text/css rel=stylesheet>
 <SCRIPT language=JavaScript src="<%=basePath %>admin/images/Common.js"></SCRIPT>
@@ -53,14 +53,14 @@ marginheight="0" marginwidth="0">
 <table width='100%' cellspacing='1' cellpadding='3' bgcolor='#CCCCCC' class="tablewidth">
 	<tr id="" class="head">
 		<td width="10%" align="center" class="center">ID </td>
-		<td  width="15%" align="center" class="center">³¡µØÃû³Æ</td>
-		<td  width="10%" align="center"  class="center">³ö×â¼ÛÎ»</td>
-		<td  width="15%" align="center" class="center" >¸º Ôğ ÈË</td>
-		<td  width="10%" align="center"  class="center">×ÉÑ¯µç»°</td>
-		<td  width="10%" align="center"  class="center">ÈİÄÉÈËÊı</td>
-		<td  width="10%" align="center"  class="center">·¢²¼Ê±¼ä</td>
-		<td  width="10%" align="center"  class="center">Ñ¡Ôñ</td>
-		<td  width="10%" align="center"  class="center">É¾³ı</td>
+		<td  width="15%" align="center" class="center">åœºåœ°åç§°</td>
+		<td  width="10%" align="center"  class="center">å‡ºç§Ÿä»·ä½</td>
+		<td  width="15%" align="center" class="center" >è´Ÿ è´£ äºº</td>
+		<td  width="10%" align="center"  class="center">å’¨è¯¢ç”µè¯</td>
+		<td  width="10%" align="center"  class="center">å®¹çº³äººæ•°</td>
+		<td  width="10%" align="center"  class="center">å‘å¸ƒæ—¶é—´</td>
+		<td  width="10%" align="center"  class="center">é€‰æ‹©</td>
+		<td  width="10%" align="center"  class="center">åˆ é™¤</td>
 	</tr>
 	<table  id="blog"></table>
 </table>
@@ -80,10 +80,10 @@ marginheight="0" marginwidth="0">
         totalPages: 1,
         visiblePages: 1,
         currentPage: 1,
-        first: '<li> <a href="javascript:void(0);">Ê×Ò³</a></li>',
-        prev: '<li ><a href="javascript:void(0);">ÉÏÒ»Ò³</a></li>',
-        next: '<li ><a href="javascript:void(0);">ÏÂÒ»Ò³</a></li>',
-        last: '<li ><a href="javascript:void(0);">Ä©Ò³</a></li>',
+        first: '<li> <a href="javascript:void(0);">é¦–é¡µ</a></li>',
+        prev: '<li ><a href="javascript:void(0);">ä¸Šä¸€é¡µ</a></li>',
+        next: '<li ><a href="javascript:void(0);">ä¸‹ä¸€é¡µ</a></li>',
+        last: '<li ><a href="javascript:void(0);">æœ«é¡µ</a></li>',
         page: '<li class="active"><a href="javascript:void(0);">{{page}}</a></li>',
         onPageChange: function (num, type) {
 
@@ -101,11 +101,11 @@ marginheight="0" marginwidth="0">
 
         $.ajax({
             type: 'GET',
-            contentType: 'application/x-www-form-urlencoded',//×¢ÒâÀàĞÍ
+            contentType: 'application/x-www-form-urlencoded',//æ³¨æ„ç±»å‹
             /**
-             *(Ä¬ÈÏ: true) Ä¬ÈÏÇé¿öÏÂ£¬Í¨¹ıdataÑ¡Ïî´«µİ½øÀ´µÄÊı¾İ£¬Èç¹ûÊÇÒ»¸ö¶ÔÏó(¼¼ÊõÉÏ½²Ö»Òª²»ÊÇ×Ö·û´®)£¬
-             * ¶¼»á´¦Àí×ª»¯³ÉÒ»¸ö²éÑ¯×Ö·û´®£¬ÒÔÅäºÏÄ¬ÈÏÄÚÈİÀàĞÍ "application/x-www-form-urlencoded"¡£
-             * Èç¹ûÒª·¢ËÍ DOM Ê÷ĞÅÏ¢»òÆäËü²»Ï£Íû×ª»»µÄĞÅÏ¢£¬ÇëÉèÖÃÎª false¡£
+             *(é»˜è®¤: true) é»˜è®¤æƒ…å†µä¸‹ï¼Œé€šè¿‡dataé€‰é¡¹ä¼ é€’è¿›æ¥çš„æ•°æ®ï¼Œå¦‚æœæ˜¯ä¸€ä¸ªå¯¹è±¡(æŠ€æœ¯ä¸Šè®²åªè¦ä¸æ˜¯å­—ç¬¦ä¸²)ï¼Œ
+             * éƒ½ä¼šå¤„ç†è½¬åŒ–æˆä¸€ä¸ªæŸ¥è¯¢å­—ç¬¦ä¸²ï¼Œä»¥é…åˆé»˜è®¤å†…å®¹ç±»å‹ "application/x-www-form-urlencoded"ã€‚
+             * å¦‚æœè¦å‘é€ DOM æ ‘ä¿¡æ¯æˆ–å…¶å®ƒä¸å¸Œæœ›è½¬æ¢çš„ä¿¡æ¯ï¼Œè¯·è®¾ç½®ä¸º falseã€‚
              */
             processData: false,
             url: '/allcourts',
@@ -115,7 +115,7 @@ marginheight="0" marginwidth="0">
                 console.dir(JSON.stringify(data))
 
                 if (data.pages==0){
-                 $('#aaa').html("ÔİÎŞÊı¾İ")
+                 $('#aaa').html("æš‚æ— æ•°æ®")
                     return;
                 } else{
                   }
@@ -131,11 +131,11 @@ marginheight="0" marginwidth="0">
                 for (i=0;i<blogdata.length;i++){
                     if (blogdata[i].dj==1){
 
-                        use[i] = "Î´Ô¤¶¨"
+                        use[i] = "æœªé¢„å®š"
                     }
                     else{
 
-                        use[i]= "ÒÑÔ¤¶©"}
+                        use[i]= "å·²é¢„è®¢"}
 
                 }
                 for (i=0;i<blogdata.length;i++){
@@ -149,7 +149,7 @@ marginheight="0" marginwidth="0">
                         '      <td width="10%"  bgcolor="#FFFFFF"  style="border-bottom:1px dotted #ccc;" class="center">'+blogdata[i].addtime+'</td>\n' +
                         '      <td width="10%"  bgcolor="#FFFFFF"  style="border-bottom:1px dotted #ccc;" class="center">' +
                         '<a href="/setprep?dj='+blogdata[i].dj+'&id='+blogdata[i].id+'">'+use[i]+ '</a> </td>\n' +
-                        '      <td width="10%"  bgcolor="#FFFFFF"  style="border-bottom:1px dotted #ccc;"  class="center"><a href="/delhzp?id='+blogdata[i].id+'" >É¾³ı</a></td>\n' +
+                        '      <td width="10%"  bgcolor="#FFFFFF"  style="border-bottom:1px dotted #ccc;"  class="center"><a href="/delhzp?id='+blogdata[i].id+'" >åˆ é™¤</a></td>\n' +
                         '    </tr>'
                 }
 
@@ -159,7 +159,7 @@ marginheight="0" marginwidth="0">
 
             },
             error: function () {
-                alert('ÇëÇó´íÎó');
+                alert('è¯·æ±‚é”™è¯¯');
 
             }
 

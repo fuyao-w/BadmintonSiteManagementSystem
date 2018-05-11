@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*"  contentType="text/html;charset=gb2312"%>
+<%@ page language="java" import="java.util.*"  pageEncoding="utf-8" contentType="text/html;charset=UTF-8" %>
 <%@ page import="bean.td" %>
 <%--<jsp:useBean id="sn" scope="page" class="com.bean.SystemBean" />--%>
 <%--<jsp:useBean id="cb" scope="page" class="com.bean.ComBean" />--%>
@@ -7,7 +7,7 @@ String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 //String dir=sn.getDir();
 %>
-<HTML><HEAD><TITLE>ºóÌ¨²Ù×÷Çø</TITLE>
+<HTML><HEAD><TITLE>åå°æ“ä½œåŒº</TITLE>
 <LINK href="<%=basePath %>admin/images/Admin_Style.css" type=text/css rel=stylesheet>
 <LINK href="<%=basePath %>admin/images/style.css" type=text/css rel=stylesheet>
 <SCRIPT language=JavaScript src="<%=basePath %>admin/images/Common.js"></SCRIPT>
@@ -44,13 +44,13 @@ String message = (String)request.getAttribute("message");
 <table width='100%' cellspacing='1' cellpadding='3' bgcolor='#CCCCCC' class="tablewidth">
      <tr class="head"> 
       <td width="5%" align="center">ID </td>
-      <td  align="center">ÈËÔ±ĞÕÃû</td>
-      <td  align="center">ĞÔ±ğ</td>
-      <td  align="center">Éí·İÖ¤ºÅÂë</td>
-      <td  align="center">ÁªÏµµç»°</td> 
-      <td  align="center">ÁªÏµµØÖ·</td>  
-      <td  align="center">ĞŞ¸Ä</td>
-      <td  align="center">É¾³ı</td>
+      <td  align="center">äººå‘˜å§“å</td>
+      <td  align="center">æ€§åˆ«</td>
+      <td  align="center">èº«ä»½è¯å·ç </td>
+      <td  align="center">è”ç³»ç”µè¯</td> 
+      <td  align="center">è”ç³»åœ°å€</td>  
+      <td  align="center">ä¿®æ”¹</td>
+      <td  align="center">åˆ é™¤</td>
     </tr>
     <%
 			List<td> pagelist3= (List<td>) request.getAttribute("tds");
@@ -65,8 +65,8 @@ String message = (String)request.getAttribute("message");
       <td align="center" bgcolor="#FFFFFF"  style="border-bottom:1px dotted #ccc;"><%=pagelist3.get(i).getSfz()%></td>
       <td align="center" bgcolor="#FFFFFF"  style="border-bottom:1px dotted #ccc;"><%=pagelist3.get(i).getDh() %></td>
       <td align="center" bgcolor="#FFFFFF"  style="border-bottom:1px dotted #ccc;"><%=pagelist3.get(i).getDz() %></td>
-      <td align="center" bgcolor="#FFFFFF"  style="border-bottom:1px dotted #ccc;"><a href="/setgl?id=<%=pagelist3.get(i).getId()%>" >ĞŞ¸Ä</a> </td>
-      <td align="center" bgcolor="#FFFFFF"  style="border-bottom:1px dotted #ccc;"><a href="/delgl?id=<%=pagelist3.get(i).getId()%>" >É¾³ı</a> </td>
+      <td align="center" bgcolor="#FFFFFF"  style="border-bottom:1px dotted #ccc;"><a href="/setgl?id=<%=pagelist3.get(i).getId()%>" >ä¿®æ”¹</a> </td>
+      <td align="center" bgcolor="#FFFFFF"  style="border-bottom:1px dotted #ccc;"><a href="/delgl?id=<%=pagelist3.get(i).getId()%>" >åˆ é™¤</a> </td>
     </tr>
 	
 <%

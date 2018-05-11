@@ -10,16 +10,25 @@
     <result column="addtime" jdbcType="VARCHAR" property="addtime" />
   </resultMap>
   <select id="getdds"  resultType="bean.dd">
-    select * from dd where zt="未处理" order by id desc
+    select * from dd where zt="未处理" order by id desc LIMIT #{cur},5
   </select>
+
+  <select id="getddstotal"  resultType="java.lang.Integer">
+   select COUNT(0) FROM dd where zt="未处理"
+  </select>
+
   <select id="undd"  resultType="bean.union">
    SELECT p.ddid,p.title FROM prep  p LEFT JOIN dd d ON p.ddid = d.ddid  WHERE d.id = #{id}
   </select>
 
 
-  <select id="getfhdds"  resultType="bean.dd">
-    select * from dd where zt="已处理" order by id desc
+  <select id="getfdds"   resultType="bean.dd">
+    select * from dd where zt="已处理" order by id desc LIMIT #{cur},5
   </select>
+  <select id="gettotalfdds"   resultType="java.lang.Integer">
+    select COUNT(0) FROM dd where zt="已处理"
+  </select>
+
   <insert id="indd" parameterType="bean.dd" useGeneratedKeys="true">
      insert into dd (ddid,member,zt,fkfs,addtime) values( #{ddid},#{member},#{zt},#{fkfs},#{addtime})
   </insert>

@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" contentType="text/html;charset=gb2312" %>
+<%@ page language="java" import="java.util.*"  pageEncoding="utf-8" contentType="text/html;charset=UTF-8" %>
 <%@ include file="iframe/head.jsp" %>
 <TABLE class=MainTable cellSpacing=0 cellPadding=0 width="100%" align=center 
 border=0>
@@ -9,7 +9,7 @@ border=0>
   <TR>
     <TD class=head>
             <H3 class=L></H3><FONT 
-                        color=#000000>ÄúÏÖÔÚµÄÎ»ÖÃ£º»áÔ±ÉêÇë&gt;&gt; ÌîÐ´×ÊÁÏ</FONT>
+                        color=#000000>æ‚¨çŽ°åœ¨çš„ä½ç½®ï¼šä¼šå‘˜ç”³è¯·&gt;&gt; å¡«å†™èµ„æ–™</FONT>
 	</TD>
 	</TR>
   </TBODY>
@@ -20,8 +20,8 @@ border=0>
       <TABLE class=dragTable  cellSpacing=0 cellPadding=0 width="100%" align=center border=0>
         <TBODY>
         <TR>
-          <TD width=100% align=left  bgColor=#c8c8c8 height=28>¡¡
-		  <SPAN class=black><strong><FONT color=blue>Çë×ÐÏ¸ÌîÐ´ÒÔÏÂ×ÊÁÏ£º</FONT></strong></SPAN></TD></TR>
+          <TD width=100% align=left  bgColor=#c8c8c8 height=28>ã€€
+		  <SPAN class=black><strong><FONT color=blue>è¯·ä»”ç»†å¡«å†™ä»¥ä¸‹èµ„æ–™ï¼š</FONT></strong></SPAN></TD></TR>
         <TR>
           <TD><FORM name="regbb" action="/reg" method="post">
             <TABLE   height=170 cellSpacing=0  cellPadding=0 width="100%"  border=0 hspace="12">
@@ -29,21 +29,21 @@ border=0>
               
               <INPUT type=hidden  name="method"> 
               <TR >
-                <TD align=right width="38%"  height=30>ÓÃ »§ Ãû:</TD>
+                <TD align=right width="38%"  height=30>ç”¨ æˆ· å:</TD>
                 <TD width="62%"  height=30 align=left><font color=red><%=request.getAttribute("message")==null?"":request.getAttribute("message")+"<br>" %></font>
 				<INPUT class=inputb id=username maxLength=10 size=21 name=username value='<%=request.getAttribute("username")==null?"":request.getAttribute("username") %>' onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))" 
-                              onkeyup="value=value.replace(/[\W]/g,'')" >&nbsp;  ²»Ð¡ÓÚ4Î»
+                              onkeyup="value=value.replace(/[\W]/g,'')" >&nbsp;  ä¸å°äºŽ4ä½
 				</TD>
 				</TR>
               <TR class=black >
-                <TD align=right width="38%"  height=30>µÇÂ½ÃÜÂë:</TD>
+                <TD align=right width="38%"  height=30>ç™»é™†å¯†ç :</TD>
                 <TD width="62%"  height=30 align=left>
 				<INPUT class=inputb id=password type=password maxLength=16 size=22 name=password onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))" 
-                              onkeyup="value=value.replace(/[\W]/g,'')" > 6Î»ÒÔÉÏ
+                              onkeyup="value=value.replace(/[\W]/g,'')" > 6ä½ä»¥ä¸Š
 				</TD>
 				</TR>
               <TR class=black >
-                <TD align=right width="38%"  height=30>ÃÜÂëÈ·ÈÏ:<input type=hidden name=reg_type value=person></TD>
+                <TD align=right width="38%"  height=30>å¯†ç ç¡®è®¤:<input type=hidden name=reg_type value=person></TD>
                 <TD width="62%"  height=30 align=left>
 				<INPUT class=inputb id=reg_pwd2 type=password maxLength=16 size=22 name=reg_pwd2 onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))" 
                               onkeyup="value=value.replace(/[\W]/g,'')" > 
@@ -51,7 +51,7 @@ border=0>
 				</TR>
              <TR class=black >
                 <TD align=middle  colSpan=2 height=40>
-				<img src=<%=basePath %>images/sub.gif onclick="checkREG()" border=0> ¡¡¡¡ <img src=<%=basePath %>images/back.gif onclick="window.location='<%=basePath %>'" border=0> 
+				<img src=<%=basePath %>images/sub.gif onclick="checkREG()" border=0> ã€€ã€€ <img src=<%=basePath %>images/back.gif onclick="window.location='<%=basePath %>'" border=0> 
                 
                 </TD>
 				</TR>
@@ -62,6 +62,6 @@ border=0>
 			</TD>
 			</TR>
 			</TBODY>
-			</TABLE>¡¡
+			</TABLE>ã€€
 			</DIV>
 <%@ include file="iframe/foot.jsp"%>

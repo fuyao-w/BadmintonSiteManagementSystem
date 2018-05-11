@@ -1,23 +1,23 @@
-<%@ page language="java" import="java.util.*"  contentType="text/html;charset=gb2312" %>
+<%@ page language="java" import="java.util.*"  pageEncoding="utf-8" contentType="text/html;charset=UTF-8" %>
 <%@ include file="iframe/head.jsp"%>
 <jsp:useBean id="code" scope="page" class="util.CheckCode" />
 <SCRIPT language=javascript>
-    //ºÏ—È±Ìµ•µƒ∫œ∑®–‘
+    //Ê£ÄÈ™åË°®ÂçïÁöÑÂêàÊ≥ïÊÄß
     function checklogin() {
         if (document.form1.username.value.replace(/\s+$|^\s+/g,"").length<=0) {
-            alert("\«Î ‰»Îƒ˙µƒ”√ªß√˚£°");
+            alert("\ËØ∑ËæìÂÖ•ÊÇ®ÁöÑÁî®Êà∑ÂêçÔºÅ");
             document.form1.username.focus();
         }
         else if (document.form1.password.value.replace(/\s+$|^\s+/g,"").length<=0) {
-            alert("\«Î ‰»Îƒ˙µƒ√‹¬Î£°");
+            alert("\ËØ∑ËæìÂÖ•ÊÇ®ÁöÑÂØÜÁ†ÅÔºÅ");
             document.form1.password.focus();
         }
         else if(document.form1.checkcode.value.replace(/\s+$|^\s+/g,"").length<=0) {
-            alert("\«Î ‰»Î—È÷§¬Î£°");
+            alert("\ËØ∑ËæìÂÖ•È™åËØÅÁ†ÅÔºÅ");
             document.form1.checkcode.focus();
         }
         else if (document.form1.checkcode.value != document.form1.yzm.value) {
-            alert("\—È÷§¬Î¥ÌŒÛ£°");
+            alert("\È™åËØÅÁ†ÅÈîôËØØÔºÅ");
             document.form1.checkcode.focus();
         }
         else{
@@ -49,7 +49,7 @@
                         <TBODY>
                         <TR height=40>
                             <TD vAlign=center align=middle colSpan=3 style="font-size: 15px">
-                                <FONT face=ÀŒÃÂ></FONT><BR><FONT color=#ff7700><STRONG>ª∂”≠µ«¬Ω</STRONG></FONT>
+                                <FONT face=ÂÆã‰Ωì></FONT><BR><FONT color=#ff7700><STRONG>Ê¨¢ËøéÁôªÈôÜ</STRONG></FONT>
                             </TD></TR>
                         <TR>
                             <%--<TD colSpan=3>--%>
@@ -61,21 +61,21 @@
                                 <TABLE width="100%" border=0>
                                     <TBODY>
                                     <TR>
-                                        <TD width="35%" height=24>”√ªß√˚£∫</TD>
+                                        <TD width="35%" height=24>Áî®Êà∑ÂêçÔºö</TD>
                                         <TD>
                                             <INPUT class=input_new id=username style="WIDTH: 110px" size=15 maxLength=10 name=username onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))"
                                                    onkeyup="value=value.replace(/[\W]/g,'')"  value=<%=request.getAttribute("reg_user")==null?"":request.getAttribute("reg_user") %>>
                                         </TD>
                                     </TR>
                                     <TR>
-                                        <TD height=25>√‹°°¬Î£∫</TD>
+                                        <TD height=25>ÂØÜ„ÄÄÁ†ÅÔºö</TD>
                                         <TD height=25>
                                             <INPUT class=input_new id=password style="WIDTH: 110px" type=password size=15  maxLength=16 name=password onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))"
                                                    onkeyup="value=value.replace(/[\W]/g,'')">
                                         </TD>
                                     </TR>
                                     <TR>
-                                        <TD height=25>—È÷§¬Î£∫</TD>
+                                        <TD height=25>È™åËØÅÁ†ÅÔºö</TD>
                                         <TD height=25><input type="hidden" name="yzm" value="<%=yzm %>" >
                                             <INPUT class=input_new id=checkcode size=5 maxlength="4" name=checkcode onKeyUp="this.value=this.value.replace(/\D/gi,'')"> <%=yzm %>
                                         </TD>
@@ -85,7 +85,7 @@
                             </TD>
                             <TD width=81>
                                 <LABEL><br>
-                                    <input type=button value="µ«¬Ω" onClick="checklogin()">
+                                    <input type=button value="ÁôªÈôÜ" onClick="checklogin()">
                                 </LABEL>
                             </TD>
                         </TR>
@@ -96,7 +96,7 @@
                                 <A class=dhx12 href=""></A>
                             </TD>
                             <TD vAlign=center>
-                                <A href="lost.jsp">’“ªÿ√‹¬Î</A> <A href="<%=basePath %>reg.jsp">◊¢≤·ª·‘±</A>
+                                <A href="lost.jsp">ÊâæÂõûÂØÜÁ†Å</A> <A href="<%=basePath %>reg.jsp">Ê≥®ÂÜå‰ºöÂëò</A>
                             </TD>
                         </TR>
                         <%--<TR>--%>

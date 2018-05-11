@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" contentType="text/html;charset=gb2312" isErrorPage="true" %>
+<%@ page language="java" import="java.util.*"  pageEncoding="utf-8" contentType="text/html;charset=UTF-8" %>
 
 <%@ taglib prefix="c"  uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ include file="iframe/head.jsp" %>
@@ -11,7 +11,7 @@
 	<link href="http://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet" type="text/css">
 	<link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
 	<link href="http://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet" type="text/css">
-	<META http-equiv=Content-Type content="text/html; charset=gb2312">
+
 	<style>
 		* {
 			margin: 0;
@@ -218,7 +218,7 @@
 	</style>
 
 	<SCRIPT language=JavaScript>
-        <!--//���γ�������
+        <!--//屏蔽出错代码
         function killErr(){
             return true;
         }
@@ -226,7 +226,7 @@
         //-->
 	</SCRIPT>
 	<SCRIPT language=JavaScript>
-        <!--//���������һ������С����
+        <!--//处理大分类一行两个小分类
         function autoTable(div){
             fs=document.getElementById(div).getElementsByTagName("TABLE");
             for(var i=0;i<fs.length;i++){
@@ -267,7 +267,7 @@
 %>
 <BODY text=#000000 bgColor=#ffffff leftMargin=0 topMargin=0>
 <SCRIPT language=JavaScript>
-    <!--//Ŀ����Ϊ������񷽱�
+    <!--//目的是为了做风格方便
     document.write('<div class="wrap">');
     //-->
 </SCRIPT>
@@ -277,7 +277,7 @@
 
 <%----%>
 <%--<TD class=Side vAlign=top align=left width="75%" height=200>--%>
-<%--<!--*******************************������Ѷ��ʼ*******************************-->--%>
+<%--<!--*******************************新闻资讯开始*******************************-->--%>
 <%--<TABLE  class=dragTable cellSpacing=0 cellPadding=0 width="100%" align=center border=0>--%>
 <%--<TBODY>--%>
 <%--<TR>--%>
@@ -285,16 +285,16 @@
 <%--</TR>--%>
 <%--</TBODY>--%>
 <%--</TABLE>--%>
-<%--<!--*******************************������Ѷ����*******************************-->--%>
+<%--<!--*******************************新闻资讯结束*******************************-->--%>
 <%--</TD>--%>
 <%--<TD class=Side vAlign=top align=right width="25%">--%>
-<%--<!--*******************************�������濪ʼ*******************************-->--%>
+<%--<!--*******************************滚动公告开始*******************************-->--%>
 <%--<TABLE width="100%" height="240" border=0 cellPadding=0 cellSpacing=0 class=dragTable>--%>
 <%--<TBODY>--%>
 <%--<TR>--%>
 <%--<TD class=head>--%>
 <%--<SPAN class=TAG>--%>
-<%--<P>��վ����</P>--%>
+<%--<P>网站公告</P>--%>
 <%--</SPAN>--%>
 <%--</TD>--%>
 <%--</TR>--%>
@@ -323,7 +323,7 @@
 <%--</TD>--%>
 <%--</TR>--%>
 <%--</TBODY>--%>
-<%--<!--*******************************�����������*******************************-->--%>
+<%--<!--*******************************滚动公告结束*******************************-->--%>
 <%--</TABLE>--%>
 <%--</TD>--%>
 <%--</TR>--%>
@@ -332,23 +332,23 @@
 
 <section class="altitude layout">
 	<div class="services" style="border-bottom: 1px solid #ccc">
-		<h3 class="haeding-title">��ҳ</h3>
-		<p class="heading-content">�������ṩ�ķ���</p>
+		<h3 class="haeding-title">首页</h3>
+		<p class="heading-content">我们能提供的服务</p>
 		<div class="clearfix">
 			<div class="col-md-4">
 				<figure><i class="fa fa-rocket" aria-hidden="true"></i></figure>
-				<h4 style="margin:15px 0;font-size:18px;color:#000">��Ч�ķ���</h4>
-				<p style="word-break:break-all">������Ϣ</p>
+				<h4 style="margin:15px 0;font-size:18px;color:#000">高效的服务</h4>
+				<p style="word-break:break-all">场地信息</p>
 			</div>
 			<div class="col-md-4">
 				<figure><i class="fa fa-paper-plane" aria-hidden="true"></i></figure>
-				<h4 style="margin:15px 0;font-size:18px;color:#000">�ṩ��Ϣ</h4>
-				<p style="word-break:break-all">�ṩ������Ϣ.</p>
+				<h4 style="margin:15px 0;font-size:18px;color:#000">提供信息</h4>
+				<p style="word-break:break-all">提供场地信息.</p>
 			</div>
 			<div class="col-md-4">
 				<figure><i class="fa fa-lock" aria-hidden="true"></i></figure>
-				<h4 style="margin:15px 0;font-size:18px;color:#000">��ȫ��</h4>
-				<p style="word-break:break-all">�������صĳ�ŵ��֤�ͻ����ݺ���˽��ȫ</p>
+				<h4 style="margin:15px 0;font-size:18px;color:#000">安全性</h4>
+				<p style="word-break:break-all">我们慎重的承诺保证客户数据和隐私安全</p>
 			</div>
 		</div>
 	</div>
@@ -356,8 +356,8 @@
 
 <section class="layout clearfix" id="ABOUT">
 	<div class="about">
-		<h3 class="haeding-title">������Ϣ</h3>
-		<p class="heading-content">����һЩ����.</p>
+		<h3 class="haeding-title">场地信息</h3>
+		<p class="heading-content">介绍一些场地.</p>
 	</div>
 	<ul class="timeline">
 
@@ -369,7 +369,7 @@
 			<c:forEach  var="i" begin="0" end="${sales.size()-1}">
 				<li><a href="/court?id=${sales.get(i).getId()}"><img class="img-circle" src="${sales.get(i).getUrl()}" alt=""></a>
 					<div class="timeline-panel">
-						<h4 class="subheading">���ͼƬ�鿴������Ϣ</h4>
+						<h4 class="subheading">点击图片查看场地信息</h4>
 						<div class="timeline-body">
 							<p class="text">${sales.get(i).getTitle()}</p>
 						</div>
@@ -381,11 +381,11 @@
 
 
 		<li>
-			<div class="circle"> ��</div>
+			<div class="circle"> 完</div>
 		</li>
 	</ul>
 </section>
-<!--*******************************���¿�ʼ*******************************-->
+<!--*******************************最新开始*******************************-->
 <%--<TABLE class=MainTable style="MARGIN-TOP: 0px" cellSpacing=0 cellPadding=0 width="100%" align=center border=0>--%>
 <%--<TBODY>--%>
 <%--<TR>--%>
@@ -394,7 +394,7 @@
 <%--<TBODY>--%>
 <%--<TR>--%>
 <%--<TD class=head>--%>
-<%--<SPAN class=TAG>������Ϣ</SPAN>--%>
+<%--<SPAN class=TAG>场地信息</SPAN>--%>
 
 <%--</TD>--%>
 <%--</TR>--%>
@@ -439,11 +439,11 @@
 
 
 
-<!--*******************************��Ϣ��Ŀ��ͨ����濪ʼAF01*******************************-->
+<!--*******************************信息栏目下通栏广告开始AF01*******************************-->
 
 
 <SCRIPT language=JavaScript>
-    <!--//Ŀ����Ϊ������񷽱�
+    <!--//目的是为了做风格方便
     document.write('</div>');
     //-->
 </SCRIPT>

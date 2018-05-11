@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*,util.*"  contentType="text/html;charset=gb2312"%>
+<%@ page language="java" import="java.util.*"  pageEncoding="utf-8" contentType="text/html;charset=UTF-8" %>
 <%--<jsp:useBean id="sn" scope="page" class="com.bean.SystemBean" />--%>
 <%
 String path = request.getContextPath();
@@ -8,7 +8,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <HTML>
 <HEAD>
-<META http-equiv=Content-Type content="text/html; charset=gb2312">
+
 <STYLE type=text/css>BODY {
 	SCROLLBAR-FACE-COLOR: #73a2d6; SCROLLBAR-HIGHLIGHT-COLOR: #73a2d6; SCROLLBAR-SHADOW-COLOR: #73a2d6; SCROLLBAR-3DLIGHT-COLOR: #73a2d6; SCROLLBAR-ARROW-COLOR: #ffffff; SCROLLBAR-TRACK-COLOR: #aabfec; SCROLLBAR-DARKSHADOW-COLOR: #73a2d6
 }
@@ -69,7 +69,7 @@ A.blue:hover {
 </STYLE>
 <SCRIPT language=javascript>		
 function out(src){
-	if(confirm("È·¶¨ÒªÍË³öÂð£¿"))	{
+	if(confirm("ç¡®å®šè¦é€€å‡ºå—ï¼Ÿ"))	{
 		return true;	
 	}
 	return false;
@@ -90,11 +90,11 @@ function out(src){
 %>
 <SCRIPT language=javascript>
 <!--
-parent.window.defaultStatus="µ±Ç°ÓÃ»§£º<%=session.getAttribute("user").toString() %>  IPµØÖ·£º<%=request.getRemoteAddr() %>";
+parent.window.defaultStatus="å½“å‰ç”¨æˆ·ï¼š<%=session.getAttribute("user").toString() %>  IPåœ°å€ï¼š<%=request.getRemoteAddr() %>";
 //-->
 </SCRIPT>
-<BODY leftMargin=0 topMargin=0 scroll=no marginheight="0" marginwidth="0">
-<TABLE cellSpacing=0 cellPadding=0 width="100%" bgColor=#3a6592 border=0>
+<BODY  leftMargin=0 topMargin=0 scroll=no marginheight="0" marginwidth="0">
+<TABLE style="background: #3ea751" cellSpacing=0 cellPadding=0 width="100%" bgColor=#3a6592 border=0>
   <TBODY>
   <TR>
     <TD height=25>
@@ -114,11 +114,11 @@ parent.window.defaultStatus="µ±Ç°ÓÃ»§£º<%=session.getAttribute("user").toString(
                 <TD class=font_text align=right>
                  
     </TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
-<TABLE class=HeaderStyle bgColor=#3a6592 height=30 cellSpacing=0 cellPadding=0 width="100%" border=0>
+<TABLE style="background: #3ea751" class=HeaderStyle bgColor=#3a6592 height=30 cellSpacing=0 cellPadding=0 width="100%" border=0>
   <TBODY>
   <TR>
     <TD width=14  >&nbsp;</TD>
-    <TD align=center><h2>ÍøÕ¾ºóÌ¨¹ÜÀíÖÐÐÄ</h2>
+    <TD align=center><h2>ç½‘ç«™åŽå°ç®¡ç†ä¸­å¿ƒ</h2>
        </TD>    
 </TR></TBODY></TABLE>
 <TABLE cellSpacing=0 cellPadding=0 width="100%">

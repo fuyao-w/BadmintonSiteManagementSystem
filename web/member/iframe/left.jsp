@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" contentType="text/html;charset=gb2312"%>
+<%@ page language="java" import="java.util.*"  pageEncoding="utf-8" contentType="text/html;charset=UTF-8" %>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -7,14 +7,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <HTML>
 <HEAD>
-<TITLE>»áÔ±¹ÜÀíÖĞĞÄ</TITLE>
+<TITLE>ä¼šå‘˜ç®¡ç†ä¸­å¿ƒ</TITLE>
 <META http-equiv=Content-Language content=zh-cn>
-<META http-equiv=Content-Type content="text/html; charset=gb2312">
+
 <LINK href="<%=basePath %>member/images/Admin_Style.css" rel=stylesheet>
 <META content="MSHTML 6.00.2900.3243" name=GENERATOR></HEAD>
 <SCRIPT language="JavaScript" type="text/JavaScript">
 <!--
-var array = new Array();//Êı×ÖË³ÑÓ
+var array = new Array();//æ•°å­—é¡ºå»¶
 array[0]=1;array[1]=2;array[2]=3;
 
 function expand(id_value){
@@ -43,8 +43,8 @@ function expand(id_value){
 	    String url="info.jsp";
 	    if(type.trim().equals("co"))url="coinfo.jsp";
 %>
-<BODY  oncontextmenu="return false;" onselectstart="return false;" leftMargin=0 background=<%=basePath %>member/images/MainBg.gif topMargin=0 scroll=no marginheight="0" marginwidth="0">
-<TABLE bgColor=#eef8fe  class=HeaderTdStyle height="100%" cellSpacing=0 cellPadding=0 width="100%" border=0>
+<BODY   oncontextmenu="return false;" onselectstart="return false;" leftMargin=0 background=<%=basePath %>member/images/MainBg.gif topMargin=0 scroll=no marginheight="0" marginwidth="0">
+<TABLE style="background: #315fa7" bgColor=#eef8fe class=HeaderTdStyle height="100%" cellSpacing=0 cellPadding=0 width="100%" border=0>
   <TBODY>
   <TR>
     <TD vAlign=top align=middle>
@@ -52,7 +52,7 @@ function expand(id_value){
         <TBODY>
         <TR>
           <TD align=middle ><IMG height=17 src="<%=basePath %>member/images/sys.gif" width=21>
-          <a href="<%=basePath %>member/iframe/main.jsp" target="MainFrame">¹ÜÀíÊ×Ò³</a></TD></TR></TBODY></TABLE>
+          <a href="<%=basePath %>member/iframe/main.jsp" target="MainFrame">ç®¡ç†é¦–é¡µ</a></TD></TR></TBODY></TABLE>
       <TABLE  bgColor=#eef8fe   height="100%" cellSpacing=0 cellPadding=0 width="100%" 
       border=0>
         <TBODY>
@@ -66,7 +66,7 @@ function expand(id_value){
   <TABLE width="100%" border="0" align="center"style="cursor:hand" onclick=javascript:expand(1)>
     <TR>
     <TD height="31" background="<%=basePath %>member/images/linkbg1.gif">&nbsp;</td>
-    <TD background="<%=basePath %>member/images/linkbg1.gif" > <a href="<%=basePath %>" target="_blank">·µ»ØÍøÕ¾Ê×Ò³</a></TD></TR>
+    <TD background="<%=basePath %>member/images/linkbg1.gif" > <a href="<%=basePath %>" target="_blank">è¿”å›ç½‘ç«™é¦–é¡µ</a></TD></TR>
     </TABLE>
   </TD>
   </TR> 
@@ -75,7 +75,7 @@ function expand(id_value){
   <TABLE width="100%" border="0" align="center"style="cursor:hand" onclick=javascript:expand(1)>
     <TR>
     <TD height="31" background="<%=basePath %>member/images/linkbg1.gif">&nbsp;</td>
-    <TD background="<%=basePath %>member/images/linkbg1.gif" > <a href="<%=basePath %>member/info/editpwd.jsp" target="MainFrame">ĞŞ¸ÄµÇÂ½ÃÜÂë</a></TD></TR>
+    <TD background="<%=basePath %>member/images/linkbg1.gif" > <a href="<%=basePath %>member/info/editpwd.jsp" target="MainFrame">ä¿®æ”¹ç™»é™†å¯†ç </a></TD></TR>
     </TABLE>
   </TD>
   </TR>
@@ -84,7 +84,7 @@ function expand(id_value){
   <TABLE width="100%" border="0" align="center"style="cursor:hand" onclick=javascript:expand(1)>
     <TR>
     <TD height="31" background="<%=basePath %>member/images/linkbg1.gif">&nbsp;</td>
-    <TD background="<%=basePath %>member/images/linkbg1.gif" ><a href="/infos?mid=<%=member%>" target="MainFrame">ĞŞ¸ÄÏêÏ¸×ÊÁÏ</a></TD></TR>
+    <TD background="<%=basePath %>member/images/linkbg1.gif" ><a href="/infos?mid=<%=member%>" target="MainFrame">ä¿®æ”¹è¯¦ç»†èµ„æ–™</a></TD></TR>
     </TABLE>
   </TD>
   </TR>
@@ -93,7 +93,7 @@ function expand(id_value){
   <TABLE width="100%" border="0" align="center"style="cursor:hand" onclick=javascript:expand(2)>
   <TR>
     <TD height="31" background="<%=basePath %>member/images/linkbg1.gif">&nbsp;</td>
-    <TD background="<%=basePath %>member/images/linkbg1.gif" ><a href="/memprep?member=<%=member%>" target="MainFrame">ÎÒµÄÔ¤¶©ĞÅÏ¢</a></TD></TR>
+    <TD background="<%=basePath %>member/images/linkbg1.gif" ><a href="/memprep?member=<%=member%>" target="MainFrame">æˆ‘çš„é¢„è®¢ä¿¡æ¯</a></TD></TR>
   </TABLE>
   </TD>
   </TR>
@@ -102,7 +102,7 @@ function expand(id_value){
   <TABLE width="100%" border="0" align="center"style="cursor:hand" onclick=javascript:expand(2)>
   <TR>
     <TD height="31" background="<%=basePath %>member/images/linkbg1.gif">&nbsp;</td>
-    <TD background="<%=basePath %>member/images/linkbg1.gif" ><a href="/stj?member=<%=member%>" target="MainFrame">ÒÑÌá½»¶©µ¥</a></TD></TR>
+    <TD background="<%=basePath %>member/images/linkbg1.gif" ><a href="/stj?member=<%=member%>" target="MainFrame">å·²æäº¤è®¢å•</a></TD></TR>
   </TABLE>
   </TD>
   </TR>
@@ -111,7 +111,7 @@ function expand(id_value){
   <TABLE width="100%" border="0" align="center"style="cursor:hand" onclick=javascript:expand(2)>
   <TR>
     <TD height="31" background="<%=basePath %>member/images/linkbg1.gif">&nbsp;</td>
-    <TD background="<%=basePath %>member/images/linkbg1.gif" ><a href="/sfh?member=<%=member%>" target="MainFrame">ÒÑ´¦Àí¶©µ¥</a></TD></TR>
+    <TD background="<%=basePath %>member/images/linkbg1.gif" ><a href="/sfh?member=<%=member%>" target="MainFrame">å·²å¤„ç†è®¢å•</a></TD></TR>
   </TABLE>
   </TD>
   </TR> 
@@ -120,7 +120,7 @@ function expand(id_value){
   <TABLE width="100%" border="0" align="center"style="cursor:hand" onclick=javascript:expand(3)>
   <TR>
     <TD height="31" background="<%=basePath %>member/images/linkbg1.gif">&nbsp;</td>
-    <TD background="<%=basePath %>member/images/linkbg1.gif" ><a href="/hello" target="_top">ÍË³öµÇÂ½×´Ì¬</a></TD></TR>
+    <TD background="<%=basePath %>member/images/linkbg1.gif" ><a href="/hello" target="_top">é€€å‡ºç™»é™†çŠ¶æ€</a></TD></TR>
   </TABLE>
   
   </TD>

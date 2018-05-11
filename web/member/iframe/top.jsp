@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*"  contentType="text/html;charset=gb2312"%>
+<%@ page language="java" import="java.util.*"  pageEncoding="utf-8" contentType="text/html;charset=UTF-8" %>
 <%--<jsp:useBean id="sn" scope="page" class="com.bean.SystemBean" />--%>
 <%
 String path = request.getContextPath();
@@ -6,7 +6,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <HTML><HEAD>
-<META http-equiv=Content-Type content="text/html; charset=gb2312">
+
 <STYLE type=text/css>BODY {
 	SCROLLBAR-FACE-COLOR: #73a2d6; SCROLLBAR-HIGHLIGHT-COLOR: #73a2d6; SCROLLBAR-SHADOW-COLOR: #73a2d6; SCROLLBAR-3DLIGHT-COLOR: #73a2d6; SCROLLBAR-ARROW-COLOR: #ffffff; SCROLLBAR-TRACK-COLOR: #aabfec; SCROLLBAR-DARKSHADOW-COLOR: #73a2d6
 }
@@ -67,14 +67,14 @@ A.blue:hover {
 </STYLE>
 <SCRIPT language=javascript>		
 function out(src){
-	if(confirm("ȷ��Ҫ�˳���"))	{
+	if(confirm("确定要退出吗？"))	{
 		return true;	
 	}
 	return false;
 }
 </SCRIPT>
 <META content="MSHTML 6.00.2900.3243" name=GENERATOR></HEAD>
-<!-- �ж�session���û������Ƿ�Ϊ�գ�Ϊ������ת������ҳ�� -->
+<!-- 判断session里用户属性是否为空，为空则跳转到错误页面 -->
 <%
 	String member=(String)session.getAttribute("member");
 	String type=(String)session.getAttribute("type");
@@ -86,14 +86,14 @@ function out(src){
 //	    String str = list.get(0).toString();
 %>
 <SCRIPT language=javascript><!--
-parent.window.defaultStatus="��ǰ�û���<%=member %>  IP��ַ��<%=request.getRemoteAddr() %>";
+parent.window.defaultStatus="当前用户：<%=member %>  IP地址：<%=request.getRemoteAddr() %>";
 //-->
 </SCRIPT>
 <BODY  oncontextmenu="return false;" onselectstart="return false;" leftMargin=0 background=<%=basePath %>member/images/MainBg.gif topMargin=0 scroll=no marginheight="0" marginwidth="0">
-<TABLE align=center cellSpacing=0 cellPadding=0 width="100%" bgColor=#3a6592 border=0>
+<TABLE style="background: #3ea751" align=center cellSpacing=0 cellPadding=0 width="100%" bgColor=#3a6592 border=0>
   <TBODY>
   <TR>
-    <TD height=120 align=center><h1>��վ��Ա����</h1></TD>
+    <TD height=120 align=center><h1>网站会员中心</h1></TD>
                 </TR></TBODY></TABLE></BODY>
 <%		
 	}

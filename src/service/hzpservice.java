@@ -91,7 +91,7 @@ public class hzpservice implements Serializable {
     public PageInfo<member> getMembers(int curPage) {
         System.out.println("开始查询会员" + curPage);
         int pagesize = 5;
-        PageHelper.startPage(curPage, pagesize);
+        PageHelper.startPage(curPage,pagesize);
         LinkedList<member> list = memberMapper.getAll();
         PageInfo<member> pageInfo = new PageInfo<>(list);
         list.stream().forEach(o -> o.getLastip());
@@ -99,27 +99,26 @@ public class hzpservice implements Serializable {
 
     }
 
-    public PageInfo<dd> getdds(int curPage) {
-        System.out.println("开始查询预订" + curPage);
-        int pagesize = 5;
-        PageHelper.startPage(curPage, pagesize);
-        LinkedList<dd> list = ddMapper.getdds();
-        PageInfo<dd> pageInfo = new PageInfo<>(list);
-        list.stream().forEach(o -> o.getDdid());
-        return pageInfo;
+//    public PageInfo<dd> getdds(int curPage) {
+//        System.out.println("开始查询预订" + curPage);
+//        int pagesize = 5;
+//
+//
+//        list.stream().forEach(o -> o.getDdid());
+//        return pageInfo;
+//
+//    }
 
-    }
-
-    public PageInfo<dd> getfhdds(int curPage) {
-        System.out.println("开始查询..预订" + curPage);
-        int pagesize = 5;
-        PageHelper.startPage(curPage, pagesize);
-        LinkedList<dd> list = ddMapper.getfhdds();
-        PageInfo<dd> pageInfo = new PageInfo<>(list);
-        list.stream().forEach(o -> o.getDdid());
-        return pageInfo;
-
-    }
+//    public PageInfo<dd> getfhdds(int curPage) {
+//        System.out.println("开始查询..预订" + curPage);
+//        int pagesize = 5;
+//        PageHelper.startPage(curPage, pagesize);
+//        LinkedList<dd> list = ddMapper.getfdds();
+//        PageInfo<dd> pageInfo = new PageInfo<>(list);
+//
+//        return pageInfo;
+//
+//    }
 
 
     // @Transactional(isolation = Isolation.SERIALIZABLE,timeout = 10)
@@ -196,19 +195,19 @@ public class hzpservice implements Serializable {
 
     public String prep(int id, prep prep) {
         System.out.println("执行方法");
-        String mes = "预订成功";
+    String mes = "预订成功";
 
-        msale = getSale(id);
+    msale = getSale(id);
 
         System.out.println(msale);
         System.out.println("场地信息" + msale.getDj());
-        synchronized (msale) {
-            System.out.println("获得锁");
-            if (msale.getDj() == 1) {
+    synchronized (msale) {
+        System.out.println("获得锁");
+        if (msale.getDj() == 1) {
 
 
-                prep.setTitle(msale.getTitle());
-                System.out.println("取得预订，" + prep.getTitle() + new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(Calendar.getInstance().getTime()));
+            prep.setTitle(msale.getTitle());
+            System.out.println("取得预订，" + prep.getTitle() + new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(Calendar.getInstance().getTime()));
 
 
 //                try {
@@ -216,24 +215,24 @@ public class hzpservice implements Serializable {
 //                } catch (InterruptedException e) {
 //                    e.printStackTrace();
 //                }
-                System.out.println("继续处理" + new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(Calendar.getInstance().getTime()));
-                prep.setDdid(String.valueOf(System.currentTimeMillis()));
+            System.out.println("继续处理" + new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(Calendar.getInstance().getTime()));
+            prep.setDdid(String.valueOf(System.currentTimeMillis()));
 
 
-                System.out.println("更新完成");
-                System.out.println("场地信息" + msale.getDj());
+            System.out.println("更新完成");
+            System.out.println("场地信息" + msale.getDj());
 
-                orderUtil.order(saleMapper, prepMapper, id, prep);
+            orderUtil.order(saleMapper, prepMapper, id, prep);
 
-                setSale(id);
+            setSale(id);
 
 
-            } else {
-                mes = "场地已被预订";
-            }
+        } else {
+            mes = "场地已被预订";
         }
+    }
 
         return mes;
-    }
+}
 
 }

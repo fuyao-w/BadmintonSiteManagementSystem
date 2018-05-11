@@ -10,7 +10,7 @@
     <result column="ts" jdbcType="VARCHAR" property="ts" />
     <result column="lxr" jdbcType="VARCHAR" property="lxr" />
     <result column="lxfs" jdbcType="VARCHAR" property="lxfs" />
-    <result column="addtime" jdbcType="TIMESTAMP" property="addtime" />
+    <result column="addtime" jdbcType="VARCHAR" property="addtime" />
     <result column="member" jdbcType="VARCHAR" property="addtime" />
     <result column="zt" jdbcType="VARCHAR" property="zt" />
     <result column="ddid" jdbcType="VARCHAR" property="ddid" />

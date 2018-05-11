@@ -1,86 +1,74 @@
-<%@ page language="java" import="java.util.*"  contentType="text/html;charset=gb2312"%>
+<%@ page language="java" import="java.util.*"  pageEncoding="utf-8" contentType="text/html;charset=UTF-8" %>
 <%--<jsp:useBean id="sn" scope="page" class="com.bean.SystemBean" />--%>
 <%--<jsp:useBean id="tb" scope="page" class="com.bean.HzpBean" />--%>
 <%
-String path = request.getContextPath();
-String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+    String path = request.getContextPath();
+    String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 //String dir=sn.getDir();
 %>
-<HTML><HEAD><TITLE>ºóÌ¨²Ù×÷Çø</TITLE></HEAD>
+<HTML>
+<HEAD><TITLE>åå°æ“ä½œåŒº</TITLE></HEAD>
 <LINK href="<%=basePath %>admin/images/Admin_Style.css" type=text/css rel=stylesheet>
 <LINK href="<%=basePath %>admin/images/style.css" type=text/css rel=stylesheet>
 <SCRIPT language=JavaScript src="<%=basePath %>admin/images/Common.js"></SCRIPT>
-    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="<%=basePath%>js/jqPaginator.js"></script>
+<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="<%=basePath%>js/jqPaginator.js"></script>
 <STYLE type=text/css>
-BODY {
-	MARGIN-LEFT: 0px; BACKGROUND-COLOR: #ffffff
-}
-.center {
-    text-align: center;
-}
-.STYLE1 {color: #ECE9D8}
+    BODY {
+        MARGIN-LEFT: 0px;
+        BACKGROUND-COLOR: #ffffff
+    }
+
+    .center {
+        text-align: center;
+    }
+
+    .STYLE1 {
+        color: #ECE9D8
+    }
 </STYLE>
 
 
 <%--<%--%>
 <%--String message = (String)request.getAttribute("message");--%>
-	<%--if(message == null){--%>
-		<%--message = "";--%>
-	<%--}--%>
-	<%--if (!message.trim().equals("")){--%>
-		<%--out.println("<script language='javascript'>");--%>
-		<%--out.println("alert('"+message+"');");--%>
-		<%--out.println("</script>");--%>
-	<%--}--%>
-	<%--request.removeAttribute("message");--%>
+<%--if(message == null){--%>
+<%--message = "";--%>
+<%--}--%>
+<%--if (!message.trim().equals("")){--%>
+<%--out.println("<script language='javascript'>");--%>
+<%--out.println("alert('"+message+"');");--%>
+<%--out.println("</script>");--%>
+<%--}--%>
+<%--request.removeAttribute("message");--%>
 <%--%>--%>
 <%--<%--%>
-	<%--String username=(String)session.getAttribute("user");--%>
-	<%--if(username==null){--%>
-		<%--response.sendRedirect(path+"/error.jsp");--%>
-	<%--}--%>
+<%--String username=(String)session.getAttribute("user");--%>
+<%--if(username==null){--%>
+<%--response.sendRedirect(path+"/error.jsp");--%>
+<%--}--%>
 <%--//	else{--%>
-<%--//		List pagelist3=tb.gegComMethod("select * from dd where zt='Î´´¦Àí' order by id desc",6);--%>
+<%--//		List pagelist3=tb.gegComMethod("select * from dd where zt='æœªå¤„ç†' order by id desc",6);--%>
 <%--%>--%>
-<BODY >
+<BODY>
 
 <table width='100%' cellspacing='1' cellpadding='3' bgcolor='#CCCCCC' class="tablewidth">
-     <tr class="head" id="blog">
-      <td width="10%"  class="center">±àºÅ</td>
-      <td   width="15%"  class="center">¶©µ¥±àºÅ</td>
-      <td   width="15%"  class="center">¶©µ¥»áÔ±</td>
-      <td   width="10%"  class="center">µ±Ç°×´Ì¬</td>
-      <td   width="10%"  class="center">¸¶¿î·½Ê½</td>
-      <td   width="20%"  class="center">Ô¤¶©Ê±¼ä</td>
-      <td   width="10%"  class="center">´¦Àí</td>
-      <td   width="10%"  class="center">É¾³ı</td>
+    <tr class="head" >
+        <td width="10%" align="center" class="center">ç¼–å·</td>
+        <td width="15%" align="center" class="center">è®¢å•ç¼–å·</td>
+        <td width="15%" align="center" class="center">è®¢å•ä¼šå‘˜</td>
+        <td width="10%" align="center" class="center">å½“å‰çŠ¶æ€</td>
+        <td width="10%" align="center" class="center">ä»˜æ¬¾æ–¹å¼</td>
+        <td width="20%" align="center" class="center">é¢„è®¢æ—¶é—´</td>
+        <td width="10%" align="center" class="center">å¤„ç†</td>
+        <td width="10%" align="center" class="center">åˆ é™¤</td>
     </tr>
-    <%--<%--%>
-			<%--if(!pagelist3.isEmpty()){--%>
-				<%--for(int i=0;i<pagelist3.size();i++){--%>
-					<%--List pagelist2 =(ArrayList)pagelist3.get(i);--%>
-			<%--%> --%>
-	<%--<tr  class="trA" onMouseOver="this.className='trB'" onMouseOut="this.className='trA'"> --%>
-      <%--<td width='10%'  style="border-bottom:1px dotted #ccc;"><%=i+1 %></td>--%>
-      <%--<td  bgcolor="#FFFFFF"  style="border-bottom:1px dotted #ccc;"><%=pagelist2.get(1).toString() %></td>--%>
-      <%--<td  bgcolor="#FFFFFF"  style="border-bottom:1px dotted #ccc;"><%=pagelist2.get(2).toString() %></td>--%>
-      <%--<td  bgcolor="#FFFFFF"  style="border-bottom:1px dotted #ccc;"><%=pagelist2.get(3).toString() %></td>--%>
-      <%--<td  bgcolor="#FFFFFF"  style="border-bottom:1px dotted #ccc;"><%=pagelist2.get(4).toString() %></td>--%>
-      <%--<td  bgcolor="#FFFFFF"  style="border-bottom:1px dotted #ccc;"><%=pagelist2.get(5).toString() %></td>--%>
-      <%--<td  bgcolor="#FFFFFF"  style="border-bottom:1px dotted #ccc;"><a href="<%=basePath %>admin/prep/info.jsp?ddid=<%=pagelist2.get(1).toString()%>">²é¿´ÏêÏ¸</a></td>--%>
-      <%--<td  bgcolor="#FFFFFF"  style="border-bottom:1px dotted #ccc;"><a href="<%=basePath %>NewsServlet?method=fDD&ddid=<%=pagelist2.get(1).toString()%>">´¦Àí</a></td>--%>
-      <%--<td  bgcolor="#FFFFFF"  style="border-bottom:1px dotted #ccc;"><a href="<%=basePath %>NewsServlet?method=dDD&ddid=<%=pagelist2.get(1).toString()%>">É¾³ı</a></td>--%>
-    <%--</tr>--%>
-<%--<%--%>
-	<%--}} --%>
-<%--%>  --%>
+    <table width="100%" id="blog"></table>
 </table>
 
 <%--<div id="blog"></div>--%>
-<ul id="aaa"  class="pagination" style="display: flex;justify-content: center;">
+<ul id="aaa" class="pagination" style="display: flex;justify-content: center;">
     <li><a href="#">&laquo;</a></li>
     <li><a href="#">1</a></li>
     <li><a href="#">2</a></li>
@@ -95,10 +83,10 @@ BODY {
         totalPages: 1,
         visiblePages: 1,
         currentPage: 1,
-        first: '<li> <a href="javascript:void(0);">Ê×Ò³</a></li>',
-        prev: '<li ><a href="javascript:void(0);">ÉÏÒ»Ò³</a></li>',
-        next: '<li ><a href="javascript:void(0);">ÏÂÒ»Ò³</a></li>',
-        last: '<li ><a href="javascript:void(0);">Ä©Ò³</a></li>',
+        first: '<li> <a href="javascript:void(0);">é¦–é¡µ</a></li>',
+        prev: '<li ><a href="javascript:void(0);">ä¸Šä¸€é¡µ</a></li>',
+        next: '<li ><a href="javascript:void(0);">ä¸‹ä¸€é¡µ</a></li>',
+        last: '<li ><a href="javascript:void(0);">æœ«é¡µ</a></li>',
         page: '<li class="active"><a href="javascript:void(0);">{{page}}</a></li>',
         onPageChange: function (num, type) {
 
@@ -110,17 +98,17 @@ BODY {
 
     function blogFilter(num) {
 
-        var json = 'curPage='+num;
+        var json = 'curPage=' + num;
 
-        var blogmes=''
+        var blogmes = ''
 
         $.ajax({
             type: 'GET',
-            contentType: 'application/x-www-form-urlencoded',//×¢ÒâÀàĞÍ
+            contentType: 'application/x-www-form-urlencoded',//æ³¨æ„ç±»å‹
             /**
-             *(Ä¬ÈÏ: true) Ä¬ÈÏÇé¿öÏÂ£¬Í¨¹ıdataÑ¡Ïî´«µİ½øÀ´µÄÊı¾İ£¬Èç¹ûÊÇÒ»¸ö¶ÔÏó(¼¼ÊõÉÏ½²Ö»Òª²»ÊÇ×Ö·û´®)£¬
-             * ¶¼»á´¦Àí×ª»¯³ÉÒ»¸ö²éÑ¯×Ö·û´®£¬ÒÔÅäºÏÄ¬ÈÏÄÚÈİÀàĞÍ "application/x-www-form-urlencoded"¡£
-             * Èç¹ûÒª·¢ËÍ DOM Ê÷ĞÅÏ¢»òÆäËü²»Ï£Íû×ª»»µÄĞÅÏ¢£¬ÇëÉèÖÃÎª false¡£
+             *(é»˜è®¤: true) é»˜è®¤æƒ…å†µä¸‹ï¼Œé€šè¿‡dataé€‰é¡¹ä¼ é€’è¿›æ¥çš„æ•°æ®ï¼Œå¦‚æœæ˜¯ä¸€ä¸ªå¯¹è±¡(æŠ€æœ¯ä¸Šè®²åªè¦ä¸æ˜¯å­—ç¬¦ä¸²)ï¼Œ
+             * éƒ½ä¼šå¤„ç†è½¬åŒ–æˆä¸€ä¸ªæŸ¥è¯¢å­—ç¬¦ä¸²ï¼Œä»¥é…åˆé»˜è®¤å†…å®¹ç±»å‹ "application/x-www-form-urlencoded"ã€‚
+             * å¦‚æœè¦å‘é€ DOM æ ‘ä¿¡æ¯æˆ–å…¶å®ƒä¸å¸Œæœ›è½¬æ¢çš„ä¿¡æ¯ï¼Œè¯·è®¾ç½®ä¸º falseã€‚
              */
             processData: false,
             url: '/getpreps',
@@ -128,39 +116,40 @@ BODY {
             data: json,
             success: function (data) {
                 console.dir(JSON.stringify(data))
+                var pages = data.total<5 ? 1: data.total / 5;
 
-                if (data.pages==0){
-                    $('#aaa').html("ÔİÎŞÊı¾İ")
+                if (pages == 0) {
+                    $('#aaa').html("æš‚æ— æ•°æ®")
                     return;
-                } else{
+                } else {
                 }
                 $('#aaa').jqPaginator('option', {
-                    totalPages: data.pages,
-                    visiblePages: (data.pages>10)?10:data.pages
+                    totalPages: pages,
+                    visiblePages: (pages > 10) ? 10 :pages
                 });
                 var blogdata = data.list;
-                blogmes=''
-                $("#blog").after("");
-                for (i=0;i<blogdata.length;i++){
-                    blogmes = blogmes+'<tr  class="trA" onMouseOver="this.className="trB" onMouseOut="this.className="trA">\n' +
-                        '      <td width="10%"  style="border-bottom:1px dotted #ccc;text-align: center;">'+blogdata[i].id+'</td>\n' +
-                        '      <td width="15%"  bgcolor="#FFFFFF"  style="border-bottom:1px dotted #ccc;text-align: center;">'+blogdata[i].ddid+'</td>\n' +
-                        '      <td width="15%"  bgcolor="#FFFFFF"  style="border-bottom:1px dotted #ccc;text-align: center;"> '+blogdata[i].member+'</td>\n' +
-                        '      <td  width="10%"  bgcolor="#FFFFFF"  style="border-bottom:1px dotted #ccc;text-align: center;">'+blogdata[i].zt+'</td>\n' +
-                        '      <td width="10%"  bgcolor="#FFFFFF"  style="border-bottom:1px dotted #ccc;text-align: center;">'+blogdata[i].fkfs+'</td>\n' +
-                        '      <td width="20%"  bgcolor="#FFFFFF"  style="border-bottom:1px dotted #ccc;text-align: center;">'+blogdata[i].addtime+'</td>\n' +
-                        '      <td width="10%"  bgcolor="#FFFFFF"  style="border-bottom:1px dotted #ccc;text-align: center;"><a href="/setdd?id='+blogdata[i].id+'">´¦Àí</a> </td>\n' +
-                        '      <td width="10%"  bgcolor="#FFFFFF"  style="border-bottom:1px dotted #ccc;text-align: center;"><a href="/deldd?id='+blogdata[i].id+'" >É¾³ı</a></td>\n' +
+                blogmes = ''
+                $("#blog").html("");
+                for (i = 0; i < blogdata.length; i++) {
+                    blogmes = blogmes + '<tr  class="trA" onMouseOver="this.className="trB" onMouseOut="this.className="trA">\n' +
+                        '      <td width="10%"  style="border-bottom:1px dotted #ccc;text-align: center;">' + blogdata[i].id + '</td>\n' +
+                        '      <td width="15%"  bgcolor="#FFFFFF"  style="border-bottom:1px dotted #ccc;text-align: center;">' + blogdata[i].ddid + '</td>\n' +
+                        '      <td width="15%"  bgcolor="#FFFFFF"  style="border-bottom:1px dotted #ccc;text-align: center;"> ' + blogdata[i].member + '</td>\n' +
+                        '      <td  width="10%"  bgcolor="#FFFFFF"  style="border-bottom:1px dotted #ccc;text-align: center;">' + blogdata[i].zt + '</td>\n' +
+                        '      <td width="10%"  bgcolor="#FFFFFF"  style="border-bottom:1px dotted #ccc;text-align: center;">' + blogdata[i].fkfs + '</td>\n' +
+                        '      <td width="20%"  bgcolor="#FFFFFF"  style="border-bottom:1px dotted #ccc;text-align: center;">' + blogdata[i].addtime + '</td>\n' +
+                        '      <td width="10%"  bgcolor="#FFFFFF"  style="border-bottom:1px dotted #ccc;text-align: center;"><a href="/setdd?id=' + blogdata[i].id + '">å¤„ç†</a> </td>\n' +
+                        '      <td width="10%"  bgcolor="#FFFFFF"  style="border-bottom:1px dotted #ccc;text-align: center;"><a href="/deldd?id=' + blogdata[i].id + '" >åˆ é™¤</a></td>\n' +
                         '    </tr>'
                 }
 
 
-                $("#blog").after(blogmes);
+                $("#blog").html(blogmes);
 
 
             },
             error: function () {
-                alert('ÇëÇó´íÎó');
+                alert('è¯·æ±‚é”™è¯¯');
 
             }
 

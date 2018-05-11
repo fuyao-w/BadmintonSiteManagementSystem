@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" contentType="text/html;charset=gb2312" isErrorPage="true" %>
+<%@ page language="java" import="java.util.*"  pageEncoding="utf-8" contentType="text/html;charset=UTF-8" %>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -8,7 +8,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <head>
     <base href="<%=basePath%>">
     
-    <title>³ö´íÀ²£¡</title>
+    <title>å‡ºé”™å•¦ï¼</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -22,7 +22,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-     <br><br>Õâ¸öÊÇ´íÎóÒ³Ãæ<br><font color=red></font>
+     <br><br>è¿™ä¸ªæ˜¯é”™è¯¯é¡µé¢<br><font color=red></font>
      <%--<%=exception.getStackTrace() %>--%>
      <%--<%=exception.getMessage() %>--%>
   </body>

@@ -1,4 +1,4 @@
-<%@ page contentType="text/html;charset=UTF-8" pageEncoding="gbk" language="java" %>
+<%@ page language="java" import="java.util.*"  pageEncoding="utf-8" contentType="text/html;charset=UTF-8" %>
 
 
 
@@ -11,15 +11,15 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
-<title>ÍøÕ¾ºóÌ¨¹ÜÀíµÇÂ¼</title>
+<title>ç½‘ç«™åå°ç®¡ç†ç™»å½•</title>
 <style type="text/css">
 /*<!--*/
-/*.font1 {  font-family: "ËÎÌå"; font-size: 12px; line-height: 130%}*/
-/*a {  font-family: "ËÎÌå"; font-size: 12px}*/
-/*a:link {  font-family: "ËÎÌå"; font-size: 12px; color: #CFD1E8; text-decoration: underline}*/
-/*a:hover {  font-family: "ËÎÌå"; font-size: 12px; color: #FFCC00; text-decoration: none}*/
-/*a:visited {  font-family: "ËÎÌå"; font-size: 12px; color: #CFD1E8; text-decoration: underline}*/
-/*.input {  font-family: "ËÎÌå"; font-size: 12px; color: #FFFFFF; border: #4047A4; border-style: solid; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; background-color: #000077}*/
+/*.font1 {  font-family: "å®‹ä½“"; font-size: 12px; line-height: 130%}*/
+/*a {  font-family: "å®‹ä½“"; font-size: 12px}*/
+/*a:link {  font-family: "å®‹ä½“"; font-size: 12px; color: #CFD1E8; text-decoration: underline}*/
+/*a:hover {  font-family: "å®‹ä½“"; font-size: 12px; color: #FFCC00; text-decoration: none}*/
+/*a:visited {  font-family: "å®‹ä½“"; font-size: 12px; color: #CFD1E8; text-decoration: underline}*/
+/*.input {  font-family: "å®‹ä½“"; font-size: 12px; color: #FFFFFF; border: #4047A4; border-style: solid; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; background-color: #000077}*/
 /*-->*/
 
 
@@ -367,12 +367,12 @@ String message = (String)request.getAttribute("message");
   <div class="clear"> </div>
   <form action="/adminLogin"  method="post" autocomplete="off">
     <input type=hidden name=method value="one" />
-    <input type="text" name="username" class="text" value="" placeholder="ÓÃ»§Ãû">
+    <input type="text" name="username" class="text" value="" placeholder="ç”¨æˆ·å">
     <div class="key">
-      <input type="password" name="password" value="" placeholder="¿ÚÁî">
+      <input type="password" name="password" value="" placeholder="å£ä»¤">
     </div>
     <div class="signin">
-      <input type="submit" value="µÇÂ¼" >
+      <input type="submit" value="ç™»å½•" >
     </div>
   </form>
 
@@ -401,12 +401,12 @@ String message = (String)request.getAttribute("message");
 
               <%--<tr>--%>
                 <%--<td width="5" class="nwes" height="36"></td>--%>
-                <%--<td width="106" class="font1" height="36"><font color="#CFD1E8">ÓÃ»§Ãû</font></td>--%>
+                <%--<td width="106" class="font1" height="36"><font color="#CFD1E8">ç”¨æˆ·å</font></td>--%>
                 <%--<td><input type="text" name="username"  size="15" /></td>--%>
               <%--</tr>--%>
               <%--<tr>--%>
                 <%--<td class="nwes" height="36">&nbsp; </td>--%>
-                <%--<td class="font1" height="36"><font color="#CFD1E8">¿Ú¡¡Áî</font></td>--%>
+                <%--<td class="font1" height="36"><font color="#CFD1E8">å£ã€€ä»¤</font></td>--%>
                 <%--<td><input type="password" name="password" size="15" ></td>--%>
               <%--</tr>--%>
 
@@ -451,8 +451,8 @@ String message = (String)request.getAttribute("message");
 	// function checkform(form)
 	// {
 	// 	var flag=true;
-	// 	if(form("username").value==""){alert("ÇëÊäÈëÓÃ»§Ãû!");form("username").focus();return false};
-	// 	if(form("password").value==""){alert("ÇëÊäÈë¿ÚÁî!");form("password").focus();return false};
+	// 	if(form("username").value==""){alert("è¯·è¾“å…¥ç”¨æˆ·å!");form("username").focus();return false};
+	// 	if(form("password").value==""){alert("è¯·è¾“å…¥å£ä»¤!");form("password").focus();return false};
 	//
 	// 	return flag;
 	// }

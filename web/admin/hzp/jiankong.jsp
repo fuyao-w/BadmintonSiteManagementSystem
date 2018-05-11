@@ -1,11 +1,11 @@
-<%@ page language="java" import="java.util.*" contentType="text/html;charset=gb2312"%>
+<%@ page language="java" import="java.util.*"  pageEncoding="utf-8" contentType="text/html;charset=UTF-8" %>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" >
     <meta name="renderer" content="webkit">
-    <title>ฒโสิาณรๆ</title>
+    <title>ๆต่ฏ•้กต้ข</title>
     <style>
         body{margin:0;text-align: center;}
         video{max-width: 1200px;width: 100%;}

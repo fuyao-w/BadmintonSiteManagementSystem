@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*"  contentType="text/html;charset=gb2312"%>
+<%@ page language="java" import="java.util.*"  pageEncoding="utf-8" contentType="text/html;charset=UTF-8" %>
 <jsp:useBean id="sn" scope="page" class="com.bean.SystemBean" />
 <jsp:useBean id="ab" scope="page" class="com.bean.AfficheBean" />
 <%
@@ -6,7 +6,7 @@ String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 String dir=sn.getDir();
 %>
-<HTML><HEAD><TITLE>ºóÌ¨²Ù×÷Çø</TITLE>
+<HTML><HEAD><TITLE>åŽå°æ“ä½œåŒº</TITLE>
 <LINK href="<%=basePath %><%=dir %>/images/Admin_Style.css" type=text/css rel=stylesheet>
 <LINK href="<%=basePath %><%=dir %>/images/style.css" type=text/css rel=stylesheet>
 <STYLE type=text/css>
@@ -21,13 +21,13 @@ function sub()
 {
 	if(document.form1.title.value.replace(/\s+$|^\s+/g,"").length<=0)
 	{
-		alert("ÇëÊäÈëÐÂÎÅ±êÌâ£¡");
+		alert("è¯·è¾“å…¥æ–°é—»æ ‡é¢˜ï¼");
 		document.form1.title.focus();
 		return false;
 	}
 	if(document.form1.content.value.replace(/\s+$|^\s+/g,"").length<=0||document.form1.content.value.replace(/\s+$|^\s+/g,"").length>1000)
    	{
-   		alert("ÇëÊäÈë¹«¸æÄÚÈÝ£¬×ÖÊýÔÚ1000¸ö×Ö·ûÒÔÄÚ£¡");
+   		alert("è¯·è¾“å…¥å…¬å‘Šå†…å®¹ï¼Œå­—æ•°åœ¨1000ä¸ªå­—ç¬¦ä»¥å†…ï¼");
        	document.form1.content.focus();
       	return false;  
    	}
@@ -58,7 +58,7 @@ String message = (String)request.getAttribute("message");
 		String title="";
 		String content="";
 		if(id!=null){
-			System.out.println(id+"id²»Îª¿Õ");
+			System.out.println(id+"idä¸ä¸ºç©º");
 			List afficheList = ab.getOneAffiche(Integer.parseInt(id));
 			title=afficheList.get(1).toString();
 			content=afficheList.get(2).toString();
@@ -84,37 +84,37 @@ marginheight="0" marginwidth="0">
 <%
 	if(method.trim().equals("addAffiche")){
 %>
-        ·¢²¼¹«¸æ 
+        å‘å¸ƒå…¬å‘Š 
 <%}else{%>
-	   ÐÞ¸Ä¹«¸æ
+	   ä¿®æ”¹å…¬å‘Š
 <%} %>
       </td>
     </tr>
 	
   <tr bgcolor='#FFFFFF'> <input type="hidden" name="method" value="<%=method %>"> <input type="hidden" name="id" value="<%=id %>">
-    <td width='30%'><div align="right">±ê&nbsp;&nbsp;&nbsp;&nbsp;Ìâ£º</div></td>
+    <td width='30%'><div align="right">æ ‡&nbsp;&nbsp;&nbsp;&nbsp;é¢˜ï¼š</div></td>
     <td ><input name="title" type="text" id="title" size="60" maxlength="100" value="<%=title %>"></td>
   </tr>
   <tr bgcolor='#FFFFFF'> 
       <td width='30%'> 
-        <div align="right">ÊÇ·ñÏÔÊ¾£º </div>
+        <div align="right">æ˜¯å¦æ˜¾ç¤ºï¼š </div>
       </td>
       <td bgcolor='#FFFFFF' > 
         <input type="radio" name="ifhide" value="1" <%=str1 %>>
-        ÏÔÊ¾ 
+        æ˜¾ç¤º 
         <input type="radio" name="ifhide" value="0" <%=str2 %>>
-        ²»ÏÔÊ¾ </td>
+        ä¸æ˜¾ç¤º </td>
     </tr>
     <tr bgcolor='#FFFFFF'> 
       <td width='30%'> 
-        <div align="right">¹«¸æÄÚÈÝ£º </div>
+        <div align="right">å…¬å‘Šå†…å®¹ï¼š </div>
       </td>
       <td bgcolor='#FFFFFF' > 
         <textarea name="content" cols="50" rows="8" ><%=content %></textarea> </td>
     </tr>
   <tr bgcolor='#FFFFFF'> 
       <td colspan="2" align="center"> 
-        <input class=mmcinb type='button' name='button' value='Ìá½»Êý¾Ý' onclick='sub()'>
+        <input class=mmcinb type='button' name='button' value='æäº¤æ•°æ®' onclick='sub()'>
       </td>
     </tr>
 	

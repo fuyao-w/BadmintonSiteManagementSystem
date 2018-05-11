@@ -1,5 +1,6 @@
-<%@ page language="java" import="java.util.*"  contentType="text/html;charset=gb2312"%>
+<%@ page language="java" import="java.util.*"  pageEncoding="utf-8" contentType="text/html;charset=UTF-8" %>
 <%@ page import="bean.prep" %>
+<%@ page import="java.util.*" %>
 <%--<jsp:useBean id="sn" scope="page" class="com.bean.SystemBean" />--%>
 <%--<jsp:useBean id="tb" scope="page" class="com.bean.HzpBean" />--%>
 <%
@@ -7,7 +8,7 @@ String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 String dir="admin";
 %>
-<HTML><HEAD><TITLE>ºóÌ¨²Ù×÷Çø</TITLE>
+<HTML><HEAD><TITLE>åŽå°æ“ä½œåŒº</TITLE>
 <LINK href="<%=basePath %><%=dir %>/images/Admin_Style.css" type=text/css rel=stylesheet>
 <LINK href="<%=basePath %><%=dir %>/images/style.css" type=text/css rel=stylesheet>
 <SCRIPT language=JavaScript src="<%=basePath %><%=dir %>/images/Common.js"></SCRIPT>
@@ -52,14 +53,14 @@ String message = (String)request.getAttribute("message");
     <TD align="left" vAlign=top >
 <table width='100%' cellspacing='1' cellpadding='3' bgcolor='#CCCCCC' class="tablewidth">
      <tr class="head"> 
-      <td width="10%" align="center">±àºÅ</td>
-      <td  align="center">³¡µØÃû³Æ</td>
-      <td  align="center">¼Û¸ñ</td>
-      <td  align="center">Ô¤¶¨ÈËÊý</td>
-      <td  align="center">Ô¤¶¨Ê±¼ä</td>
-      <td  align="center">ÁªÏµµØÖ·</td>
-      <td  align="center">ÁªÏµÈË</td>
-      <td  align="center">ÁªÏµ·½Ê½</td> 
+      <td width="10%" align="center">ç¼–å·</td>
+      <td  align="center">åœºåœ°åç§°</td>
+      <td  align="center">ä»·æ ¼</td>
+      <td  align="center">é¢„å®šäººæ•°</td>
+      <td  align="center">é¢„å®šæ—¶é—´</td>
+      <td  align="center">è”ç³»åœ°å€</td>
+      <td  align="center">è”ç³»äºº</td>
+      <td  align="center">è”ç³»æ–¹å¼</td> 
     </tr>
     <% 
 			if(true){

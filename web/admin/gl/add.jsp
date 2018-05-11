@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="utf-8" contentType="text/html;charset=UTF-8"%>
+<%@ page language="java" import="java.util.*"  pageEncoding="utf-8" contentType="text/html;charset=UTF-8" %>
 <%@page isELIgnored="false"%>
 <%--<jsp:useBean id="sn" scope="page" class="com.bean.SystemBean" /> --%>
 <%--<jsp:useBean id="cb" scope="page" class="com.bean.ComBean" />--%>

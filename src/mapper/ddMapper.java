@@ -11,10 +11,12 @@ public interface ddMapper {
 
     int insert(dd record);
     int deldd(Integer id);
+    int getddstotal();
+    int gettotalfdds();
     union  undd(Integer id);
     int setdd(Integer id);
-    LinkedList<dd> getdds();
-    LinkedList<dd> getfhdds();
+    LinkedList<dd> getdds(int cur);
+    LinkedList<dd> getfdds(int cur);
     LinkedList<dd>  getAllprepdd(Integer member);
     LinkedList<dd>  getAlldd(Integer member);
 

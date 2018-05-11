@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" contentType="text/html;charset=gb2312" %>
+<%@ page language="java" import="java.util.*"  pageEncoding="utf-8" contentType="text/html;charset=UTF-8" %>
 <%@ page import="bean.sale" %>
 
 <%@ include file="iframe/head.jsp" %>
@@ -9,7 +9,7 @@
 <HEAD>
 <LINK href="images/default.css" type=text/css rel=stylesheet>
 <LINK href="images/css.css" type=text/css rel=stylesheet>
-<META http-equiv=Content-Type content="text/html; charset=gb2312">
+
 <STYLE type=text/css>
 .ycbt {
 	BORDER-RIGHT: #fff 1px solid; BORDER-TOP: #fff 1px solid; PADDING-LEFT: 1.8em; BACKGROUND-COLOR: #EAF2EF; BORDER-LEFT: #fff 1px solid; PADDING-TOP: 7px; BORDER-BOTTOM: #fff 1px solid; HEIGHT: 20px
@@ -23,6 +23,11 @@
 .ycnr {
 	DISPLAY: none
 }
+	.center {
+		display: flex;
+		justify-content: center;
+	}
+
 </STYLE>
 <SCRIPT type=text/javascript>
 function tb_xs(t,m,n){
@@ -35,7 +40,7 @@ document.getElementById("tb"+t+ "_bt" + i).className= "xsbt";
 document.getElementById("tb"+t+ "_nr" + i).className= "xsnr";}}}
 </SCRIPT>
 <SCRIPT language=JavaScript>
-<!--//ÆÁ±Î³ö´í´úÂë
+<!--//å±è”½å‡ºé”™ä»£ç 
 function killErr(){
 	return true;
 }
@@ -43,7 +48,7 @@ window.onerror=killErr;
 //-->
 </SCRIPT>
 <SCRIPT language=JavaScript>
-<!--//´¦Àí´ó·ÖÀàÒ»ĞĞÁ½¸öĞ¡·ÖÀà
+<!--//å¤„ç†å¤§åˆ†ç±»ä¸€è¡Œä¸¤ä¸ªå°åˆ†ç±»
 function autoTable(div){
 	fs=document.getElementById(div).getElementsByTagName("TABLE");
 	for(var i=0;i<fs.length;i++){
@@ -72,21 +77,21 @@ function autoTable(div){
 </HEAD>
 <BODY text=#000000 bgColor=#ffffff leftMargin=0 topMargin=0>
 <SCRIPT language=JavaScript>
-<!--//Ä¿µÄÊÇÎªÁË×ö·ç¸ñ·½±ã
+<!--//ç›®çš„æ˜¯ä¸ºäº†åšé£æ ¼æ–¹ä¾¿
 document.write('<div class="wrap">');
 //-->
 </SCRIPT>
-     <TABLE class=dragTable cellSpacing=0 cellPadding=0 width="100%" border=0>
+     <TABLE class=dragTable style="" cellSpacing=0 cellPadding=0 width="100%" border=0>
 		<TBODY>
         <TR>
           <TD class=head colspan="2">
-			<SPAN class=TAG>³¡µØĞÅÏ¢</SPAN> 
+			<SPAN class=TAG>åœºåœ°ä¿¡æ¯</SPAN> 
 			
 		  </TD>
 		</TR>
 		<TR>
 		<TD  class=middle align="left" >
-               <TABLE class=xsnr id=tb1_nr1  cellSpacing=0 cellPadding=0 width="100%" border=0>
+               <TABLE class="center" id=tb1_nr1  cellSpacing=0 cellPadding=0 width="100%" border=0 >
                     <TBODY>
 <%
 
@@ -100,12 +105,12 @@ document.write('<div class="wrap">');
 									<HR style="border: 0;height: 20px" width="80%"   SIZE=1>
 								</TD>
 								<TD style="padding-left: 10px" align=left>
-									³¡µØÃû³Æ£º${hotlist.get(i).getTitle()} <br>
-									³ö×â¼ÛÎ»£º${hotlist.get(i).getDz()} Ôª/Ğ¡Ê±  &nbsp;&nbsp;&nbsp;¸º Ôğ ÈË£º${hotlist.get(i).getYb()}<br>
-									×ÉÑ¯µç»°£º${hotlist.get(i).getDh()}  <br>
-									ÈİÄÉÈËÊı£º${hotlist.get(i).getJd()} <br>
-									·¢²¼Ê±¼ä£º${hotlist.get(i).getAddtime()}
-									&nbsp;&nbsp;<a href="/hinf?id=${hotlist.get(i).getId()}">µã»÷²é¿´ÏêÏ¸...</a>
+									åœºåœ°åç§°ï¼š${hotlist.get(i).getTitle()} <br>
+									å‡ºç§Ÿä»·ä½ï¼š${hotlist.get(i).getDz()} å…ƒ/å°æ—¶  &nbsp;&nbsp;&nbsp;è´Ÿ è´£ äººï¼š${hotlist.get(i).getYb()}<br>
+									å’¨è¯¢ç”µè¯ï¼š${hotlist.get(i).getDh()}  <br>
+									å®¹çº³äººæ•°ï¼š${hotlist.get(i).getJd()} <br>
+									å‘å¸ƒæ—¶é—´ï¼š${hotlist.get(i).getAddtime()}
+									&nbsp;&nbsp;<a href="/hinf?id=${hotlist.get(i).getId()}">ç‚¹å‡»æŸ¥çœ‹è¯¦ç»†...</a>
 									<HR style="border:1 dashed #2295b9" width="100%" color=#987cb9 SIZE=1>
 								</TD>
 
@@ -126,7 +131,7 @@ document.write('<div class="wrap">');
 
 
 <SCRIPT language=JavaScript>
-<!--//Ä¿µÄÊÇÎªÁË×ö·ç¸ñ·½±ã
+<!--//ç›®çš„æ˜¯ä¸ºäº†åšé£æ ¼æ–¹ä¾¿
 document.write('</div>');
 //-->
 </SCRIPT>

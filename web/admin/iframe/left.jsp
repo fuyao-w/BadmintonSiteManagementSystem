@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" contentType="text/html;charset=gb2312"%>
+<%@ page language="java" import="java.util.*"  pageEncoding="utf-8" contentType="text/html;charset=UTF-8" %>
 <%--<jsp:useBean id="sn" scope="page" class="com.bean.SystemBean" />--%>
 <%
     String path = request.getContextPath();
@@ -8,15 +8,15 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <HTML>
 <HEAD>
-    <TITLE>系统管理</TITLE>
+    <TITLE>绯荤粺绠＄悊</TITLE>
     <META http-equiv=Content-Language content=zh-cn>
-    <META http-equiv=Content-Type content="text/html; charset=gb2312">
+
     <LINK href="<%=basePath %>admin/images/Admin_Style.css" rel=stylesheet>
     <META content="MSHTML 6.00.2900.3243" name=GENERATOR>
 </HEAD>
 <SCRIPT language="JavaScript" type="text/JavaScript">
     <!--
-    var array = new Array();//数字顺延
+    var array = new Array();//鏁板瓧椤哄欢
     array[0]=1;array[1]=2;array[2]=3;array[3]=4;array[4]=5;array[5]=6;array[6]=7;
     function expand(id_value){
         var tmp;
@@ -42,8 +42,8 @@
 //        String QX=list.get(4).toString();
 //        String temp[]=QX.split("/");
 %>
-<BODY  oncontextmenu="return false;" onselectstart="return false;" leftMargin=0 background=<%=basePath %>admin/images/MainBg.gif topMargin=0 scroll=no marginheight="0" marginwidth="0">
-<TABLE bgColor=#eef8fe  class=HeaderTdStyle height="100%" cellSpacing=0 cellPadding=0 width="100%" border=0>
+<BODY   oncontextmenu="return false;" onselectstart="return false;" leftMargin=0 background=<%=basePath %>admin/images/MainBg.gif topMargin=0 scroll=no marginheight="0" marginwidth="0">
+<TABLE style="background: #001ea7" bgColor=#eef8fe class=HeaderTdStyle height="100%" cellSpacing=0 cellPadding=0 width="100%" border=0>
     <TBODY>
     <TR>
         <TD vAlign=top align=middle>
@@ -51,7 +51,7 @@
                 <TBODY>
                 <TR>
                     <TD align=middle ><IMG height=17 src="<%=basePath %>admin/images/sys.gif" width=21>
-                        <a href="<%=basePath %>admin/iframe/main.jsp" target="MainFrame">管理首页</a>
+                        <a href="<%=basePath %>admin/iframe/main.jsp" target="MainFrame">绠＄悊棣栭〉</a>
                     </TD>
                 </TR>
                 </TBODY>
@@ -68,17 +68,17 @@
                                         <TABLE width="100%" border="0" align="center"style="cursor:hand" onclick=javascript:expand(1)>
                                             <TR>
                                                 <TD height="31" background="<%=basePath %>admin/images/linkbg1.gif">&nbsp;</td>
-                                                <TD background="<%=basePath %>admin/images/linkbg1.gif" >&nbsp;&nbsp;&nbsp;&nbsp;管理员管理</TD></TR>
+                                                <TD background="<%=basePath %>admin/images/linkbg1.gif" >&nbsp;&nbsp;&nbsp;&nbsp;绠＄悊鍛樼鐞�</TD></TR>
                                         </TABLE>
                                         <TABLE width="100%" border="0" align="center" id=id_1 style="display:none">
                                             <TR>
                                                 <TD noWrap width="35%"><IMG src="<%=basePath %>admin/images/bullet.gif"
                                                                             align=absMiddle><SPAN style="CURSOR: default">
-      <a href="<%=basePath %>/alladmin" target="MainFrame">管理员管理</a></SPAN></TD></TR>
+      <a href="<%=basePath %>/alladmin" target="MainFrame">绠＄悊鍛樼鐞�</a></SPAN></TD></TR>
                                             <TR>
                                                 <TD noWrap width="35%"><IMG src="<%=basePath %>admin/images/bullet.gif"
                                                                             align=absMiddle><SPAN style="CURSOR: default">
-      <a href="<%=basePath %>admin/system/editpwd.jsp" target="MainFrame">修改登录密码</a></SPAN></TD></TR>
+      <a href="<%=basePath %>admin/system/editpwd.jsp" target="MainFrame">淇敼鐧诲綍瀵嗙爜</a></SPAN></TD></TR>
 
                                         </TABLE>
                                     </TD>
@@ -88,14 +88,14 @@
                                         <TABLE width="100%" border="0" align="center"style="cursor:hand" onclick=javascript:expand(2)>
                                             <TR>
                                                 <TD height="31" background="<%=basePath %>admin/images/linkbg1.gif">&nbsp;</td>
-                                                <TD background="<%=basePath %>admin/images/linkbg1.gif" >&nbsp;&nbsp;&nbsp;&nbsp;图表统计查看</TD></TR>
+                                                <TD background="<%=basePath %>admin/images/linkbg1.gif" >&nbsp;&nbsp;&nbsp;&nbsp;鍥捐〃缁熻鏌ョ湅</TD></TR>
                                         </TABLE>
                                         <TABLE width="100%" border="0" align="center" id=id_2 style="display:none">
                                             <TR ParentID="ConventionLastPic" AllParentID="ConventionLastPic">
                                                 <TD noWrap width="35%"><IMG src="<%=basePath %>admin/images/bullet.gif"
-                                                                            align=absMiddle><SPAN style="CURSOR: default"> <a href="/charts" target="MainFrame">图表统计</a></SPAN></TD></TR><TR ParentID="ConventionLastPic" AllParentID="ConventionLastPic">
+                                                                            align=absMiddle><SPAN style="CURSOR: default"> <a href="/charts" target="MainFrame">鍥捐〃缁熻</a></SPAN></TD></TR><TR ParentID="ConventionLastPic" AllParentID="ConventionLastPic">
                                                 <TD noWrap width="35%"><IMG src="<%=basePath %>admin/images/bullet.gif"
-                                                                            align=absMiddle><SPAN style="CURSOR: default"> <a href="/jk" target="MainFrame">监控</a></SPAN></TD></TR>
+                                                                            align=absMiddle><SPAN style="CURSOR: default"> <a href="/jk" target="MainFrame">鐩戞帶</a></SPAN></TD></TR>
 
 
                                         </TABLE>
@@ -108,16 +108,16 @@
                                         <TABLE width="100%" border="0" align="center"style="cursor:hand" onclick=javascript:expand(3)>
                                             <TR>
                                                 <TD height="31" background="<%=basePath %>admin/images/linkbg1.gif">&nbsp;</td>
-                                                <TD background="<%=basePath %>admin/images/linkbg1.gif" >&nbsp;&nbsp;&nbsp;&nbsp;场地信息管理</TD></TR>
+                                                <TD background="<%=basePath %>admin/images/linkbg1.gif" >&nbsp;&nbsp;&nbsp;&nbsp;鍦哄湴淇℃伅绠＄悊</TD></TR>
                                         </TABLE>
                                         <TABLE width="100%" border="0" align="center" id=id_3 style="display:none">
 
                                             <TR ParentID="ConventionLastPic" AllParentID="ConventionLastPic">
                                                 <TD noWrap width="35%"><IMG src="<%=basePath %>admin/images/bullet.gif"
-                                                                            align=absMiddle><SPAN style="CURSOR: default"> <a href="<%=basePath %>admin/hzp/index.jsp" target="MainFrame">场地信息管理</a></SPAN></TD></TR>
+                                                                            align=absMiddle><SPAN style="CURSOR: default"> <a href="<%=basePath %>admin/hzp/index.jsp" target="MainFrame">鍦哄湴淇℃伅绠＄悊</a></SPAN></TD></TR>
                                             <TR ParentID="ConventionLastPic" AllParentID="ConventionLastPic">
                                                 <TD noWrap width="35%"><IMG src="<%=basePath %>admin/images/bullet.gif"
-                                                                            align=absMiddle><SPAN style="CURSOR: default"> <a href="<%=basePath %>admin/hzp/add.jsp?method=addlvyou" target="MainFrame">添加场地信息</a></SPAN></TD></TR>
+                                                                            align=absMiddle><SPAN style="CURSOR: default"> <a href="<%=basePath %>admin/hzp/add.jsp?method=addlvyou" target="MainFrame">娣诲姞鍦哄湴淇℃伅</a></SPAN></TD></TR>
                                         </TABLE>
                                     </TD>
                                 </TR>
@@ -126,12 +126,12 @@
                                         <TABLE width="100%" border="0" align="center"style="cursor:hand" onclick=javascript:expand(4)>
                                             <TR>
                                                 <TD height="31" background="<%=basePath %>admin/images/linkbg1.gif">&nbsp;</td>
-                                                <TD background="<%=basePath %>admin/images/linkbg1.gif" >&nbsp;&nbsp;&nbsp;&nbsp;注册会员管理</TD></TR>
+                                                <TD background="<%=basePath %>admin/images/linkbg1.gif" >&nbsp;&nbsp;&nbsp;&nbsp;娉ㄥ唽浼氬憳绠＄悊</TD></TR>
                                         </TABLE>
                                         <TABLE width="100%" border="0" align="center" id=id_4 style="display:none">
                                             <TR ParentID="ConventionLastPic" AllParentID="ConventionLastPic">
                                                 <TD noWrap width="35%"><IMG src="<%=basePath %>admin/images/bullet.gif"
-                                                                            align=absMiddle><SPAN style="CURSOR: default"> <a href="<%=basePath %>menbersadmin" target="MainFrame">注册会员管理</a></SPAN></TD></TR>
+                                                                            align=absMiddle><SPAN style="CURSOR: default"> <a href="<%=basePath %>menbersadmin" target="MainFrame">娉ㄥ唽浼氬憳绠＄悊</a></SPAN></TD></TR>
                                         </TABLE>
                                     </TD>
                                 </TR>
@@ -140,15 +140,19 @@
                                         <TABLE width="100%" border="0" align="center"style="cursor:hand" onclick=javascript:expand(5)>
                                             <TR>
                                                 <TD height="31" background="<%=basePath %>admin/images/linkbg1.gif">&nbsp;</td>
-                                                <TD background="<%=basePath %>admin/images/linkbg1.gif" >&nbsp;&nbsp;&nbsp;&nbsp;预约信息管理</TD></TR>
+                                                <TD background="<%=basePath %>admin/images/linkbg1.gif" >&nbsp;&nbsp;&nbsp;&nbsp;棰勭害淇℃伅绠＄悊</TD></TR>
                                         </TABLE>
                                         <TABLE width="100%" border="0" align="center" id=id_5 style="display:none">
                                             <TR ParentID="ConventionLastPic" AllParentID="ConventionLastPic">
                                                 <TD noWrap width="35%"><IMG src="<%=basePath %>admin/images/bullet.gif"
-                                                                            align=absMiddle><SPAN style="CURSOR: default"> <a href="<%=basePath %>prepadmin" target="MainFrame">预约信息管理</a></SPAN></TD></TR>
+                                                                            align=absMiddle><SPAN style="CURSOR: default"> <a href="<%=basePath %>prepadmin" target="MainFrame">棰勭害淇℃伅绠＄悊</a></SPAN></TD></TR>
                                             <TR ParentID="ConventionLastPic" AllParentID="ConventionLastPic">
                                                 <TD noWrap width="35%"><IMG src="<%=basePath %>admin/images/bullet.gif"
-                                                                            align=absMiddle><SPAN style="CURSOR: default"> <a href="<%=basePath %>fhadmin" target="MainFrame">已处理预约信息</a></SPAN></TD></TR>
+                                                                            align=absMiddle><SPAN style="CURSOR: default"> <a href="<%=basePath %>fhadmin" target="MainFrame">宸插鐞嗛绾︿俊鎭�</a></SPAN></TD></TR>
+
+                                            <TR ParentID="ConventionLastPic" AllParentID="ConventionLastPic">
+                                                <TD noWrap width="35%"><IMG src="<%=basePath %>admin/images/bullet.gif"
+                                                                            align=absMiddle><SPAN style="CURSOR: default"> <a href="<%=basePath %>admin/prep/review.jsp " target="MainFrame">璇勮淇℃伅</a></SPAN></TD></TR>
                                         </TABLE>
                                     </TD>
                                 </TR>
@@ -158,15 +162,15 @@
                                         <TABLE width="100%" border="0" align="center"style="cursor:hand" onclick=javascript:expand(6)>
                                             <TR>
                                                 <TD height="31" background="<%=basePath %>admin/images/linkbg1.gif">&nbsp;</td>
-                                                <TD background="<%=basePath %>admin/images/linkbg1.gif" >&nbsp;&nbsp;&nbsp;&nbsp;管理人员管理</TD></TR>
+                                                <TD background="<%=basePath %>admin/images/linkbg1.gif" >&nbsp;&nbsp;&nbsp;&nbsp;绠＄悊浜哄憳绠＄悊</TD></TR>
                                         </TABLE>
                                         <TABLE width="100%" border="0" align="center" id=id_6 style="display:none">
                                             <TR ParentID="ConventionLastPic" AllParentID="ConventionLastPic">
                                                 <TD noWrap width="35%"><IMG src="<%=basePath %>admin/images/bullet.gif"
-                                                                            align=absMiddle><SPAN style="CURSOR: default"> <a href="/gettds" target="MainFrame">管理人员管理</a></SPAN></TD></TR>
+                                                                            align=absMiddle><SPAN style="CURSOR: default"> <a href="/gettds" target="MainFrame">绠＄悊浜哄憳绠＄悊</a></SPAN></TD></TR>
                                             <TR ParentID="ConventionLastPic" AllParentID="ConventionLastPic">
                                                 <TD noWrap width="35%"><IMG src="<%=basePath %>admin/images/bullet.gif"
-                                                                            align=absMiddle><SPAN style="CURSOR: default"> <a href="/setGl" target="MainFrame">增加管理人员</a></SPAN></TD></TR>
+                                                                            align=absMiddle><SPAN style="CURSOR: default"> <a href="/setGl" target="MainFrame">澧炲姞绠＄悊浜哄憳</a></SPAN></TD></TR>
                                         </TABLE>
                                     </TD>
                                 </TR>
@@ -175,12 +179,12 @@
                                         <TABLE width="100%" border="0" align="center"style="cursor:hand" onclick=javascript:expand(7)>
                                             <TR>
                                                 <TD height="31" background="<%=basePath %>admin/images/linkbg1.gif">&nbsp;</td>
-                                                <TD background="<%=basePath %>admin/images/linkbg1.gif" >&nbsp;&nbsp;&nbsp;&nbsp;退出登陆</TD></TR>
+                                                <TD background="<%=basePath %>admin/images/linkbg1.gif" >&nbsp;&nbsp;&nbsp;&nbsp;閫�鍑虹櫥闄�</TD></TR>
                                         </TABLE>
                                         <TABLE width="100%" border="0" align="center" id=id_7 style="display:none">
                                             <TR ParentID="ConventionLastPic" AllParentID="ConventionLastPic">
                                                 <TD noWrap width="35%"><IMG src="<%=basePath %>admin/images/bullet.gif"
-                                                                            align=absMiddle><SPAN style="CURSOR: default"> <a href="<%=basePath%>hello" target=_top>退出登陆</a></SPAN></TD></TR>
+                                                                            align=absMiddle><SPAN style="CURSOR: default"> <a href="<%=basePath%>hello" target=_top>閫�鍑虹櫥闄�</a></SPAN></TD></TR>
                                         </TABLE>
                                     </TD>
                                 </TR>

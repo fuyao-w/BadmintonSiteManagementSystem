@@ -22,6 +22,19 @@
         select count(*) from sale
     </select>
 
+    <select id="selqualification" resultType="java.lang.Integer">
+       SELECT
+COUNT(0)
+FROM
+( (
+		member m
+		LEFT JOIN prep p ON m.username = p.member
+	)
+LEFT JOIN dd d ON d.ddid = p.ddid) LEFT JOIN sale s ON s.title = p.title
+WHERE
+	s.dj = '1'  AND s.id = #{id} AND d.zt='已处理' AND m.username = #{username}
+    </select>
+
 
     <select id="selOrderByid" resultType="java.lang.Integer">
         select * from sale order by id desc
@@ -63,10 +76,24 @@
         update sale set dj=0 where id= #{id}
     </update>
     <update id="updj1" parameterType="java.lang.Integer" >
-        update sale set dj=1 where id= #{sid}
+        update sale set dj=1 where id= #{id}
     </update>
 
     <update id="uppdj" >
         update sale set dj= #{dj} where id= #{id}
+    </update>
+
+
+    <update id="updatedj" parameterType="java.lang.Integer">
+        UPDATE sale
+        SET dj = 1 WHERE title = (
+        SELECT
+        prep.title
+        FROM
+        dd
+        LEFT JOIN prep ON dd.ddid = prep.ddid
+        WHERE
+        dd.id = #{id}
+        )
     </update>
 </mapper>

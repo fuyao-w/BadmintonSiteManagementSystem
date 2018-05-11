@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*"  contentType="text/html;charset=gb2312"%>
+<%@ page language="java" import="java.util.*"  pageEncoding="utf-8" contentType="text/html;charset=UTF-8" %>
 <%--<jsp:useBean id="sn" scope="page" class="com.bean.SystemBean" />--%>
 <%
 String path = request.getContextPath();
@@ -8,8 +8,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <HTML>
 <HEAD>
-<TITLE>后台操作区</TITLE>
-<META http-equiv=Content-Type content="text/html; charset=gb2312">
+<TITLE>鍚庡彴鎿嶄綔鍖�</TITLE>
+
  
 <SCRIPT language=JavaScript src="<%=basePath %>admin/images/Common.js"></SCRIPT>
 <STYLE type=text/css>BODY {

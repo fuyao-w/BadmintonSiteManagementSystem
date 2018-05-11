@@ -1,11 +1,11 @@
-<%@ page language="java" import="java.util.*"  contentType="text/html;charset=gb2312"%>
+<%@ page language="java" import="java.util.*"  pageEncoding="utf-8" contentType="text/html;charset=UTF-8" %>
 
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 
 %>
-<HTML><HEAD><TITLE>ºóÌ¨²Ù×÷Çø</TITLE>
+<HTML><HEAD><TITLE>åå°æ“ä½œåŒº</TITLE>
 <LINK href="<%=basePath %>admin/images/Admin_Style.css" type=text/css rel=stylesheet>
 <LINK href="<%=basePath %>admin/images/style.css" type=text/css rel=stylesheet>
 <SCRIPT language=JavaScript src="<%=basePath %>admin/images/Common.js"></SCRIPT>
@@ -30,7 +30,7 @@ BODY {
     <%--form3.submit();--%>
 <%--}--%>
 <%--function last(){--%>
-    <%--if(form3.pageCount.value==0){//Èç¹û×ÜÒ³ÊıÎª0£¬ÄÇÃ´×îºóÒ»Ò³Îª1£¬Ò²¾ÍÊÇµÚÒ»Ò³£¬¶ø²»ÊÇµÚ0Ò³--%>
+    <%--if(form3.pageCount.value==0){//å¦‚æœæ€»é¡µæ•°ä¸º0ï¼Œé‚£ä¹ˆæœ€åä¸€é¡µä¸º1ï¼Œä¹Ÿå°±æ˜¯ç¬¬ä¸€é¡µï¼Œè€Œä¸æ˜¯ç¬¬0é¡µ--%>
     <%--form3.action="<%=basePath%><%=dir %>/member/person.jsp?page=1";--%>
     <%--form3.submit();--%>
 	<%--}else{--%>
@@ -41,7 +41,7 @@ BODY {
 <%--function pre(){--%>
   <%--var page=parseInt(form3.page.value);--%>
   <%--if(page<=1){--%>
-    <%--alert("ÒÑÖÁµÚÒ»Ò³");--%>
+    <%--alert("å·²è‡³ç¬¬ä¸€é¡µ");--%>
   <%--}else{--%>
     <%--form3.action="<%=basePath%><%=dir %>/member/person.jsp?page="+(page-1);--%>
     <%--form3.submit();--%>
@@ -52,7 +52,7 @@ BODY {
   <%--var page=parseInt(form3.page.value);--%>
   <%--var pageCount=parseInt(form3.pageCount.value);--%>
   <%--if(page>=pageCount){--%>
-    <%--alert("ÒÑÖÁ×îºóÒ»Ò³");--%>
+    <%--alert("å·²è‡³æœ€åä¸€é¡µ");--%>
   <%--}else{--%>
     <%--form3.action="<%=basePath%><%=dir %>/member/person.jsp?page="+(page+1);--%>
     <%--form3.submit();--%>
@@ -61,12 +61,12 @@ BODY {
 <%--function bjump(){--%>
   	<%--var pageCount=parseInt(form3.pageCount.value);--%>
   	<%--if( fIsNumber(form3.busjump.value,"1234567890")!=1 ){--%>
-		<%--alert("Ìø×ªÎÄ±¾¿òÖĞÖ»ÄÜÊäÈëÊı×Ö!");--%>
+		<%--alert("è·³è½¬æ–‡æœ¬æ¡†ä¸­åªèƒ½è¾“å…¥æ•°å­—!");--%>
 		<%--form3.busjump.select();--%>
 		<%--form3.busjump.focus();--%>
 		<%--return false;--%>
 	<%--}--%>
-	<%--if(form3.busjump.value>pageCount){//Èç¹ûÌø×ªÎÄ±¾¿òÖĞÊäÈëµÄÒ³Êı³¬¹ı×îºóÒ»Ò³µÄÊı£¬ÔòÌøµ½×îºóÒ»Ò³--%>
+	<%--if(form3.busjump.value>pageCount){//å¦‚æœè·³è½¬æ–‡æœ¬æ¡†ä¸­è¾“å…¥çš„é¡µæ•°è¶…è¿‡æœ€åä¸€é¡µçš„æ•°ï¼Œåˆ™è·³åˆ°æœ€åä¸€é¡µ--%>
 	  <%--if(pageCount==0){	--%>
 	  <%--form3.action="<%=basePath%><%=dir %>/member/person.jsp?page=1";--%>
 	  <%--form3.submit();--%>
@@ -79,7 +79,7 @@ BODY {
 <%--else if(form3.busjump.value<=pageCount){--%>
 <%--var page=parseInt(form3.busjump.value);--%>
    <%--if(page==0){--%>
-      <%--page=1;//Èç¹ûÄãÊäÈëµÄÊÇ0£¬ÄÇÃ´¾ÍÈÃËüµÈÓÚ1--%>
+      <%--page=1;//å¦‚æœä½ è¾“å…¥çš„æ˜¯0ï¼Œé‚£ä¹ˆå°±è®©å®ƒç­‰äº1--%>
       <%--form3.action="<%=basePath%><%=dir %>/member/person.jsp?page="+page;--%>
       <%--form3.submit();--%>
    <%--}else{--%>
@@ -90,7 +90,7 @@ BODY {
 <%--}--%>
 
 <%--}--%>
-<%--//****ÅĞ¶ÏÊÇ·ñÊÇNumber.--%>
+<%--//****åˆ¤æ–­æ˜¯å¦æ˜¯Number.--%>
 <%--function fIsNumber (sV,sR){--%>
 <%--var sTmp;--%>
 <%--if(sV.length==0){ return (false);}--%>
@@ -109,7 +109,7 @@ BODY {
 <%--{--%>
 	<%--if(document.sform.id.value.replace(/\s+$|^\s+/g,"").length<=0&&document.sform.name.value.replace(/\s+$|^\s+/g,"").length<=0)--%>
 	<%--{--%>
-		<%--alert("ÇëÊäÈë²éÑ¯Ìõ¼ş£ºID»òÕß»áÔ±Ãû£¡");--%>
+		<%--alert("è¯·è¾“å…¥æŸ¥è¯¢æ¡ä»¶ï¼šIDæˆ–è€…ä¼šå‘˜åï¼");--%>
 		<%--document.sform.id.focus();--%>
 		<%--return false;--%>
 	<%--}--%>
@@ -119,13 +119,13 @@ BODY {
 <%--{--%>
 	<%--if(document.sform.stime.value.replace(/\s+$|^\s+/g,"").length<=0)--%>
 	<%--{--%>
-		<%--alert("ÇëÊäÈëÆğÊ¼Ê±¼ä£¡");--%>
+		<%--alert("è¯·è¾“å…¥èµ·å§‹æ—¶é—´ï¼");--%>
 		<%--document.sform.stime.focus();--%>
 		<%--return false;--%>
 	<%--}--%>
 	<%--if(document.sform.etime.value.replace(/\s+$|^\s+/g,"").length<=0)--%>
 	<%--{--%>
-		<%--alert("ÇëÊäÈë½ØÖ¹Ê±¼ä£¡");--%>
+		<%--alert("è¯·è¾“å…¥æˆªæ­¢æ—¶é—´ï¼");--%>
 		<%--document.sform.etime.focus();--%>
 		<%--return false;--%>
 	<%--}--%>
@@ -161,27 +161,27 @@ BODY {
        <%--<TABLE width="100%" border=0 align="center" cellPadding=3 cellSpacing=1 class=tablewidth>--%>
 		  <%--<TBODY>--%>
 		  <%--<TR align="center" class=head>--%>
-			<%--<TD height=23>ĞòºÅ</TD>--%>
-			<%--<TD>»áÔ±Ãû</TD>--%>
-			<%--<TD>×¢²áÊ±¼ä</TD>--%>
-			<%--<TD>µÇÂ½´ÎÊı</TD>--%>
-			<%--<TD>ÉÏ´ÎµÇÂ½Ê±¼ä</TD>--%>
-			<%--<TD>ÉÏ´ÎµÇÂ½IP</TD>--%>
-			<%--<TD>×´Ì¬</TD>--%>
-			<%--<TD>Ñ¡Ôñ</TD>--%>
+			<%--<TD height=23>åºå·</TD>--%>
+			<%--<TD>ä¼šå‘˜å</TD>--%>
+			<%--<TD>æ³¨å†Œæ—¶é—´</TD>--%>
+			<%--<TD>ç™»é™†æ¬¡æ•°</TD>--%>
+			<%--<TD>ä¸Šæ¬¡ç™»é™†æ—¶é—´</TD>--%>
+			<%--<TD>ä¸Šæ¬¡ç™»é™†IP</TD>--%>
+			<%--<TD>çŠ¶æ€</TD>--%>
+			<%--<TD>é€‰æ‹©</TD>--%>
 		  <%--</TR>--%>
 		<%--<%--%>
 			<%--mb.setEVERYPAGENUM(10);--%>
-			<%--int cou = mb.getMessageCount();//µÃµ½ĞÅÏ¢×ÜÊı			        --%>
+			<%--int cou = mb.getMessageCount();//å¾—åˆ°ä¿¡æ¯æ€»æ•°			        --%>
 			<%--String page1=request.getParameter("page");--%>
 			<%--if(page1==null){--%>
 				<%--page1="1";--%>
 			<%--}--%>
 			<%--session.setAttribute("busMessageCount", cou + "");--%>
 			<%--session.setAttribute("busPage", page1);--%>
-			<%--List pagelist1 = mb.getMessage(Integer.parseInt(page1)); //´ø½øÒ»¸öÒ³Êı£¬²¢·µ»Ø¸ÃÒ³ËùÒªÏÔÊ¾µÄĞÅÏ¢ --%>
+			<%--List pagelist1 = mb.getMessage(Integer.parseInt(page1)); //å¸¦è¿›ä¸€ä¸ªé¡µæ•°ï¼Œå¹¶è¿”å›è¯¥é¡µæ‰€è¦æ˜¾ç¤ºçš„ä¿¡æ¯ --%>
 			<%--session.setAttribute("qqq", pagelist1);--%>
-			<%--int pageCount = mb.getPageCount(); //µÃµ½Ò³Êı  --%>
+			<%--int pageCount = mb.getPageCount(); //å¾—åˆ°é¡µæ•°  --%>
 			<%--session.setAttribute("busPageCount", pageCount + ""); --%>
 			<%--List pagelist3=(ArrayList)session.getAttribute("qqq");--%>
 			<%--%>--%>
@@ -202,7 +202,7 @@ BODY {
 		  <%--<TR align="center" bgColor=#ffffff>--%>
 		    <%--<TD id=map><%=i+1 %></TD>--%>
 			<%--<TD id=map>--%>
-			<%--<a title="µã»÷²é¿´ÏêÏ¸ĞÅÏ¢" href="javascript:" onclick="window.showModelessDialog('<%=basePath+dir %>/member/pminfo.jsp?id=<%=pagelist2.get(0).toString()%>','newwin','dialogHeight:400px;   dialogWidth:   600px;   dialogTop:0px;   dialogLeft:   5px;   edge:   Raised;   center:   Yes;   help:   Yes;   resizable:   Yes;   status:yes;');">					--%>
+			<%--<a title="ç‚¹å‡»æŸ¥çœ‹è¯¦ç»†ä¿¡æ¯" href="javascript:" onclick="window.showModelessDialog('<%=basePath+dir %>/member/pminfo.jsp?id=<%=pagelist2.get(0).toString()%>','newwin','dialogHeight:400px;   dialogWidth:   600px;   dialogTop:0px;   dialogLeft:   5px;   edge:   Raised;   center:   Yes;   help:   Yes;   resizable:   Yes;   status:yes;');">					--%>
 			<%--<%=pagelist2.get(1).toString() %>--%>
 			<%--</a>--%>
 			<%--</TD>--%>
@@ -211,14 +211,14 @@ BODY {
 			<%--<TD id=map><%=pagelist2.get(5).toString() %></TD>--%>
 			<%--<TD id=map><%=pagelist2.get(6).toString() %></TD>--%>
 			<%--<TD id=map><a href="<%=basePath%>MemberManage.do?method=CLOSE&id=<%=pagelist2.get(0).toString()%>">--%>
-			<%--<%if(Integer.parseInt(pagelist2.get(3).toString())==1){%><font color=blue>ÔÚÓÃ</font><%}else{%><font color=red>¶³½á</font><%} %>--%>
+			<%--<%if(Integer.parseInt(pagelist2.get(3).toString())==1){%><font color=blue>åœ¨ç”¨</font><%}else{%><font color=red>å†»ç»“</font><%} %>--%>
 			<%--</a></TD>--%>
 			<%--<TD id=map><input type="checkbox" name="checkit" value="<%=pagelist2.get(0).toString()%>"></TD>--%>
 		  <%--</TR>--%>
 		<%--<%}%>    	--%>
 		  <%--<TR align="right" >--%>
 			 <%--<TD colspan="10" id=map>--%>
-			 <%--<input type="checkbox" name="checkall" onClick="allch()" >&nbsp;È«Ñ¡--%>
+			 <%--<input type="checkbox" name="checkall" onClick="allch()" >&nbsp;å…¨é€‰--%>
 			 <%--</TD>--%>
 			 <%--</TR>--%>
 		<%----%>
@@ -233,14 +233,14 @@ BODY {
 		     <%--<TR align="right" class=head>--%>
 			 <%--<TD >--%>
 			 <%--<form action="" method="post" name="form3">	--%>
-			 <%--<input type="hidden" name="pageCount" value="<%= session.getAttribute("busPageCount").toString()%>" /><!--//ÓÃÓÚ¸øÉÏÃæjavascript´«Öµ-->--%>
-			 <%--<input type="hidden" name="page" value="<%=session.getAttribute("busPage").toString()%>" /><!--//ÓÃÓÚ¸øÉÏÃæjavascript´«Öµ-->         --%>
+			 <%--<input type="hidden" name="pageCount" value="<%= session.getAttribute("busPageCount").toString()%>" /><!--//ç”¨äºç»™ä¸Šé¢javascriptä¼ å€¼-->--%>
+			 <%--<input type="hidden" name="page" value="<%=session.getAttribute("busPage").toString()%>" /><!--//ç”¨äºç»™ä¸Šé¢javascriptä¼ å€¼-->         --%>
 							<%--<a href="#" onClick="top()"><img src="<%=basePath %>images/first.gif" border="0" /></a>&nbsp;&nbsp;&nbsp;--%>
 				<%--<a href="#" onClick="pre()"><img src="<%=basePath %>images/pre.gif" border="0" /></a>&nbsp;&nbsp;&nbsp;--%>
-				 <%--¹²<%=session.getAttribute("busMessageCount").toString()%>Ìõ¼ÇÂ¼,¹²¼Æ<%=session.getAttribute("busPageCount").toString()%>Ò³,µ±Ç°µÚ<%=session.getAttribute("busPage").toString()%>Ò³&nbsp;&nbsp;&nbsp;--%>
+				 <%--å…±<%=session.getAttribute("busMessageCount").toString()%>æ¡è®°å½•,å…±è®¡<%=session.getAttribute("busPageCount").toString()%>é¡µ,å½“å‰ç¬¬<%=session.getAttribute("busPage").toString()%>é¡µ&nbsp;&nbsp;&nbsp;--%>
 				<%--<a href="#" onClick="next()"><img src="<%=basePath %>images/next.gif" border="0" /></a>&nbsp;&nbsp;&nbsp;--%>
 				<%--<a href="#" onClick="last()"><img src="<%=basePath %>images/last.gif" border="0" /></a>--%>
-			 <%--µÚ<input name="busjump" type="text" size="3" />Ò³<a href="#" onClick="bjump()"><img src="<%=basePath %>images/jump.gif" border="0" /></a>&nbsp;&nbsp;&nbsp;--%>
+			 <%--ç¬¬<input name="busjump" type="text" size="3" />é¡µ<a href="#" onClick="bjump()"><img src="<%=basePath %>images/jump.gif" border="0" /></a>&nbsp;&nbsp;&nbsp;--%>
 			 <%--</form>--%>
              <%--</TD>--%>
              <%--</TR>--%>
@@ -254,7 +254,7 @@ BODY {
 		     <%--<TBODY>--%>
 		     <%--<TR align="center" class=head>--%>
 			 <%--<TD >--%>
-			 <%--<input type="button" name="button" value="É¾³ı" onClick="del()" >--%>
+			 <%--<input type="button" name="button" value="åˆ é™¤" onClick="del()" >--%>
 			 <%--</TD>--%>
 			 <%--</TR>--%>
 			 <%--</TBODY>--%>
@@ -272,14 +272,14 @@ BODY {
 <TABLE width="100%" border=0 align="center" cellPadding=3 cellSpacing=1 class=tablewidth>
 <TBODY>
 <TR align="center" class=head ID="blog">
-<TD height=23 WIDTH="10%" class="center">ĞòºÅ</TD>
-<TD WIDTH="10%" class="center">»áÔ±Ãû</TD>
-<TD WIDTH="10%" class="center">×¢²áÊ±¼ä</TD>
-<TD WIDTH="10%" class="center">µÇÂ½´ÎÊı</TD>
-<TD WIDTH="15%" class="center">ÉÏ´ÎµÇÂ½Ê±¼ä</TD>
-<TD WIDTH="15%" class="center">ÉÏ´ÎµÇÂ½IP</TD>
-<TD WIDTH="10%" class="center">×´Ì¬</TD>
-<TD WIDTH="10%" class="center">Ñ¡Ôñ</TD>
+<TD height=23 WIDTH="10%" class="center">åºå·</TD>
+<TD WIDTH="10%" class="center">ä¼šå‘˜å</TD>
+<TD WIDTH="10%" class="center">æ³¨å†Œæ—¶é—´</TD>
+<TD WIDTH="10%" class="center">ç™»é™†æ¬¡æ•°</TD>
+<TD WIDTH="15%" class="center">ä¸Šæ¬¡ç™»é™†æ—¶é—´</TD>
+<TD WIDTH="15%" class="center">ä¸Šæ¬¡ç™»é™†IP</TD>
+<TD WIDTH="10%" class="center">çŠ¶æ€</TD>
+<TD WIDTH="10%" class="center">é€‰æ‹©</TD>
 </TR>
 
 </TBODY>
@@ -300,10 +300,10 @@ BODY {
             totalPages: 1,
             visiblePages: 1,
             currentPage: 1,
-            first: '<li> <a href="javascript:void(0);">Ê×Ò³</a></li>',
-            prev: '<li ><a href="javascript:void(0);">ÉÏÒ»Ò³</a></li>',
-            next: '<li ><a href="javascript:void(0);">ÏÂÒ»Ò³</a></li>',
-            last: '<li ><a href="javascript:void(0);">Ä©Ò³</a></li>',
+            first: '<li> <a href="javascript:void(0);">é¦–é¡µ</a></li>',
+            prev: '<li ><a href="javascript:void(0);">ä¸Šä¸€é¡µ</a></li>',
+            next: '<li ><a href="javascript:void(0);">ä¸‹ä¸€é¡µ</a></li>',
+            last: '<li ><a href="javascript:void(0);">æœ«é¡µ</a></li>',
             page: '<li class="active"><a href="javascript:void(0);">{{page}}</a></li>',
             onPageChange: function (num, type) {
 
@@ -321,11 +321,11 @@ BODY {
 
             $.ajax({
                 type: 'GET',
-                contentType: 'application/x-www-form-urlencoded',//×¢ÒâÀàĞÍ
+                contentType: 'application/x-www-form-urlencoded',//æ³¨æ„ç±»å‹
                 /**
-                 *(Ä¬ÈÏ: true) Ä¬ÈÏÇé¿öÏÂ£¬Í¨¹ıdataÑ¡Ïî´«µİ½øÀ´µÄÊı¾İ£¬Èç¹ûÊÇÒ»¸ö¶ÔÏó(¼¼ÊõÉÏ½²Ö»Òª²»ÊÇ×Ö·û´®)£¬
-                 * ¶¼»á´¦Àí×ª»¯³ÉÒ»¸ö²éÑ¯×Ö·û´®£¬ÒÔÅäºÏÄ¬ÈÏÄÚÈİÀàĞÍ "application/x-www-form-urlencoded"¡£
-                 * Èç¹ûÒª·¢ËÍ DOM Ê÷ĞÅÏ¢»òÆäËü²»Ï£Íû×ª»»µÄĞÅÏ¢£¬ÇëÉèÖÃÎª false¡£
+                 *(é»˜è®¤: true) é»˜è®¤æƒ…å†µä¸‹ï¼Œé€šè¿‡dataé€‰é¡¹ä¼ é€’è¿›æ¥çš„æ•°æ®ï¼Œå¦‚æœæ˜¯ä¸€ä¸ªå¯¹è±¡(æŠ€æœ¯ä¸Šè®²åªè¦ä¸æ˜¯å­—ç¬¦ä¸²)ï¼Œ
+                 * éƒ½ä¼šå¤„ç†è½¬åŒ–æˆä¸€ä¸ªæŸ¥è¯¢å­—ç¬¦ä¸²ï¼Œä»¥é…åˆé»˜è®¤å†…å®¹ç±»å‹ "application/x-www-form-urlencoded"ã€‚
+                 * å¦‚æœè¦å‘é€ DOM æ ‘ä¿¡æ¯æˆ–å…¶å®ƒä¸å¸Œæœ›è½¬æ¢çš„ä¿¡æ¯ï¼Œè¯·è®¾ç½®ä¸º falseã€‚
                  */
                 processData: false,
                 url: '/getmenbers',
@@ -335,7 +335,7 @@ BODY {
                     console.dir(JSON.stringify(data))
 
                     if (data.pages==0){
-                        $('#aaa').html("ÔİÎŞÊı¾İ")
+                        $('#aaa').html("æš‚æ— æ•°æ®")
                         return;
                     } else{
                     }
@@ -350,12 +350,12 @@ BODY {
                     var use = new Array();
                     for (i=0;i<blogdata.length;i++){
                         if (blogdata[i].ifuse==1){
-                            console.dir("ÔÚÓÃ")
-                            use[i] = "ÔÚÓÃ"
+                            console.dir("åœ¨ç”¨")
+                            use[i] = "åœ¨ç”¨"
                         }
                         else{
-                            console.dir("¶³½á")
-                            use[i]= "¶³½á"}
+                            console.dir("å†»ç»“")
+                            use[i]= "å†»ç»“"}
 
 					}
                     for (i=0;i<blogdata.length;i++){
@@ -369,7 +369,7 @@ BODY {
                             '      <td width="20%"  bgcolor="#FFFFFF"  style="border-bottom:1px dotted #ccc;" class="center">' +
 							'<a href="/setuse?ifuse='+blogdata[i].ifuse+'&id='+blogdata[i].id+'">'+use[i]+ '</a> </td>\n' +
 
-                            '      <td width="10%" bgcolor="#FFFFFF"  style="border-bottom:1px dotted #ccc;" class="center"><a href="/delmen?id='+blogdata[i].id+'" >É¾³ı</a></td>\n' +
+                            '      <td width="10%" bgcolor="#FFFFFF"  style="border-bottom:1px dotted #ccc;" class="center"><a href="/delmen?id='+blogdata[i].id+'" >åˆ é™¤</a></td>\n' +
                             '    </tr>'
                     }
 
@@ -379,7 +379,7 @@ BODY {
 
                 },
                 error: function () {
-                    alert('ÇëÇó´íÎó');
+                    alert('è¯·æ±‚é”™è¯¯');
 
                 }
 

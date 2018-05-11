@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*,util.*" contentType="text/html;charset=gb2312"%>
+<%@ page language="java" import="java.util.*"  pageEncoding="utf-8" contentType="text/html;charset=UTF-8" %>
 <%--<jsp:useBean id="sn" scope="page" class="com.bean.SystemBean" />--%>
 <%
 //List list = sn.getSiteInfo();
@@ -8,8 +8,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 %>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Frameset//EN">
-<HTML><HEAD><TITLE>网站后台管理---admin</TITLE>
-<META http-equiv=Content-Type content="text/html; charset=gb2312">
+<HTML><HEAD><TITLE>缃戠珯鍚庡彴绠＄悊---admin</TITLE>
+
 <META content="MSHTML 6.00.2900.3243" name=GENERATOR></HEAD>
 <%
 	String username=(String)session.getAttribute("user");

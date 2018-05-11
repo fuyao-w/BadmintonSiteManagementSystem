@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*"  contentType="text/html;charset=gb2312"%>
+<%@ page language="java" import="java.util.*"  pageEncoding="utf-8" contentType="text/html;charset=UTF-8" %>
 <%--<jsp:useBean id="sn" scope="page" class="com.bean.SystemBean" />--%>
 <%
 String path = request.getContextPath();
@@ -8,7 +8,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <HTML><HEAD>
 <META http-equiv=Content-Language content=zh-cn>
-<META http-equiv=Content-Type content="text/html; charset=gb2312">
+
 <LINK href="<%=basePath %>admin/images/Admin_Style.css" type=text/css rel=stylesheet>
 <SCRIPT language=JavaScript src="<%=basePath %>admin/images/SetFocus.js"></SCRIPT>
 <META content="MSHTML 6.00.2900.3243" name=GENERATOR>

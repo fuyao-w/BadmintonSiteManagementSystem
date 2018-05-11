@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*,com.util.*" contentType="text/html;charset=gb2312" %>
+<%@ page language="java" import="java.util.*"  pageEncoding="utf-8" contentType="text/html;charset=UTF-8" %>
 <%@ include file="iframe/head.jsp" %>
 <%@page isELIgnored="false"%>
 <%@ taglib prefix="c"  uri="http://java.sun.com/jsp/jstl/core" %>
@@ -7,7 +7,7 @@
 <HEAD>
 	<LINK href="images/default.css" type=text/css rel=stylesheet>
 	<LINK href="images/css.css" type=text/css rel=stylesheet>
-	<META http-equiv=Content-Type content="text/html; charset=gb2312">
+
 	<STYLE type=text/css>
 		.ycbt {
 			BORDER-RIGHT: #fff 1px solid; BORDER-TOP: #fff 1px solid; PADDING-LEFT: 1.8em; BACKGROUND-COLOR: #EAF2EF; BORDER-LEFT: #fff 1px solid; PADDING-TOP: 7px; BORDER-BOTTOM: #fff 1px solid; HEIGHT: 20px
@@ -33,7 +33,7 @@
                     document.getElementById("tb"+t+ "_nr" + i).className= "xsnr";}}}
 	</SCRIPT>
 	<SCRIPT language=JavaScript>
-        <!--//���γ�������
+        <!--//屏蔽出错代码
         function killErr(){
             return true;
         }
@@ -41,7 +41,7 @@
         //-->
 	</SCRIPT>
 	<SCRIPT language=JavaScript>
-        <!--//���������һ������С����
+        <!--//处理大分类一行两个小分类
         function autoTable(div){
             fs=document.getElementById(div).getElementsByTagName("TABLE");
             for(var i=0;i<fs.length;i++){
@@ -73,34 +73,34 @@
     {//rs  sj ts lxr lxfs
         if(document.form1.rs.value=="")
         {
-            alert("����дԤ��������");
+            alert("请填写预定人数！");
             document.form1.rs.focus();
             return false;
         }
         if(isNaN(document.form1.rs.value))
         {
-            alert("����ֻ��Ϊ������");
+            alert("人数只能为整数！");
             document.form1.rs.focus();
             return false;
         }
         if(document.form1.sj.value=="")
         {
-            alert("����дԤ��ʱ�䣡");
+            alert("请填写预定时间！");
             document.form1.sj.focus();
             return false;
         }if(document.form1.ts.value=="")
     {
-        alert("����д��ϵ��ַ��");
+        alert("请填写联系地址！");
         document.form1.ts.focus();
         return false;
     }if(document.form1.lxr.value=="")
     {
-        alert("����д��ϵ�ˣ�");
+        alert("请填写联系人！");
         document.form1.lxr.focus();
         return false;
     }if(document.form1.lxfs.value=="")
     {
-        alert("����д��ϵ��ʽ��");
+        alert("请填写联系方式！");
         document.form1.lxfs.focus();
         return false;
     }
@@ -113,7 +113,7 @@
 %>
 <BODY text=#000000 bgColor=#ffffff leftMargin=0 topMargin=0>
 <SCRIPT language=JavaScript>
-    <!--//Ŀ����Ϊ������񷽱�
+    <!--//目的是为了做风格方便
     document.write('<div class="wrap">');
     //-->
 </SCRIPT>
@@ -121,36 +121,36 @@
 	<TBODY>
 	<TR>
 		<TD class=head >
-			<SPAN class=TAG>��ҪԤԼ</SPAN>
+			<SPAN class=TAG>我要预约</SPAN>
 
 		</TD>
 	</TR>
 	<TR>
 		<TD  class=middle align="center" >
-			<form action="/addprep" method="post" name="form1" >
+			<form action="/addprep" method="post" accept-charset="UTF-8"  name="form1" >
 				<TABLE   cellSpacing=0 cellPadding=0 width="100%" border=0>
 					<TBODY>
 
 					<TR><input type=hidden name=member value=<%=member%>><input type=hidden name=sid value=<%=request.getParameter("id")%>><input type=hidden name=title value=${sale.getTitle()}>
-						<TD width=45% align=right>�������ƣ�</TD><TD align=left>${sale.getTitle()}</TD>
+						<TD width=45% align=right>场地名称：</TD><TD align=left>${sale.getTitle()}</TD>
 					</TR>
 					<TR>
-						<TD width=45% align=right>ԤԼ������</TD><TD align=left><input type=text name=rs ></TD>
+						<TD width=45% align=right>预约人数：</TD><TD align=left><input type=text name=rs ></TD>
 					</TR>
 					<TR>
-						<TD  align=right>ԤԼʱ�䣺</TD><TD align=left><input type=text name=sj  ></TD>
+						<TD  align=right>预约时间：</TD><TD align=left><input type=text name=sj  ></TD>
 					</TR>
 					<TR>
-						<TD  align=right>��ϵ��ַ��</TD><TD align=left><input type=text name=ts  ></TD>
+						<TD  align=right>联系地址：</TD><TD align=left><input type=text name=ts  ></TD>
 					</TR>
 					<TR>
-						<TD  align=right>�� ϵ �ˣ�</TD><TD align=left><input type=text name=lxr ></TD>
+						<TD  align=right>联 系 人：</TD><TD align=left><input type=text name=lxr ></TD>
 					</TR>
 					<TR>
-						<TD  align=right>��ϵ�绰��</TD><TD align=left><input type=text name=lxfs  ></TD>
+						<TD  align=right>联系电话：</TD><TD align=left><input type=text name=lxfs  ></TD>
 					</TR>
 					<TR>
-						<TD  align=center colspan=2><br><input type=button onclick="f1()" value="�ύԤ��"></TD>
+						<TD  align=center colspan=2><br><input type=button onclick="f1()" value="提交预订"></TD>
 					</TR>
 					</TBODY>
 				</TABLE>
@@ -161,7 +161,7 @@
 </TABLE>
 
 <SCRIPT language=JavaScript>
-    <!--//Ŀ����Ϊ������񷽱�
+    <!--//目的是为了做风格方便
     document.write('</div>');
     //-->
 </SCRIPT>

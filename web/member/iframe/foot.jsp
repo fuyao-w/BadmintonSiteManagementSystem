@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*"  contentType="text/html;charset=gb2312"%>
+<%@ page language="java" import="java.util.*"  pageEncoding="utf-8" contentType="text/html;charset=UTF-8" %>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -6,7 +6,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <HTML><HEAD>
-<META http-equiv=Content-Type content="text/html; charset=gb2312">
+
 <SCRIPT language=JavaScript src="<%=basePath %>member/images/SetFocus.js"></SCRIPT>
 
 <STYLE>TD {
@@ -23,11 +23,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	}else{
 %>
 <BODY  oncontextmenu="return false;" onselectstart="return false;" leftMargin=0 background=<%=basePath %>member/images/MainBg.gif topMargin=0 scroll=no marginheight="0" marginwidth="0">
-<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+<TABLE  cellSpacing=0 cellPadding=0 width="100%" border=0>
   <TBODY>
   <TR>
     <TD bgColor=#73a3d4 height=6></TD></TR></TBODY></TABLE>
-<TABLE height=28 cellSpacing=0 cellPadding=0 width="100%" bgColor=#3a6592 
+<TABLE style="background: #3ea751" height=28 cellSpacing=0 cellPadding=0 width="100%" bgColor=#3a6592
 border=0>
   <TBODY>
   <TR>
@@ -36,14 +36,14 @@ border=0>
         <TBODY>
         <TR>
           <TD align=right width=109>
-            <DIV id=st title=全屏/半屏 style="CURSOR: hand" 
+            <DIV id=st title=鍏ㄥ睆/鍗婂睆 style="CURSOR: hand" 
             onclick=ChangeLeftFrameStatu(); align=center><FONT 
-            color=red>×</FONT> 关闭左栏</DIV></TD>
+            color=red>
           <TD align=right width=628></TD>
           <TD 
           style="FONT-WEIGHT: bolder; FILTER: shadow(Color=#000000,direction=180)" 
           align=right width=250></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
-<SCRIPT language=javascript>    var screen=false;i=0;width=0;    function ChangeLeftFrameStatu()    {        if(screen==false)        {            parent.FrameMain.cols='0,*';            screen=true;            self.st.innerHTML = "√ 打开左栏"        }        else if(screen==true)        {            parent.FrameMain.cols='165,*';           screen=false;            self.st.innerHTML = "<font color=red>×</font> 关闭左栏"        }    }</SCRIPT>
+<SCRIPT language=javascript>    var screen=false;i=0;width=0;    function ChangeLeftFrameStatu()    {        if(screen==false)        {            parent.FrameMain.cols='0,*';            screen=true;            self.st.innerHTML = "鈭� 鎵撳紑宸︽爮"        }        else if(screen==true)        {            parent.FrameMain.cols='165,*';           screen=false;            self.st.innerHTML = "<font color=red>脳</font> 鍏抽棴宸︽爮"        }    }</SCRIPT>
 </BODY>
 <%} %>
 </HTML>

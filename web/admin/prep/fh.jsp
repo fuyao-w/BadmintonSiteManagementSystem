@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*"  contentType="text/html;charset=gb2312"%>
+<%@ page language="java" import="java.util.*"  pageEncoding="utf-8" contentType="text/html;charset=UTF-8" %>
 <%--<jsp:useBean id="sn" scope="page" class="com.bean.SystemBean" />--%>
 <%--<jsp:useBean id="tb" scope="page" class="com.bean.HzpBean" />--%>
 <%
@@ -6,7 +6,7 @@ String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 //String dir=sn.getDir();
 %>
-<HTML><HEAD><TITLE>ºóÌ¨²Ù×÷Çø</TITLE>
+<HTML><HEAD><TITLE>åå°æ“ä½œåŒº</TITLE>
 <LINK href="<%=basePath %>admin/images/Admin_Style.css" type=text/css rel=stylesheet>
 <LINK href="<%=basePath %>admin/images/style.css" type=text/css rel=stylesheet>
 <SCRIPT language=JavaScript src="<%=basePath %>admin/images/Common.js"></SCRIPT>
@@ -25,60 +25,36 @@ BODY {
 </STYLE>
 </HEAD>
 
-<%--<%--%>
-<%--String message = (String)request.getAttribute("message");--%>
-	<%--if(message == null){--%>
-		<%--message = "";--%>
-	<%--}--%>
-	<%--if (!message.trim().equals("")){--%>
-		<%--out.println("<script language='javascript'>");--%>
-		<%--out.println("alert('"+message+"');");--%>
-		<%--out.println("</script>");--%>
-	<%--}--%>
-	<%--request.removeAttribute("message");--%>
-<%--%>--%>
-<%--<%--%>
-	<%--String username=(String)session.getAttribute("user");--%>
-	<%--if(username==null){--%>
-		<%--response.sendRedirect(path+"/error.jsp");--%>
-	<%--}--%>
-	<%--else{--%>
-		<%--List pagelist3=tb.gegComMethod("select * from dd where zt='ÒÑ´¦Àí' order by id desc",6);--%>
-<%--%>--%>
+<%
+String message = (String)request.getAttribute("message");
+	if(message == null){
+		message = "";
+	}
+	if (!message.trim().equals("")){
+		out.println("<script language='javascript'>");
+		out.println("alert('"+message+"');");
+		out.println("</script>");
+	}
+	request.removeAttribute("message");
+%>
+
 <BODY >
 <TABLE  cellSpacing=0 cellPadding=0 width="100%" border=0>
   <TBODY>
   <TR>
     <TD align="left" vAlign=top >
 <table width='100%' cellspacing='1' cellpadding='3' bgcolor='#CCCCCC' class="tablewidth">
-     <tr id="blog" class="head">
-      <td width="10%" class="center">±àºÅ</td>
-      <td  align="center" width="20%" class="center">¶©µ¥±àºÅ</td>
-      <td  align="center" width="15%" class="center">¶©µ¥»áÔ±</td>
-      <td  align="center" width="10%" class="center">µ±Ç°×´Ì¬</td>
-      <td  align="center" width="10%" class="center">¸¶¿î·½Ê½</td>
-      <td  align="center" width="15%" class="center">Ô¤¶©Ê±¼ä</td>
-      <td  align="center" width="10%" class="center">²é¿´ÏêÏ¸</td>
-      <td  align="center" width="10%" class="center">É¾³ı</td>
+     <tr  class="head">
+      <td width="10%" class="center">ç¼–å·</td>
+      <td  align="center" width="20%" class="center">è®¢å•ç¼–å·</td>
+      <td  align="center" width="15%" class="center">è®¢å•ä¼šå‘˜</td>
+      <td  align="center" width="10%" class="center">å½“å‰çŠ¶æ€</td>
+      <td  align="center" width="10%" class="center">ä»˜æ¬¾æ–¹å¼</td>
+      <td  align="center" width="15%" class="center">é¢„è®¢æ—¶é—´</td>
+      <td  align="center" width="10%" class="center">ç»“æŸè®¢å•</td>
+      <td  align="center" width="10%" class="center">åˆ é™¤</td>
     </tr>
-    <%--<%--%>
-			<%--if(!pagelist3.isEmpty()){--%>
-				<%--for(int i=0;i<pagelist3.size();i++){--%>
-					<%--List pagelist2 =(ArrayList)pagelist3.get(i);--%>
-			<%--%> --%>
-	<%--<tr  class="trA" onMouseOver="this.className='trB'" onMouseOut="this.className='trA'"> --%>
-      <%--<td width='10%' align="center" style="border-bottom:1px dotted #ccc;"><%=i+1 %></td>--%>
-      <%--<td align="center" bgcolor="#FFFFFF"  style="border-bottom:1px dotted #ccc;"><%=pagelist2.get(1).toString() %></td>--%>
-      <%--<td align="center" bgcolor="#FFFFFF"  style="border-bottom:1px dotted #ccc;"><%=pagelist2.get(2).toString() %></td>--%>
-      <%--<td align="center" bgcolor="#FFFFFF"  style="border-bottom:1px dotted #ccc;"><%=pagelist2.get(3).toString() %></td>--%>
-      <%--<td align="center" bgcolor="#FFFFFF"  style="border-bottom:1px dotted #ccc;"><%=pagelist2.get(4).toString() %></td>--%>
-      <%--<td align="center" bgcolor="#FFFFFF"  style="border-bottom:1px dotted #ccc;"><%=pagelist2.get(5).toString() %></td>--%>
-      <%--<td align="center" bgcolor="#FFFFFF"  style="border-bottom:1px dotted #ccc;"><a href="<%=basePath %>admin/prep/info.jsp?ddid=<%=pagelist2.get(1).toString()%>">²é¿´ÏêÏ¸</a></td>--%>
-      <%--<td align="center" bgcolor="#FFFFFF"  style="border-bottom:1px dotted #ccc;"><a href="<%=basePath %>NewsServlet?method=dDD2&ddid=<%=pagelist2.get(1).toString()%>">É¾³ı</a></td>--%>
-    <%--</tr>--%>
-<%--<%--%>
-	<%--}} --%>
-<%--%>  --%>
+    <table width="100%" id="blog"></table>
 
 
 
@@ -102,10 +78,10 @@ BODY {
         totalPages: 1,
         visiblePages: 1,
         currentPage: 1,
-        first: '<li> <a href="javascript:void(0);">Ê×Ò³</a></li>',
-        prev: '<li ><a href="javascript:void(0);">ÉÏÒ»Ò³</a></li>',
-        next: '<li ><a href="javascript:void(0);">ÏÂÒ»Ò³</a></li>',
-        last: '<li ><a href="javascript:void(0);">Ä©Ò³</a></li>',
+        first: '<li> <a href="javascript:void(0);">é¦–é¡µ</a></li>',
+        prev: '<li ><a href="javascript:void(0);">ä¸Šä¸€é¡µ</a></li>',
+        next: '<li ><a href="javascript:void(0);">ä¸‹ä¸€é¡µ</a></li>',
+        last: '<li ><a href="javascript:void(0);">æœ«é¡µ</a></li>',
         page: '<li class="active"><a href="javascript:void(0);">{{page}}</a></li>',
         onPageChange: function (num, type) {
 
@@ -123,11 +99,11 @@ BODY {
 
         $.ajax({
             type: 'GET',
-            contentType: 'application/x-www-form-urlencoded',//×¢ÒâÀàĞÍ
+            contentType: 'application/x-www-form-urlencoded',//æ³¨æ„ç±»å‹
             /**
-             *(Ä¬ÈÏ: true) Ä¬ÈÏÇé¿öÏÂ£¬Í¨¹ıdataÑ¡Ïî´«µİ½øÀ´µÄÊı¾İ£¬Èç¹ûÊÇÒ»¸ö¶ÔÏó(¼¼ÊõÉÏ½²Ö»Òª²»ÊÇ×Ö·û´®)£¬
-             * ¶¼»á´¦Àí×ª»¯³ÉÒ»¸ö²éÑ¯×Ö·û´®£¬ÒÔÅäºÏÄ¬ÈÏÄÚÈİÀàĞÍ "application/x-www-form-urlencoded"¡£
-             * Èç¹ûÒª·¢ËÍ DOM Ê÷ĞÅÏ¢»òÆäËü²»Ï£Íû×ª»»µÄĞÅÏ¢£¬ÇëÉèÖÃÎª false¡£
+             *(é»˜è®¤: true) é»˜è®¤æƒ…å†µä¸‹ï¼Œé€šè¿‡dataé€‰é¡¹ä¼ é€’è¿›æ¥çš„æ•°æ®ï¼Œå¦‚æœæ˜¯ä¸€ä¸ªå¯¹è±¡(æŠ€æœ¯ä¸Šè®²åªè¦ä¸æ˜¯å­—ç¬¦ä¸²)ï¼Œ
+             * éƒ½ä¼šå¤„ç†è½¬åŒ–æˆä¸€ä¸ªæŸ¥è¯¢å­—ç¬¦ä¸²ï¼Œä»¥é…åˆé»˜è®¤å†…å®¹ç±»å‹ "application/x-www-form-urlencoded"ã€‚
+             * å¦‚æœè¦å‘é€ DOM æ ‘ä¿¡æ¯æˆ–å…¶å®ƒä¸å¸Œæœ›è½¬æ¢çš„ä¿¡æ¯ï¼Œè¯·è®¾ç½®ä¸º falseã€‚
              */
             processData: false,
             url: '/getfhpreps',
@@ -136,18 +112,19 @@ BODY {
             success: function (data) {
                 console.dir(JSON.stringify(data))
 
-                if (data.pages==0){
-                    $('#aaa').html("ÔİÎŞÊı¾İ")
+                var pages = data.total<5 ? 1: data.total / 5;
+                if (pages==0){
+                    $('#aaa').html("æš‚æ— æ•°æ®")
                     return;
                 } else{
                 }
                 $('#aaa').jqPaginator('option', {
-                    totalPages: data.pages,
-                    visiblePages: (data.pages>10)?10:data.pages
+                    totalPages: pages,
+                    visiblePages: (pages>10)?10:pages
                 });
                 var blogdata = data.list;
                 blogmes=''
-                $("#blog").after("");
+                $("#blog").html("");
                 for (i=0;i<blogdata.length;i++){
                     blogmes = blogmes+'<tr  class="trA" onMouseOver="this.className="trB" onMouseOut="this.className="trA">\n' +
                         '      <td width="10%"  style="border-bottom:1px dotted #ccc;" class="center">'+blogdata[i].id+'</td>\n' +
@@ -156,19 +133,19 @@ BODY {
                         '      <td  width="10%"  bgcolor="#FFFFFF"  style="border-bottom:1px dotted #ccc;" class="center">'+blogdata[i].zt+'</td>\n' +
                         '      <td width="10%"  bgcolor="#FFFFFF"  style="border-bottom:1px dotted #ccc;" class="center">'+blogdata[i].fkfs+'</td>\n' +
                         '      <td width="15%"  bgcolor="#FFFFFF"  style="border-bottom:1px dotted #ccc;" class="center">'+blogdata[i].addtime+'</td>\n' +
-                        '      <td width="10%"  bgcolor="#FFFFFF"  style="border-bottom:1px dotted #ccc;" class="center"><a href="">´¦Àí</a> </td>\n' +
+                        '      <td width="10%"  bgcolor="#FFFFFF"  style="border-bottom:1px dotted #ccc;" class="center"><a href="/setdd1?id=' + blogdata[i].id + '">å¤„ç†</a> </td>\n' +
 
-                        '      <td width="10%" bgcolor="#FFFFFF"  style="border-bottom:1px dotted #ccc;" class="center"><a href="" >É¾³ı</a></td>\n' +
+                        '      <td width="10%" bgcolor="#FFFFFF"  style="border-bottom:1px dotted #ccc;" class="center"><a href="/deldd1?id=' + blogdata[i].id + '" >åˆ é™¤</a></td>\n' +
                         '    </tr>'
                 }
 
 
-                $("#blog").after(blogmes);
+                $("#blog").html(blogmes);
 
 
             },
             error: function () {
-                alert('ÇëÇó´íÎó');
+                alert('è¯·æ±‚é”™è¯¯');
 
             }
 

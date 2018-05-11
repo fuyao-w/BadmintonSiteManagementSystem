@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*"  contentType="text/html;charset=gb2312"%>
+<%@ page language="java" import="java.util.*"  pageEncoding="utf-8" contentType="text/html;charset=UTF-8" %>
 
 <%
 String path = request.getContextPath();
@@ -10,7 +10,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <HEAD>
 <TITLE></TITLE>
 <META http-equiv=Content-Language content=zh-cn>
-<META http-equiv=Content-Type content="text/html; charset=gb2312">
+
 
 
 <META content="MSHTML 6.00.2900.3243" name=GENERATOR>
@@ -106,7 +106,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <SCRIPT language=JavaScript src="<%=basePath %>images/calendar.js"></SCRIPT>
 
 <SCRIPT language=JavaScript>
-<!--//ÆÁ±Î³ö´í´úÂë
+<!--//å±è”½å‡ºé”™ä»£ç 
 function killErr(){
 	return true;
 }
@@ -114,7 +114,7 @@ window.onerror=killErr;
 //-->
 </SCRIPT>
 <SCRIPT language=JavaScript>
-<!--//´¦Àí´ó·ÖÀàÒ»ĞĞÁ½¸öĞ¡·ÖÀà
+<!--//å¤„ç†å¤§åˆ†ç±»ä¸€è¡Œä¸¤ä¸ªå°åˆ†ç±»
 function autoTable(div){
 	fs=document.getElementById(div).getElementsByTagName("TABLE");
 	for(var i=0;i<fs.length;i++){
@@ -142,7 +142,7 @@ function autoTable(div){
  
 <BODY text=#000000  background=images/xh.gif  leftMargin=0 topMargin=0>
 <%--<SCRIPT language=JavaScript>--%>
-<%--<!--//Ä¿µÄÊÇÎªÁË×ö·ç¸ñ·½±ã--%>
+<%--<!--//ç›®çš„æ˜¯ä¸ºäº†åšé£æ ¼æ–¹ä¾¿--%>
 <%--document.write('<div class="wrap">');--%>
 <%--//-->--%>
 <%--</SCRIPT>--%>
@@ -152,16 +152,16 @@ function autoTable(div){
     <%--<TD vAlign=center align=left>--%>
       <%--<DIV class=jstime style="FLOAT: left; WIDTH: 45%">--%>
       <%--<%String member2=(String)session.getAttribute("member");if(member2==null){ %>--%>
-      <%--¡¾<a href="login.jsp">»áÔ±µÇÂ¼</a>¡¿¡¾<a href="reg.jsp">Ãâ·Ñ×¢²á</a>¡¿¡¾<a href="lost.jsp">Íü¼ÇÃÜÂë</a>¡¿--%>
+      <%--ã€<a href="login.jsp">ä¼šå‘˜ç™»å½•</a>ã€‘ã€<a href="reg.jsp">å…è´¹æ³¨å†Œ</a>ã€‘ã€<a href="lost.jsp">å¿˜è®°å¯†ç </a>ã€‘--%>
       <%--<%}else{   %>--%>
-      <%--»¶Ó­Äú£¬×ğ¾´µÄ»áÔ±£º<%=member2 %> <A href="member/index.jsp" target="">¡¾»áÔ±ÖĞĞÄ¡¿</A>--%>
+      <%--æ¬¢è¿æ‚¨ï¼Œå°Šæ•¬çš„ä¼šå‘˜ï¼š<%=member2 %> <A href="member/index.jsp" target="">ã€ä¼šå‘˜ä¸­å¿ƒã€‘</A>--%>
       <%--<%} %>--%>
       <%--</DIV>--%>
       <%--<DIV class=jstime style="FLOAT: right; WIDTH: 45%; TEXT-ALIGN: right">--%>
-	  <%--<!--****************Ê±¼äÈÕÀú¿ªÊ¼****************-->--%>
-      <%--<SCRIPT>setInterval("clock.innerHTML=new Date().toLocaleString()+'&nbsp;&nbsp;ĞÇÆÚ'+'ÈÕÒ»¶şÈıËÄÎåÁù'.charAt(new Date().getDay());",1000)</SCRIPT>--%>
+	  <%--<!--****************æ—¶é—´æ—¥å†å¼€å§‹****************-->--%>
+      <%--<SCRIPT>setInterval("clock.innerHTML=new Date().toLocaleString()+'&nbsp;&nbsp;æ˜ŸæœŸ'+'æ—¥ä¸€äºŒä¸‰å››äº”å…­'.charAt(new Date().getDay());",1000)</SCRIPT>--%>
       <%--<SPAN id=clock></SPAN>--%>
-	  <%--<!--****************Ê±¼äÈÕÀú½áÊø****************-->&nbsp;&nbsp; --%>
+	  <%--<!--****************æ—¶é—´æ—¥å†ç»“æŸ****************-->&nbsp;&nbsp; --%>
       <%--<A href="javascript:javascript:window.external.AddFavorite('<%=basePath %>','<%=sysList.get(0).toString() %>');"> </A> --%>
       <%--<A onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('<%=basePath %>');" href="http://localhost/#"> </A> --%>
 	  <%--<A href="mailto:<%=sysList.get(4).toString() %>"> </A> --%>
@@ -172,12 +172,12 @@ function autoTable(div){
 <%--</TABLE>--%>
 
 <div id="header">
-    <div class="nav clearfix"><div class="nav-brand">ÓğÃ«Çò¹ÜÀíÏµÍ³</div>
+    <div class="nav clearfix"><div class="nav-brand">ç¾½æ¯›çƒç®¡ç†ç³»ç»Ÿ</div>
         <ul class="menu">
-            <li><a href="/hello">Ê×    Ò³</a></li>
-            <li><a href="/cdxx">³¡µØĞÅÏ¢</a></li>
-            <li><a href="member/index.jsp">»áÔ±ÖĞĞÄ</a></li>
-            <li><a href="/admin">¹ÜÀíµÇÂ½</a></li>
+            <li><a href="/hello">é¦–    é¡µ</a></li>
+            <li><a href="/cdxx">åœºåœ°ä¿¡æ¯</a></li>
+            <li><a href="member/index.jsp">ä¼šå‘˜ä¸­å¿ƒ</a></li>
+            <li><a href="/admin">ç®¡ç†ç™»é™†</a></li>
         </ul>
     </div>
 </div>
@@ -188,12 +188,12 @@ function autoTable(div){
     </div>
     <div class="swiper-button-prev"></div>
     <div class="swiper-button-next"></div>
-    <!-- Èç¹ûĞèÒª·ÖÒ³Æ÷ -->
+    <!-- å¦‚æœéœ€è¦åˆ†é¡µå™¨ -->
     <div class="swiper-pagination"></div>
 </div>
 <div class="head-intro">
-    <h2>»¶Ó­¹âÁÙ</h2>
-    <h1>ÊÍ·ÅÄãµÄ»îÁ¦!</h1>
+    <h2>æ¬¢è¿å…‰ä¸´</h2>
+    <h1>é‡Šæ”¾ä½ çš„æ´»åŠ›!</h1>
 </div>
 <TABLE id=header cellSpacing=0 cellPadding=0 width="100%" align=center border=0>
 <%--<TBODY>--%>
@@ -208,13 +208,13 @@ function autoTable(div){
 <%--<TBODY>--%>
   <%--<TR>--%>
     <%--<TD align=middle>--%>
-	<%--<!--****************Ö÷²Ëµ¥¿ªÊ¼****************-->--%>
+	<%--<!--****************ä¸»èœå•å¼€å§‹****************-->--%>
 	<%----%>
-	<%--<A href="index.jsp" target="">Ê×    Ò³</A> |--%>
-	<%--<A href="nhzp.jsp" target="">³¡µØĞÅÏ¢</A> |  --%>
-	<%--<A href="member/index.jsp" target="">»áÔ±ÖĞĞÄ</A> | --%>
-	<%--<A href="admin/login.jsp" target="">¹ÜÀíµÇÂ½</A> --%>
-	<%--<!--****************Ö÷²Ëµ¥½áÊø****************-->--%>
+	<%--<A href="index.jsp" target="">é¦–    é¡µ</A> |--%>
+	<%--<A href="nhzp.jsp" target="">åœºåœ°ä¿¡æ¯</A> |  --%>
+	<%--<A href="member/index.jsp" target="">ä¼šå‘˜ä¸­å¿ƒ</A> | --%>
+	<%--<A href="admin/login.jsp" target="">ç®¡ç†ç™»é™†</A> --%>
+	<%--<!--****************ä¸»èœå•ç»“æŸ****************-->--%>
 	<%--</TD>--%>
   <%--</TR>--%>
 <%--</TBODY>--%>
@@ -226,7 +226,7 @@ function autoTable(div){
         loop: true,
         autoplay: true,
 
-        // Èç¹ûĞèÒª·ÖÒ³Æ÷
+        // å¦‚æœéœ€è¦åˆ†é¡µå™¨
         pagination: {
             el: '.swiper-pagination',
         },

@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*"  contentType="text/html;charset=gb2312"%>
+<%@ page language="java" import="java.util.*"  pageEncoding="utf-8" contentType="text/html;charset=UTF-8" %>
 <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <%--<TABLE class=dragTable cellSpacing=0 cellPadding=0 width="100%" align=center border=0>--%>
   <%--<TBODY>--%>
@@ -13,7 +13,7 @@
   <%--<TR>--%>
     <%--<TD align=middle>--%>
 	<%--<DIV align=center>--%>
-	  <%--½¨ÒéÊ¹ÓÃIE6.0»òÒÔÉÏ°æ±¾ä¯ÀÀ</DIV>--%>
+	  <%--å»ºè®®ä½¿ç”¨IE6.0æˆ–ä»¥ä¸Šç‰ˆæœ¬æµè§ˆ</DIV>--%>
     <%--</TD>--%>
  <%--</TR>--%>
 <%--</TBODY>--%>
@@ -70,7 +70,7 @@
 </div>
 
 <%--<SCRIPT language=JavaScript>--%>
-<%--<!--//Ä¿µÄÊÇÎªÁË×ö·ç¸ñ·½±ã--%>
+<%--<!--//ç›®çš„æ˜¯ä¸ºäº†åšé£Žæ ¼æ–¹ä¾¿--%>
 <%--document.write('</div>');--%>
 <%--//-->--%>
 <%--</SCRIPT>--%>

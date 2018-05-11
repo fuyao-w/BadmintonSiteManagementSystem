@@ -2,6 +2,7 @@ package mvc;
 
 import bean.*;
 import beans.MemberBean;
+import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 
 import com.sun.org.apache.xpath.internal.operations.Mod;
@@ -38,8 +39,6 @@ import java.util.concurrent.Executors;
 @RequestMapping("/")
 @Scope("session")
 public class mController implements Serializable {
-
-
     @Autowired
     hzpservice hzpservice;
     @Autowired
@@ -70,6 +69,8 @@ public class mController implements Serializable {
         LinkedList<sale> sale1s = hzpservice.get5Mes();
         model.addAttribute("sales", sale1s);
 
+        request.getSession().removeAttribute("member");
+
 
         return "index";
 
@@ -83,7 +84,6 @@ public class mController implements Serializable {
         return "admin/login";
 
     }
-
 
 
     @RequestMapping(value = "/adminLogin", method = RequestMethod.POST)
@@ -190,6 +190,7 @@ public class mController implements Serializable {
         return "admin/member/person";
 
     }
+
     @RequestMapping(value = "/setprep", method = RequestMethod.GET)
     public String setprep(@RequestParam("dj") Integer dj, @RequestParam("id") Integer id, HttpServletRequest request) {
 
@@ -198,7 +199,7 @@ public class mController implements Serializable {
             dj = 0;
         else
             dj = 1;
-        if (saleMapper.uppdj(dj,id) == 1)
+        if (saleMapper.uppdj(dj, id) == 1)
             request.setAttribute("message", "操作成功");
         else
             request.setAttribute("message", "操作失败");
@@ -296,6 +297,17 @@ public class mController implements Serializable {
         return "admin/prep/prep";
 
     }
+    @RequestMapping(value = "/deldd1", method = RequestMethod.GET)
+    public String deldd1(@RequestParam("id") Integer id) {
+        System.out.println("删除预订");
+        System.out.println(id);
+
+        ddMapper.deldd(id);
+
+
+        return "admin/prep/fh";
+
+    }
 
     @RequestMapping(value = "/setdd", method = RequestMethod.GET)
     public String setdd(@RequestParam("id") Integer id) {
@@ -303,12 +315,32 @@ public class mController implements Serializable {
         System.out.println(id);
 
         ddMapper.setdd(id);
+
         union union = ddMapper.undd(id);
         System.out.println("联查结果" + union.getTitle());
-        saleMapper.updj1(union.getTitle());
-//saleMapper.updj1()
+
+//        saleMapper.updj1(union.getTitle());
+//         ddMapper.setdd()
 
         return "admin/prep/prep";
+
+    }
+    @RequestMapping(value = "/setdd1", method = RequestMethod.GET)
+    public String setdd1(@RequestParam("id") Integer id,HttpServletRequest request) {
+        System.out.println("处理场地预订");
+        System.out.println(id);
+
+       if (saleMapper.updatedj(id)==1) {
+
+           request.setAttribute("message", "订单已完成");
+
+       }
+       else {
+           request.setAttribute("message", "场地已被释放");
+       }
+
+
+        return "admin/prep/fh";
 
     }
 
@@ -385,25 +417,36 @@ public class mController implements Serializable {
 
     @RequestMapping(value = "/getpreps", method = RequestMethod.GET)
     @ResponseBody
-    public PageInfo<dd> getpreps(@RequestParam("curPage") Integer curPage) {
+    public HashMap<String,Object> getpreps(@RequestParam("curPage") Integer curPage) {
         System.out.println("取得预订信息，页数" + curPage);
+        int cur = (curPage-1) *5;
 
-        PageInfo<dd> preps = hzpservice.getdds(curPage);
+        LinkedList<dd> list = ddMapper.getdds(cur);
 
+        int total = ddMapper.getddstotal();
 
-        return preps;
+        HashMap<String,Object> hashMap = new HashMap<>();
+        hashMap.put("total",total);
+        hashMap.put("list",list);
+
+        return hashMap;
 
     }
 
     @RequestMapping(value = "/getfhpreps", method = RequestMethod.GET)
     @ResponseBody
-    public PageInfo<dd> getfhpreps(@RequestParam("curPage") Integer curPage) {
+    public  HashMap<String,Object> getfhpreps(@RequestParam("curPage") Integer curPage) {
         System.out.println("取得预订信息，页数" + curPage);
+        int cur = (curPage-1) *5;
+        LinkedList<dd> list = ddMapper.getfdds(cur);
 
-        PageInfo<dd> preps = hzpservice.getfhdds(curPage);
+        int total = ddMapper.gettotalfdds();
 
+        HashMap<String,Object> hashMap = new HashMap<>();
+        hashMap.put("total",total);
+        hashMap.put("list",list);
 
-        return preps;
+        return hashMap;
 
     }
 
@@ -512,9 +555,14 @@ public class mController implements Serializable {
 
     @RequestMapping(value = "/addprep", method = RequestMethod.POST)
     public String addprep(@RequestParam("sid") int sid, prep prep, HttpServletRequest request) throws UnsupportedEncodingException {
-        //int id = sid;
-prep.setTitle(new String(prep.getTitle().getBytes("iso-8859-1"),"utf-8"));
+
+
+        prep.setTitle(new String(prep.getTitle().getBytes("iso-8859-1"), "utf-8"));
+        prep.setLxr(new String(prep.getLxr().getBytes("iso-8859-1"), "utf-8"));
+        prep.setAddtime(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(Calendar.getInstance().getTime()));
+
         request.setAttribute("message", hzpservice.prep(sid, prep));
+
         return "index";
 
     }
@@ -626,8 +674,8 @@ prep.setTitle(new String(prep.getTitle().getBytes("iso-8859-1"),"utf-8"));
         dd dd = new dd();
         dd.setDdid(ddid);
         dd.setAddtime(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(Calendar.getInstance().getTime()));
-        dd.setFkfs("");
-        dd.setMember("现场支付");
+
+        dd.setFkfs("现场支付");
         dd.setZt("未处理");
         dd.setMember(member);
         hzpservice.updd(dd);
@@ -695,16 +743,20 @@ prep.setTitle(new String(prep.getTitle().getBytes("iso-8859-1"),"utf-8"));
         ArrayList<prep> preps1 = prepMapper.gettotal1();
 
         LinkedHashMap<String, ArrayList<prep>> map = new LinkedHashMap<>();
-        map.put("list1",preps);
-        map.put("list2",preps1);
+        map.put("list1", preps);
+        map.put("list2", preps1);
         System.out.println("返回");
         return map;
 
     }
 
     @RequestMapping(value = "/upcourt", method = RequestMethod.POST)
-    public String upcourt(sale sale, @RequestParam("pic") MultipartFile uploadFile, HttpServletRequest request) {
+    public String upcourt(sale sale, @RequestParam("pic") MultipartFile uploadFile, HttpServletRequest request) throws Exception {
 
+        request.setCharacterEncoding("utf-8");
+
+
+        System.out.println(sale.getYb()+"  "+sale.getTitle());
         SimpleDateFormat format1 = new SimpleDateFormat("yyyy-MM-dd HH-mm-ss");
         System.out.println("添加场地" + sale.getTitle());
         Date date = new Date();
@@ -715,7 +767,6 @@ prep.setTitle(new String(prep.getTitle().getBytes("iso-8859-1"),"utf-8"));
         System.out.println("文件" + uploadRootPath);
 
 
-//        String filrPath = "G:\\Proimg";
         String filrPath = request.getServletContext().getRealPath("images");
         String netPath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + request.getContextPath();
         File fileDir = new File(filrPath);
@@ -743,9 +794,7 @@ prep.setTitle(new String(prep.getTitle().getBytes("iso-8859-1"),"utf-8"));
 
         request.setAttribute("message", hzpservice.upcourt(sale));
 
-
-
-
+        request.setAttribute("message",111);
         return "admin/hzp/add";
 
     }

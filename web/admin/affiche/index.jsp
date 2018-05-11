@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*"  contentType="text/html;charset=gb2312"%>
+<%@ page language="java" import="java.util.*"  pageEncoding="utf-8" contentType="text/html;charset=UTF-8" %>
 <%--<jsp:useBean id="sn" scope="page" class="com.bean.SystemBean" />--%>
 <%--<jsp:useBean id="ab" scope="page" class="com.bean.AfficheBean" /> --%>
 <%
@@ -6,7 +6,7 @@ String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 String dir="admin";
 %>
-<HTML><HEAD><TITLE>ºóÌ¨²Ù×÷Çø</TITLE>
+<HTML><HEAD><TITLE>åå°æ“ä½œåŒº</TITLE>
 <LINK href="<%=basePath %><%=dir %>/images/Admin_Style.css" type=text/css rel=stylesheet>
 <LINK href="<%=basePath %><%=dir %>/images/style.css" type=text/css rel=stylesheet>
 <SCRIPT language=JavaScript src="<%=basePath %><%=dir %>/images/Common.js"></SCRIPT>
@@ -55,7 +55,7 @@ marginheight="0" marginwidth="0">
         backgroundColor: '#2c343c',
 
         title: {
-            text: '³¡µØÔ¤¶©Î´Ìá½»¶©µ¥Í³¼ÆÍ¼',
+            text: 'åœºåœ°é¢„è®¢æœªæäº¤è®¢å•ç»Ÿè®¡å›¾',
             left: 'center',
             top: 20,
             textStyle: {
@@ -78,16 +78,16 @@ marginheight="0" marginwidth="0">
         },
         series : [
             {
-                name:'Ô¤¶©ĞÅÏ¢',
+                name:'é¢„è®¢ä¿¡æ¯',
                 type:'pie',
                 radius : '55%',
                 center: ['50%', '50%'],
                 data:[
-                    {value:335, name:'Ö±½Ó·ÃÎÊ'},
-                    {value:310, name:'ÓÊ¼şÓªÏú'},
-                    {value:274, name:'ÁªÃË¹ã¸æ'},
-                    {value:235, name:'ÊÓÆµ¹ã¸æ'},
-                    {value:400, name:'ËÑË÷ÒıÇæ'}
+                    {value:335, name:'ç›´æ¥è®¿é—®'},
+                    {value:310, name:'é‚®ä»¶è¥é”€'},
+                    {value:274, name:'è”ç›Ÿå¹¿å‘Š'},
+                    {value:235, name:'è§†é¢‘å¹¿å‘Š'},
+                    {value:400, name:'æœç´¢å¼•æ“'}
                 ].sort(function (a, b) { return a.value - b.value; }),
                 roseType: 'radius',
                 label: {
@@ -128,7 +128,7 @@ marginheight="0" marginwidth="0">
         backgroundColor: '#2c343c',
 
         title: {
-            text: '³¡µØÔ¤¶©ÒÑÌá½»¶©µ¥Í³¼ÆÍ¼',
+            text: 'åœºåœ°é¢„è®¢å·²æäº¤è®¢å•ç»Ÿè®¡å›¾',
             left: 'center',
             top: 20,
             textStyle: {
@@ -151,16 +151,16 @@ marginheight="0" marginwidth="0">
         },
         series : [
             {
-                name:'Ô¤¶©ĞÅÏ¢',
+                name:'é¢„è®¢ä¿¡æ¯',
                 type:'pie',
                 radius : '55%',
                 center: ['50%', '50%'],
                 data:[
-                    {value:335, name:'Ö±½Ó·ÃÎÊ'},
-                    {value:310, name:'ÓÊ¼şÓªÏú'},
-                    {value:274, name:'ÁªÃË¹ã¸æ'},
-                    {value:235, name:'ÊÓÆµ¹ã¸æ'},
-                    {value:400, name:'ËÑË÷ÒıÇæ'}
+                    {value:335, name:'ç›´æ¥è®¿é—®'},
+                    {value:310, name:'é‚®ä»¶è¥é”€'},
+                    {value:274, name:'è”ç›Ÿå¹¿å‘Š'},
+                    {value:235, name:'è§†é¢‘å¹¿å‘Š'},
+                    {value:400, name:'æœç´¢å¼•æ“'}
                 ].sort(function (a, b) { return a.value - b.value; }),
                 roseType: 'radius',
                 label: {
@@ -209,7 +209,7 @@ marginheight="0" marginwidth="0">
 
 			jsondata=JSON.stringify(datas);
             console.dir(jsondata)
-            //´´½¨Ò»¸öÊı×é£¬ÓÃÀ´×°¶ÔÏó´«¸øseries.data£¬ÒòÎªseries.dataÀïÃæ²»ÄÜÖ±½ÓĞ¬forÑ­»·
+            //åˆ›å»ºä¸€ä¸ªæ•°ç»„ï¼Œç”¨æ¥è£…å¯¹è±¡ä¼ ç»™series.dataï¼Œå› ä¸ºseries.dataé‡Œé¢ä¸èƒ½ç›´æ¥é‹forå¾ªç¯
             var servicedata=[];
            var servicedata1=[];
 
@@ -234,7 +234,7 @@ marginheight="0" marginwidth="0">
             myChart.setOption({
 
                 series:[{
-                    name:'·ÃÎÊÁ¿',
+                    name:'è®¿é—®é‡',
                     type:'pie',
                     radius:'60%',
                     data:servicedata,
@@ -244,7 +244,7 @@ marginheight="0" marginwidth="0">
             myChart1.setOption({
 
                 series:[{
-                    name:'·ÃÎÊÁ¿',
+                    name:'è®¿é—®é‡',
                     type:'pie',
                     radius:'60%',
                     data:servicedata1,

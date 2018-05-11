@@ -1,12 +1,12 @@
-<%@ page language="java" import="java.util.*"  contentType="text/html;charset=gb2312"%>
+<%@ page language="java" import="java.util.*"  pageEncoding="utf-8" contentType="text/html;charset=UTF-8" %>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML><HEAD><TITLE>ºóÌ¨²Ù×÷Çø</TITLE>
-<META http-equiv=Content-Type content="text/html; charset=gb2312">
+<HTML><HEAD><TITLE>åå°æ“ä½œåŒº</TITLE>
+
 <LINK href="<%=basePath %>member/images/Admin_Style.css" type=text/css rel=stylesheet>
 <LINK href="<%=basePath %>member/images/style.css" type=text/css rel=stylesheet>
 <SCRIPT language=JavaScript src="<%=basePath %>member/images/Common.js"></SCRIPT>
@@ -20,31 +20,31 @@ function check()
 {
 	if(document.form1.oldpwd.value=="")
 	{
-		alert("ÇëÊäÈë¾ÉÃÜÂë£¡");
+		alert("è¯·è¾“å…¥æ—§å¯†ç ï¼");
 		document.form1.oldpwd.focus();
 		return false;
 	}
 	if(document.form1.newpwd.value=="")
 	{
-		alert("ÇëÊäÈëĞÂÃÜÂë£¡");
+		alert("è¯·è¾“å…¥æ–°å¯†ç ï¼");
 		document.form1.newpwd.focus();
 		return false;
 	}
 	if(document.form1.newpwd.value.length<6||document.form1.newpwd.value.length>16)
 	{
-		alert("ÃÜÂëÎª6-16Î»Ö®¼ä£¡");
+		alert("å¯†ç ä¸º6-16ä½ä¹‹é—´ï¼");
 		document.form1.newpwd.focus();
 		return false;
 	}
 	if(document.form1.repwd.value=="")
 	{
-		alert("ÇëÈ·ÈÏÃÜÂë£¡");
+		alert("è¯·ç¡®è®¤å¯†ç ï¼");
 		document.form1.repwd.focus();
 		return false;
 	}
 	if(document.form1.repwd.value!=document.form1.newpwd.value)
 	{
-		alert("¶Ô²»Æğ£¬Á½´ÎÊäÈëµÄÃÜÂë²»ÏàÍ¬£¬ÇëÈ·ÈÏÃÜÂë£¡");
+		alert("å¯¹ä¸èµ·ï¼Œä¸¤æ¬¡è¾“å…¥çš„å¯†ç ä¸ç›¸åŒï¼Œè¯·ç¡®è®¤å¯†ç ï¼");
 		document.form1.repwd.focus();
 		return false;
 	}
@@ -82,23 +82,23 @@ marginheight="0" marginwidth="0"><br><br><br>
 		 <TABLE width="100%" border=0 align="center" cellPadding=3 cellSpacing=1 class=tablewidth>
 			<TBODY>
 			<TR class=head>
-			<TD colSpan=2 height=23>ĞŞ¸ÄºóÌ¨µÇÂ¼ÃÜÂë µ±Ç°ÓÃ»§£º<FONT color=red><%=member %></FONT>&nbsp;&nbsp;£¨ÃÜÂëÎª6-16Î»Ö®¼ä£©</TD></TR>
+			<TD colSpan=2 height=23>ä¿®æ”¹åå°ç™»å½•å¯†ç  å½“å‰ç”¨æˆ·ï¼š<FONT color=red><%=member %></FONT>&nbsp;&nbsp;ï¼ˆå¯†ç ä¸º6-16ä½ä¹‹é—´ï¼‰</TD></TR>
 			<TR bgColor=#ffffff>
-			<TD width="50%" align="right" id=map>¾É ÃÜ Âë£º<input type="hidden" name="username" value=""/></TD>
+			<TD width="50%" align="right" id=map>æ—§ å¯† ç ï¼š<input type="hidden" name="username" value="<%=member%>"/></TD>
 			<TD width="50%" align="left" id=map><input type="password" name="oldpwd" size="20" maxlength=16  class=input onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))" 
                               onkeyup="value=value.replace(/[\W]/g,'')"></TD></TR>
 			<TR bgColor=#ffffff>
-			<TD width="50%" align="right" id=map>ĞÂ ÃÜ Âë£º</TD>
+			<TD width="50%" align="right" id=map>æ–° å¯† ç ï¼š</TD>
 			<TD width="50%" align="left" id=map><input type="password" name="newpwd" size="20" maxlength=16 class=input onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))" 
                               onkeyup="value=value.replace(/[\W]/g,'')"></TD>
 			</TR>
 			<TR bgColor=#ffffff>
-			<TD width="50%" align="right" id=map>È·ÈÏÃÜÂë£º</TD>
+			<TD width="50%" align="right" id=map>ç¡®è®¤å¯†ç ï¼š</TD>
 			<TD width="50%" align="left" id=map><input type="password" name="repwd" size="20" maxlength=16 class=input onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))" 
                               onkeyup="value=value.replace(/[\W]/g,'')"></TD>
 			</TR>
 			<TR bgColor=#ffffff>
-			<TD colspan="2" align="center" id=map><input type="submit" value="È·¶¨">&nbsp;&nbsp;<input type="reset" value="ÖØÌî"></TD>
+			<TD colspan="2" align="center" id=map><input type="submit" value="ç¡®å®š">&nbsp;&nbsp;<input type="reset" value="é‡å¡«"></TD>
 			</TR>
 			</TBODY>
 		</TABLE>

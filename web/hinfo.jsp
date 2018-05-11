@@ -1,33 +1,28 @@
-<%@ page language="java" import="java.util.*" contentType="text/html;charset=gb2312" %>
+<%@ page language="java" import="java.util.*"  pageEncoding="utf-8" contentType="text/html;charset=UTF-8" %>
 <%@page isELIgnored="false"%>
 <%@ include file="iframe/head.jsp" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" >
 <HTML xmlns="http://www.w3.org/1999/xhtml">
+<%String member=(String)session.getAttribute("member");
+
+
+%>
 <HEAD>
 	<LINK href="http://localhost:8081/images/default.css" type=text/css rel=stylesheet>
 	<LINK href="http://localhost:8081/images/css.css" type=text/css rel=stylesheet>
-	<META http-equiv=Content-Type content="text/html; charset=gb2312">
+
 	<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
 	<STYLE type=text/css>
-		/*.ycbt {*/
-		/*BORDER-RIGHT: #fff 1px solid; BORDER-TOP: #fff 1px solid; PADDING-LEFT: 1.8em; BACKGROUND-COLOR: #EAF2EF; BORDER-LEFT: #fff 1px solid; PADDING-TOP: 7px; BORDER-BOTTOM: #fff 1px solid; HEIGHT: 20px*/
-		/*}*/
-		/*.xsbt {*/
-		/*BORDER-RIGHT: #fff 1px solid; BORDER-TOP: #fff 1px solid; PADDING-LEFT: 1.8em; BACKGROUND-IMAGE: url(images/head1.gif); BORDER-LEFT: #fff 1px solid; PADDING-TOP: 7px; BORDER-BOTTOM: #fff 1px solid; HEIGHT: 20px*/
-		/*}*/
-		/*.xsnr {*/
-		/*DISPLAY: block*/
-		/*}*/
-		/*.ycnr {*/
-		/*DISPLAY: none*/
-		/*}*/
+
 		.rightpicture {
 			/*background-position: 50% 0;*/
 			background-size: cover;
 			background-repeat: no-repeat;
 			/*background-attachment: fixed;*/
-			min-height: 593px;
+			/*min-height: 593px;*/
+			margin-top: 120px;
+			height: 300px;
 		}
 
 		.leftpicture {
@@ -86,6 +81,14 @@
 		.comment-content {
 			margin-top: 6px;
 		}
+		.col-md-9 {
+			width: 70%;
+			float: left;
+		}
+		.col-md-3 {
+			width: 30%;
+			float: right;
+		}
 	</STYLE>
 	<SCRIPT type=text/javascript>
         function tb_xs(t,m,n){
@@ -98,7 +101,7 @@
                     document.getElementById("tb"+t+ "_nr" + i).className= "xsnr";}}}
 	</SCRIPT>
 	<SCRIPT language=JavaScript>
-        <!--//ÆÁ±Î³ö´í´úÂë
+        <!--//å±è”½å‡ºé”™ä»£ç 
         function killErr(){
             return true;
         }
@@ -106,7 +109,7 @@
         //-->
 	</SCRIPT>
 	<SCRIPT language=JavaScript>
-        <!--//´¦Àí´ó·ÖÀàÒ»ĞĞÁ½¸öĞ¡·ÖÀà
+        <!--//å¤„ç†å¤§åˆ†ç±»ä¸€è¡Œä¸¤ä¸ªå°åˆ†ç±»
         function autoTable(div){
             fs=document.getElementById(div).getElementsByTagName("TABLE");
             for(var i=0;i<fs.length;i++){
@@ -135,7 +138,7 @@
 </HEAD>
 <BODY text=#000000 bgColor=#ffffff leftMargin=0 topMargin=0>
 <SCRIPT language=JavaScript>
-    <!--//Ä¿µÄÊÇÎªÁË×ö·ç¸ñ·½±ã
+    <!--//ç›®çš„æ˜¯ä¸ºäº†åšé£æ ¼æ–¹ä¾¿
     // document.write('<div class="wrap">');
     //-->
 </SCRIPT>
@@ -146,26 +149,26 @@
 	<%--List hotlist=tb.getOneTrave(Integer.parseInt(id));--%>
 	<%--if(!hotlist.isEmpty()){--%>
 <%--%>--%>
-<div class="col-md-6">
+<div class="col-md-9">
 	<article>
 		<c:if test="${sale != null}">
 
-			<h2>³¡µØĞÅÏ¢</h2>
-			<a href="/prepinfo?id=${sale.getId()}&title=${sale.getTitle()}">->ÎÒÒªÔ¤¶©³¡µØ.£¨Èç¹ûÄú»¹Ã»ÓĞµÇÂ¼£¬ÇëÏÈµÇÂ¼ÔÙ½øĞĞÔ¤¶©²Ù×÷£¡£©</a>
+			<h2>åœºåœ°ä¿¡æ¯</h2>
+			<a href="/prepinfo?id=${sale.getId()}&title=${sale.getTitle()}">->æˆ‘è¦é¢„è®¢åœºåœ°.ï¼ˆå¦‚æœæ‚¨è¿˜æ²¡æœ‰ç™»å½•ï¼Œè¯·å…ˆç™»å½•å†è¿›è¡Œé¢„è®¢æ“ä½œï¼ï¼‰</a>
 			<ul style="margin-top: 20px">
-				<li>³¡µØÃû³Æ£º${sale.getTitle()}</li>
-				<li>³ö×â¼ÛÎ»£º${sale.getDz()} Ôª/Ğ¡Ê±</li>
-				<li>¸º Ôğ ÈË£º${sale.getDh()}</li>
-				<li>¸º Ôğ ÈË£º${sale.getJd()}</li>
-				<li>×ÉÑ¯µç»°£º${sale.getDh()}</li>
-				<li>·¢²¼Ê±¼ä£º${sale.getAddtime()}</li>
+				<li>åœºåœ°åç§°ï¼š${sale.getTitle()}</li>
+				<li>å‡ºç§Ÿä»·ä½ï¼š${sale.getDz()} å…ƒ/å°æ—¶</li>
+				<li>è´Ÿ è´£ äººï¼š${sale.getDh()}</li>
+				<li>è´Ÿ è´£ äººï¼š${sale.getJd()}</li>
+				<li>å’¨è¯¢ç”µè¯ï¼š${sale.getDh()}</li>
+				<li>å‘å¸ƒæ—¶é—´ï¼š${sale.getAddtime()}</li>
 			</ul>
 
 		</c:if>
 
 		<textarea id="mes" style="width: 100%;height: 43px;"></textarea>
 		<div style="display: flex;justify-content: flex-end;margin-top: 10px">
-			<button id="sub" style="width: 58px;height: 20px">ÆÀÂÛ</button>
+			<button id="sub" style="width: 58px;height: 20px">è¯„è®º</button>
 		</div>
 
 		<hr />
@@ -175,16 +178,16 @@
 					<i class="fa fa-comment-o" aria-hidden="true"></i
 				</span>
 				<span id="time">
-         ${comment.time}
+         ${comment.times}
 				</span>
 			</div>
 			<div class="comment-content">
-				<div id="comment"> ${comment.mes} </div>
+				<div id="comment"> ${comment.content} </div>
 			</div>
 		</div>
 	</article>
 </div>
-<div class="col-md-6">
+<div class="col-md-3">
 	<div class="rightpicture" style="background-image: url(${sale.getUrl()})">
 
 	</div>
@@ -194,33 +197,35 @@
 
 <script>
     $("button").click(function () {
-        var json = 'comment='+ $("#mes").val();
+        var json = 'comments='+ $("#mes").val()+'&id='+${sale.getId()}+'&username='+${member};
 
 
 
 
         $.ajax({
             type: 'POST',
-            contentType: 'application/x-www-form-urlencoded',//×¢ÒâÀàĞÍ
+            contentType: 'application/x-www-form-urlencoded',//æ³¨æ„ç±»å‹
             /**
-             *(Ä¬ÈÏ: true) Ä¬ÈÏÇé¿öÏÂ£¬Í¨¹ıdataÑ¡Ïî´«µİ½øÀ´µÄÊı¾İ£¬Èç¹ûÊÇÒ»¸ö¶ÔÏó(¼¼ÊõÉÏ½²Ö»Òª²»ÊÇ×Ö·û´®)£¬
-             * ¶¼»á´¦Àí×ª»¯³ÉÒ»¸ö²éÑ¯×Ö·û´®£¬ÒÔÅäºÏÄ¬ÈÏÄÚÈİÀàĞÍ "application/x-www-form-urlencoded"¡£
-             * Èç¹ûÒª·¢ËÍ DOM Ê÷ĞÅÏ¢»òÆäËü²»Ï£Íû×ª»»µÄĞÅÏ¢£¬ÇëÉèÖÃÎª false¡£
+             *(é»˜è®¤: true) é»˜è®¤æƒ…å†µä¸‹ï¼Œé€šè¿‡dataé€‰é¡¹ä¼ é€’è¿›æ¥çš„æ•°æ®ï¼Œå¦‚æœæ˜¯ä¸€ä¸ªå¯¹è±¡(æŠ€æœ¯ä¸Šè®²åªè¦ä¸æ˜¯å­—ç¬¦ä¸²)ï¼Œ
+             * éƒ½ä¼šå¤„ç†è½¬åŒ–æˆä¸€ä¸ªæŸ¥è¯¢å­—ç¬¦ä¸²ï¼Œä»¥é…åˆé»˜è®¤å†…å®¹ç±»å‹ "application/x-www-form-urlencoded"ã€‚
+             * å¦‚æœè¦å‘é€ DOM æ ‘ä¿¡æ¯æˆ–å…¶å®ƒä¸å¸Œæœ›è½¬æ¢çš„ä¿¡æ¯ï¼Œè¯·è®¾ç½®ä¸º falseã€‚
              */
             processData: false,
             url: '/comment',
             dataType: 'json',
             data: json,
             success: function (data) {
-                a = data.mes;
                 console.dir(JSON.stringify(data))
-              $("#comment").text(a.mes);
-              $("#time").text(a.time);
+                alert(data.news)
+
+                if(data.state == 100){
+              $("#comment").text(data.mes);
+              $("#time").text(data.time);}
 
 
             },
             error: function () {
-                alert('ÇëÇó´íÎó');
+                alert('è¯·æ±‚é”™è¯¯');
 
             }
 
@@ -231,7 +236,7 @@
 
 </script>
 <SCRIPT language=JavaScript>
-    <!--//Ä¿µÄÊÇÎªÁË×ö·ç¸ñ·½±ã
+    <!--//ç›®çš„æ˜¯ä¸ºäº†åšé£æ ¼æ–¹ä¾¿
     document.write('</div>');
     //-->
 </SCRIPT>

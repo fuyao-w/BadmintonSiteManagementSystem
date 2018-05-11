@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*"  contentType="text/html;charset=gb2312"%>
+<%@ page language="java" import="java.util.*"  pageEncoding="utf-8" contentType="text/html;charset=UTF-8" %>
 <%--<jsp:useBean id="sn" scope="page" class="com.bean.SystemBean" />--%>
 <%
 String path = request.getContextPath();
@@ -7,8 +7,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 %>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML><HEAD><TITLE>��̨������</TITLE>
-<META http-equiv=Content-Type content="text/html; charset=gb2312">
+<HTML><HEAD><TITLE>后台操作区</TITLE>
+
 <LINK href="<%=basePath %>admin/images/Admin_Style.css" type=text/css rel=stylesheet>
 <LINK href="<%=basePath %>admin/images/style.css" type=text/css rel=stylesheet>
 <SCRIPT language=JavaScript src="<%=basePath %>admin/images/Common.js"></SCRIPT>
@@ -48,23 +48,23 @@ marginheight="0" marginwidth="0"><br><br><br>
 		 <TABLE width="100%" border=0 align="center" cellPadding=3 cellSpacing=1 class=tablewidth>
 			<TBODY>
 			<TR class=head>
-			<TD colSpan=2 height=23>�޸ĺ�̨��¼���� ��ǰ�û���<FONT color=red></FONT>&nbsp;&nbsp;������Ϊ6-16λ֮�䣩</TD></TR>
+			<TD colSpan=2 height=23>修改后台登录密码 当前用户：<FONT color=red></FONT>&nbsp;&nbsp;（密码为6-16位之间）</TD></TR>
 			<TR bgColor=#ffffff>
-			<TD width="50%" align="right" id=map>�� �� �룺</TD>
-			<TD width="50%" align="left" id=map><input type="password" name="oldpwd" size="20" maxlength=16  class=input onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))" 
+			<TD width="50%" align="right" id=map>旧 密 码：</TD>
+			<TD width="50%" align="left" id=map><input type="text" name="oldpwd" size="20" maxlength=16  class=input onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))"
                               onkeyup="value=value.replace(/[\W]/g,'')"></TD></TR>
 			<TR bgColor=#ffffff>
-			<TD width="50%" align="right" id=map>�� �� �룺</TD>
+			<TD width="50%" align="right" id=map>新 密 码：</TD>
 			<TD width="50%" align="left" id=map><input type="password" name="newpwd" size="20" maxlength=16 class=input onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))" 
                               onkeyup="value=value.replace(/[\W]/g,'')"></TD>
 			</TR>
 			<TR bgColor=#ffffff>
-			<TD width="50%" align="right" id=map>ȷ�����룺</TD>
+			<TD width="50%" align="right" id=map>确认密码：</TD>
 			<TD width="50%" align="left" id=map><input type="password" name="repwd" size="20" maxlength=16 class=input onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))" 
                               onkeyup="value=value.replace(/[\W]/g,'')"></TD>
 			</TR>
 			<TR bgColor=#ffffff>
-			<TD colspan="2" align="center" id=map><input type="submit" value="ȷ��">&nbsp;&nbsp;<input type="reset" value="����"></TD>
+			<TD colspan="2" align="center" id=map><input type="submit" value="确定">&nbsp;&nbsp;<input type="reset" value="重填"></TD>
 			</TR>
 			</TBODY>
 		</TABLE>

@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*"  contentType="text/html;charset=gb2312"%>
+<%@ page language="java" import="java.util.*"  pageEncoding="utf-8" contentType="text/html;charset=UTF-8" %>
 <%--<jsp:useBean id="tb" scope="page" class="com.bean.HzpBean" />--%>
 <%--<jsp:useBean id="sysb" scope="page" class="com.bean.SystemBean" />--%>
 <%
@@ -6,8 +6,8 @@ String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML><HEAD><TITLE>会员管理中心</TITLE>
-<META http-equiv=Content-Type content="text/html; charset=gb2312">
+<HTML><HEAD><TITLE>浼氬憳绠＄悊涓績</TITLE>
+
 <LINK href="<%=basePath %>member/images/Admin_Style.css" type=text/css rel=stylesheet>
 <LINK href="<%=basePath %>member/images/style.css" type=text/css rel=stylesheet>
 <SCRIPT language=JavaScript src="<%=basePath %>member/images/Common.js"></SCRIPT>
@@ -40,7 +40,7 @@ String message = (String)request.getAttribute("message");
 
 <BODY  oncontextmenu="return false;" onselectstart="return false;" leftMargin=0 background=<%=basePath %>member/images/MainBg.gif topMargin=0 scroll=no marginheight="0" marginwidth="0">
 <br><br><br><br><br><p align=center><font color=red><strong>
-      欢迎您，尊敬的会员：<%=member %> </strong></font>
+      娆㈣繋鎮紝灏婃暚鐨勪細鍛橈細<%=member %> </strong></font>
 	</BODY>
 <%} %>
 </HTML>

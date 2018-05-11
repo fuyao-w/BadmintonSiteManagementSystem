@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="utf-8" contentType="text/html;charset=UTF-8"%>
+<%@ page language="java" import="java.util.*"  pageEncoding="utf-8" contentType="text/html;charset=UTF-8" %>
 <%@ page import="bean.pmember" %>
 <%--<jsp:useBean id="mb" scope="page" class="com.bean.MemberBean"></jsp:useBean>--%>
 <%

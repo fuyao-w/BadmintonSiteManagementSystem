@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*"  contentType="text/html;charset=gb2312"%>
+<%@ page language="java" import="java.util.*"  pageEncoding="utf-8" contentType="text/html;charset=UTF-8" %>
 <%@ include file="iframe/head.jsp" %>
 <SCRIPT language=JavaScript src="<%=basePath %>member/images/city.js"></SCRIPT>
 <%
@@ -21,7 +21,7 @@ String message = (String)request.getAttribute("message");
               <TR>
                 <TD class=head>
                   
-                      <FONT color=#000000>ÄúÏÖÔÚµÄÎ»ÖÃ£º»áÔ±ÉêÇë&gt;&gt; ÏêÏ¸×ÊÁÏ</FONT>
+                      <FONT color=#000000>æ‚¨çŽ°åœ¨çš„ä½ç½®ï¼šä¼šå‘˜ç”³è¯·&gt;&gt; è¯¦ç»†èµ„æ–™</FONT>
 					
 					</TD>
 					</TR>
@@ -32,100 +32,100 @@ String message = (String)request.getAttribute("message");
                     
                     <TBODY>
                     <TR>
-                      <TD align=left class=white width=100% bgColor=#c8c8c8 height=23>¡¡
-					  <SPAN class=black><FONT color=blue><strong>ÓÃ»§×¢²á¸öÈËÐÅÏ¢: </strong></FONT>¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ 
-                        <FONT color="#FF0000">**</FONT>Îª±ØÌîÐ´×Ö¶Î&nbsp;&nbsp;</SPAN></TD></TR>
+                      <TD align=left class=white width=100% bgColor=#c8c8c8 height=23>ã€€
+					  <SPAN class=black><FONT color=blue><strong>ç”¨æˆ·æ³¨å†Œä¸ªäººä¿¡æ¯: </strong></FONT>ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ 
+                        <FONT color="#FF0000">**</FONT>ä¸ºå¿…å¡«å†™å­—æ®µ&nbsp;&nbsp;</SPAN></TD></TR>
                     <TR>
                       <TD vAlign=top align=middle bgColor=#ffffff height=209>
                         <DIV align=center>
          <TABLE  height=237 cellSpacing=0  cellPadding=0 width="100%" border=0 hspace="12">
                           <TBODY>
                           <TR e>
-                            <TD vAlign=center align=right  height=12>ÓÃ »§ Ãû£º</TD>
+                            <TD vAlign=center align=right  height=12>ç”¨ æˆ· åï¼š</TD>
                             <TD width=556 height=24 align=left><INPUT class=inputb maxLength=24 size=30  name="mid" value="<%=request.getAttribute("username") %>" readonly></TD>
 							</TR>
                           <TR >
-                            <TD vAlign=center align=right  height=24>µÇÂ½ÃÜÂë£º</TD>
+                            <TD vAlign=center align=right  height=24>ç™»é™†å¯†ç ï¼š</TD>
                             <TD width=556 height=24 align=left><INPUT class=inputb maxLength=24 size=30  name="password" value='<%=request.getAttribute("password") %>' readonly></TD></TR>
 						  <TR >
-						    <TD vAlign=center align=right  height=26>&nbsp;&nbsp;ÕæÊµÐÕÃû£º</TD>
+						    <TD vAlign=center align=right  height=26>&nbsp;&nbsp;çœŸå®žå§“åï¼š</TD>
 						    <TD width=556 height=26 align=left>
 							<INPUT class=inputb maxLength=24 size=30 name=realname> <FONT color=#ff0000>**</FONT> </TD></TR>
                           <TR >
-                            <TD vAlign=center align=right  height=26>&nbsp;&nbsp;ÐÔ&nbsp;&nbsp;&nbsp;&nbsp;±ð£º</TD>
+                            <TD vAlign=center align=right  height=26>&nbsp;&nbsp;æ€§&nbsp;&nbsp;&nbsp;&nbsp;åˆ«ï¼š</TD>
                             <TD width=556 height=26 align=left>
-							<INPUT type="radio" name="sex" value="m" checked="checked"> ÄÐ <input type="radio" name="sex" value="f" >Å®</TD></TR>
+							<INPUT type="radio" name="sex" value="m" checked="checked"> ç”· <input type="radio" name="sex" value="f" >å¥³</TD></TR>
 						  <TR >
-						    <TD vAlign=center align=right  height=26>&nbsp;&nbsp;³öÉúÈÕÆÚ£º</TD>
+						    <TD vAlign=center align=right  height=26>&nbsp;&nbsp;å‡ºç”Ÿæ—¥æœŸï¼š</TD>
 						    <TD width=556 height=26 align=left>
 						    <INPUT class=inputb maxLength=24 size=30 name=bir readonly onclick="SelectDate(this,'yyyy-MM-dd')"  this.Txt_Date.Attributes["onclick"] = "SelectDate(this,'yyyy-MM-dd')";>  
-						    ¸ñÊ½£º2008-01-01</TD></TR>
+						    æ ¼å¼ï¼š2008-01-01</TD></TR>
                           <TR >
-                            <TD vAlign=center align=right  height=12>¼®&nbsp;&nbsp;&nbsp;&nbsp;¹á£º</TD>
+                            <TD vAlign=center align=right  height=12>ç±&nbsp;&nbsp;&nbsp;&nbsp;è´¯ï¼š</TD>
                             <TD height=12 align=left>                                 
                                   <select style="WIDTH: 80px"  name="sheng" id="sheng" onchange="ProvinceChange(this, regform.city);">
-							          <option selected="selected" value="">-ÇëÑ¡Ôñ-</option>
-							          <option value="±±¾©">±±¾©</option>
-							          <option value="Ìì½ò">Ìì½ò</option>
-							          <option value="ÁÉÄþ">ÁÉÄþ</option>
-							          <option value="¼ªÁÖ">¼ªÁÖ</option>
-							          <option value="ºÚÁú½­">ºÚÁú½­</option>
-							          <option value="ºÓ±±">ºÓ±±</option>
-							          <option value="É½Î÷">É½Î÷</option>
-							          <option value="ÄÚÃÉ¹Å">ÄÚÃÉ¹Å</option>
-							          <option value="ÉÏº£">ÉÏº£</option>
-							          <option value="½­ËÕ">½­ËÕ</option>
-							          <option value="Õã½­">Õã½­</option>
-							          <option value="°²»Õ">°²»Õ</option>
-							          <option value="¸£½¨">¸£½¨</option>
-							          <option value="½­Î÷">½­Î÷</option>
-							          <option value="É½¶«">É½¶«</option>
-							          <option value="ºÓÄÏ">ºÓÄÏ</option>
-							          <option value="ºþ±±">ºþ±±</option>
-							          <option value="ºþÄÏ">ºþÄÏ</option>
-							          <option value="¹ã¶«">¹ã¶«</option>
-							          <option value="¹ãÎ÷">¹ãÎ÷</option>
-							          <option value="º£ÄÏ">º£ÄÏ</option>
-							          <option value="ÖØÇì">ÖØÇì</option>
-							          <option value="ËÄ´¨">ËÄ´¨</option>
-							          <option value="¹óÖÝ">¹óÖÝ</option>
-							          <option value="ÔÆÄÏ">ÔÆÄÏ</option>
-							          <option value="Î÷²Ø">Î÷²Ø</option>
-							          <option value="ÉÂÎ÷">ÉÂÎ÷</option>
-							          <option value="¸ÊËà">¸ÊËà</option>
-							          <option value="Çàº£">Çàº£</option>
-							          <option value="ÄþÏÄ">ÄþÏÄ</option>
-							          <option value="ÐÂ½®">ÐÂ½®</option>
-							          <option value="Ì¨Íå">Ì¨Íå</option>
-							          <option value="Ïã¸Û">Ïã¸Û</option>
-							          <option value="°ÄÃÅ">°ÄÃÅ</option>
+							          <option selected="selected" value="">-è¯·é€‰æ‹©-</option>
+							          <option value="åŒ—äº¬">åŒ—äº¬</option>
+							          <option value="å¤©æ´¥">å¤©æ´¥</option>
+							          <option value="è¾½å®">è¾½å®</option>
+							          <option value="å‰æž—">å‰æž—</option>
+							          <option value="é»‘é¾™æ±Ÿ">é»‘é¾™æ±Ÿ</option>
+							          <option value="æ²³åŒ—">æ²³åŒ—</option>
+							          <option value="å±±è¥¿">å±±è¥¿</option>
+							          <option value="å†…è’™å¤">å†…è’™å¤</option>
+							          <option value="ä¸Šæµ·">ä¸Šæµ·</option>
+							          <option value="æ±Ÿè‹">æ±Ÿè‹</option>
+							          <option value="æµ™æ±Ÿ">æµ™æ±Ÿ</option>
+							          <option value="å®‰å¾½">å®‰å¾½</option>
+							          <option value="ç¦å»º">ç¦å»º</option>
+							          <option value="æ±Ÿè¥¿">æ±Ÿè¥¿</option>
+							          <option value="å±±ä¸œ">å±±ä¸œ</option>
+							          <option value="æ²³å—">æ²³å—</option>
+							          <option value="æ¹–åŒ—">æ¹–åŒ—</option>
+							          <option value="æ¹–å—">æ¹–å—</option>
+							          <option value="å¹¿ä¸œ">å¹¿ä¸œ</option>
+							          <option value="å¹¿è¥¿">å¹¿è¥¿</option>
+							          <option value="æµ·å—">æµ·å—</option>
+							          <option value="é‡åº†">é‡åº†</option>
+							          <option value="å››å·">å››å·</option>
+							          <option value="è´µå·ž">è´µå·ž</option>
+							          <option value="äº‘å—">äº‘å—</option>
+							          <option value="è¥¿è—">è¥¿è—</option>
+							          <option value="é™•è¥¿">é™•è¥¿</option>
+							          <option value="ç”˜è‚ƒ">ç”˜è‚ƒ</option>
+							          <option value="é’æµ·">é’æµ·</option>
+							          <option value="å®å¤">å®å¤</option>
+							          <option value="æ–°ç–†">æ–°ç–†</option>
+							          <option value="å°æ¹¾">å°æ¹¾</option>
+							          <option value="é¦™æ¸¯">é¦™æ¸¯</option>
+							          <option value="æ¾³é—¨">æ¾³é—¨</option>
 							        </select>
 							        <select style="WIDTH: 80px" name="city" id="city" >
-							        <option selected="selected" value="">-ÇëÑ¡Ôñ-</option>
+							        <option selected="selected" value="">-è¯·é€‰æ‹©-</option>
 							        </select>           <FONT color=#ff0000>**</FONT> </TD></TR>              
                           <TR >
-                            <TD vAlign=center align=right height=12>ÏêÏ¸µØÖ·£º</TD>
+                            <TD vAlign=center align=right height=12>è¯¦ç»†åœ°å€ï¼š</TD>
                             <TD height=12 align=left>
 							<INPUT class=inputb  name=address maxLength=50 size=30 > <FONT color=#ff0000>**</FONT> 
                               </TD></TR>
                           <TR >
-                            <TD vAlign=center align=right  height=12>ÁªÏµµç»°£º</TD>
+                            <TD vAlign=center align=right  height=12>è”ç³»ç”µè¯ï¼š</TD>
                             <TD height=12 align=left>
 							<INPUT class=inputb name=telphone maxLength=18 size=30  onkeyup="this.value=this.value.replace(/\D/gi,'')"> <FONT color=#ff0000>**</FONT> </TD></TR>
                           <TR >
-                            <TD vAlign=center align=right height=12>E-mail£º</TD>
+                            <TD vAlign=center align=right height=12>E-mailï¼š</TD>
                             <TD height=12 align=left>
 							<INPUT class=inputb  name=email maxLength=50 size=30 > <FONT color=#ff0000>**</FONT> 
-                              <FONT color=#ff6600>(´Ëµç×ÓÓÊ¼þ·Ç³£ÖØÒª£¬ÇëÈÏÕæÌîÐ´£¡£©</FONT></TD></TR>
+                              <FONT color=#ff6600>(æ­¤ç”µå­é‚®ä»¶éžå¸¸é‡è¦ï¼Œè¯·è®¤çœŸå¡«å†™ï¼ï¼‰</FONT></TD></TR>
                           <TR >
                             <TD vAlign=center align=right  
-                            height=12>&nbsp;&nbsp;ÃÜÂëÌáÊ¾ÎÊÌâ£º</TD>
+                            height=12>&nbsp;&nbsp;å¯†ç æç¤ºé—®é¢˜ï¼š</TD>
                             <TD width=556 height=12 align=left>
-						<INPUT class=inputb maxLength=28 size=30 name=question> <FONT color=#ff0000>**</FONT> ÐèÒªÕÒ»ØÃÜÂëµÄÊ±ºò,ÌáÊ¾µÄÎÊÌâ¡°Äú½ÐÊ²Ã´Ãû×Ö£¿¡±</TD></TR>
+						<INPUT class=inputb maxLength=28 size=30 name=question> <FONT color=#ff0000>**</FONT> éœ€è¦æ‰¾å›žå¯†ç çš„æ—¶å€™,æç¤ºçš„é—®é¢˜â€œæ‚¨å«ä»€ä¹ˆåå­—ï¼Ÿâ€</TD></TR>
                           <TR >
-                            <TD vAlign=center align=right  height=17>&nbsp;&nbsp;ÎÊÌâ»Ø´ð£º</TD>
+                            <TD vAlign=center align=right  height=17>&nbsp;&nbsp;é—®é¢˜å›žç­”ï¼š</TD>
                             <TD width=556 height=17 align=left>
-							<INPUT class=inputb maxLength=28 size=30  name=answer> <FONT color=#ff0000>**</FONT> Äú×ÔÉèÎÊÌâµÄ´ð°¸,ÈçÄúµÄ´ð°¸ÊÇ¡°Ð¡»Æ¡± </TD></TR>
+							<INPUT class=inputb maxLength=28 size=30  name=answer> <FONT color=#ff0000>**</FONT> æ‚¨è‡ªè®¾é—®é¢˜çš„ç­”æ¡ˆ,å¦‚æ‚¨çš„ç­”æ¡ˆæ˜¯â€œå°é»„â€ </TD></TR>
                           <TR>
                             <TD vAlign=center align=center width=697 colSpan=2 height=17>
                               <P align=center>

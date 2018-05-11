@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" contentType="text/html;charset=gb2312" %>
+<%@ page language="java" import="java.util.*"  pageEncoding="utf-8" contentType="text/html;charset=UTF-8" %>
 <%@ include file="iframe/head.jsp" %>
 <TABLE class=MainTable cellSpacing=0 cellPadding=0 width="100%" align=center 
 border=0>
@@ -9,8 +9,8 @@ border=0>
   <TR>
     <TD class=head>
             <H3 class=L></H3><FONT 
-                        color=#000000>ÄúÏÖÔÚµÄÎ»ÖÃ£º<SPAN 
-                        style="TEXT-DECORATION: none"> »áÔ±µÇÂ¼ &gt;&gt; ÕÒ»ØÃÜÂë</FONT>
+                        color=#000000>æ‚¨ç°åœ¨çš„ä½ç½®ï¼š<SPAN 
+                        style="TEXT-DECORATION: none"> ä¼šå‘˜ç™»å½• &gt;&gt; æ‰¾å›å¯†ç </FONT>
 	</TD>
 	</TR>
   </TBODY>
@@ -21,19 +21,19 @@ function lostpwd()
 {
 	if(document.form1.username.value=="")
 	{
-		alert("ÇëÊäÈëÓÃ»§Ãû£¡");
+		alert("è¯·è¾“å…¥ç”¨æˆ·åï¼");
 		document.form1.username.focus();
 		return false;
 	}
 	if(document.form1.question.value=="")
 	{
-		alert("ÇëÊäÈëÃÜÂëÌáÊ¾ÎÊÌâ£¡");
+		alert("è¯·è¾“å…¥å¯†ç æç¤ºé—®é¢˜ï¼");
 		document.form1.question.focus();
 		return false;
 	}
 	if(document.form1.answer.value=="")
 	{
-		alert("ÇëÊäÈëÌáÊ¾ÎÊÌâ´ğ°¸£¡");
+		alert("è¯·è¾“å…¥æç¤ºé—®é¢˜ç­”æ¡ˆï¼");
 		document.form1.answer.focus();
 		return false;
 	}
@@ -45,8 +45,8 @@ function lostpwd()
       <TABLE class=dragTable  cellSpacing=0 cellPadding=0 width="100%" align=center border=0>
         <TBODY>
         <TR>
-          <TD width=100% align=left  bgColor=#c8c8c8 height=28>¡¡
-		  <SPAN class=black><strong><FONT color=blue>Çë×ĞÏ¸ÌîĞ´ÒÔÏÂ×ÊÁÏ£º</FONT></strong></SPAN></TD></TR>
+          <TD width=100% align=left  bgColor=#c8c8c8 height=28>ã€€
+		  <SPAN class=black><strong><FONT color=blue>è¯·ä»”ç»†å¡«å†™ä»¥ä¸‹èµ„æ–™ï¼š</FONT></strong></SPAN></TD></TR>
         <TR>
           <TD><FORM name="form1" action="/findpw" method="post">
             <TABLE   height=170 cellSpacing=0  cellPadding=0 width="100%"  border=0 hspace="12">
@@ -54,26 +54,26 @@ function lostpwd()
               
               <INPUT type=hidden  name="method"> 
               <TR >
-                <TD align=right width="38%"  height=30>ÓÃ »§ Ãû:</TD>
+                <TD align=right width="38%"  height=30>ç”¨ æˆ· å:</TD>
                 <TD width="62%"  height=30 align=left>
 				<INPUT class=inputb  size=22 name=username >
 				</TD>
 				</TR>
               <TR class=black >
-                <TD align=right width="38%"  height=30>ÌáÊ¾ÎÊÌâ:<input type=hidden name=reg_type value=person></TD>
+                <TD align=right width="38%"  height=30>æç¤ºé—®é¢˜:<input type=hidden name=reg_type value=person></TD>
                 <TD width="62%"  height=30 align=left>
 				<INPUT class=inputb   size=22 name=question >
 				</TD>
 				</TR>
               <TR class=black >
-                <TD align=right width="38%"  height=30>ÎÊÌâ´ğ°¸:</TD>
+                <TD align=right width="38%"  height=30>é—®é¢˜ç­”æ¡ˆ:</TD>
                 <TD width="62%"  height=30 align=left>
 				<INPUT class=inputb  size=22 name=answer > 
 				</TD>
 				</TR>
               <TR class=black >
                 <TD align=middle  colSpan=2 height=40>
-				<img src=<%=basePath %>images/sub.gif onclick="lostpwd()" border=0> ¡¡¡¡ <img src=<%=basePath %>images/back.gif onclick="window.location='<%=basePath %>'" border=0> 
+				<img src=<%=basePath %>images/sub.gif onclick="lostpwd()" border=0> ã€€ã€€ <img src=<%=basePath %>images/back.gif onclick="window.location='<%=basePath %>'" border=0> 
                 
                 </TD>
 				</TR>
@@ -85,6 +85,6 @@ function lostpwd()
 			</TD>
 			</TR>
 			</TBODY>
-			</TABLE>¡¡
+			</TABLE>ã€€
 			</DIV>
 <%@ include file="iframe/foot.jsp"%>

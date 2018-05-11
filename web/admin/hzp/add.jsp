@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*"  contentType="text/html;charset=gb2312"%>
+<%@ page language="java" import="java.util.*"  pageEncoding="utf-8" contentType="text/html;charset=UTF-8" %>
 <%--<%@ page language="java" import="com.fredck.FCKeditor.*" %> --%>
 <%--<%@ taglib uri="/WEB-INF/FCKeditor.tld" prefix="FCK" %> --%>
 <%--<jsp:useBean id="sn" scope="page" class="com.bean.SystemBean" />--%>
@@ -9,7 +9,7 @@ String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 String dir="admin";
 %>
-<HTML><HEAD><TITLE>ºóÌ¨²Ù×÷Çø</TITLE>
+<HTML><HEAD><TITLE>åå°æ“ä½œåŒº</TITLE>
 <LINK href="<%=basePath %><%=dir %>/images/Admin_Style.css" type=text/css rel=stylesheet>
 <LINK href="<%=basePath %><%=dir %>/images/style.css" type=text/css rel=stylesheet>
 <script type="text/javascript" src="<%=path %>FCKeditor/fckeditor.js"></script> 
@@ -30,7 +30,7 @@ function sub()
 	||document.form1.dh.value.replace(/\s+$|^\s+/g,"").length<=0
 	||document.form1.jd.value.replace(/\s+$|^\s+/g,"").length<=0)
 	{
-		alert("ËùÓĞÏîÄ¿±ØĞëÌîĞ´£¡");
+		alert("æ‰€æœ‰é¡¹ç›®å¿…é¡»å¡«å†™ï¼");
 		return false;
 	}
 	if(document.form1.pic.value.replace(/\s+$|^\s+/g,"").length>0)
@@ -39,7 +39,7 @@ function sub()
 		fileext=fileext.toLowerCase(); 
 		if(!(fileext=='.jpg')&&!(fileext=='.gif')) 
 		{
-			alert("¶Ô²»Æğ£¬ÎÄ¼ş¸ñÊ½²»¶Ô,±ØĞëÎªjpg»ògif¸ñÊ½ÎÄ¼ş!"); 
+			alert("å¯¹ä¸èµ·ï¼Œæ–‡ä»¶æ ¼å¼ä¸å¯¹,å¿…é¡»ä¸ºjpgæˆ–gifæ ¼å¼æ–‡ä»¶!"); 
 			form1.pic.focus(); 
 			return false; 
 		} 
@@ -77,7 +77,7 @@ String message = (String)request.getAttribute("message");
 //		String jd="";
 //		String content="";
 //		String id="";
-//		//String s="ÈçÎŞËõÂÔÍ¼Çë±£³ÖÎª¿Õ";
+//		//String s="å¦‚æ— ç¼©ç•¥å›¾è¯·ä¿æŒä¸ºç©º";
 //		if(method.equals("uplvyou")){
 //			id=request.getParameter("id").trim();
 //			List newsList=tb.getOneTrave(Integer.parseInt(id));
@@ -95,42 +95,42 @@ String message = (String)request.getAttribute("message");
   <TBODY>
   <TR>
     <TD align="left" vAlign=top >
-        <form name="form1" action="/upcourt" method="post"  enctype="multipart/form-data" >
+        <form name="form1" action="/upcourt" method="post" accept-charset="UTF-8" enctype="multipart/form-data" >
 <table width='100%' cellspacing='1' cellpadding='3' bgcolor='#CCCCCC' class="tablewidth">
 <tr class="head"> 
       <td colspan="2">     
 <%--<%--%>
 	<%--if(method.trim().equals("addlvyou")){--%>
 <%--%>--%>
-        <%--Ìí¼ÓĞÅÏ¢ £¨ÄÚÈİ²»ÄÜ³¬¹ı5000¸ö×Ö·û£©--%>
+        <%--æ·»åŠ ä¿¡æ¯ ï¼ˆå†…å®¹ä¸èƒ½è¶…è¿‡5000ä¸ªå­—ç¬¦ï¼‰--%>
 <%--<%}else{%>--%>
-	   <%--ĞŞ¸ÄĞÅÏ¢ £¨ÄÚÈİ²»ÄÜ³¬¹ı5000¸ö×Ö·û£©--%>
+	   <%--ä¿®æ”¹ä¿¡æ¯ ï¼ˆå†…å®¹ä¸èƒ½è¶…è¿‡5000ä¸ªå­—ç¬¦ï¼‰--%>
 <%--<%} %>--%>
       </td>
     </tr>
 	
   <tr bgcolor='#FFFFFF'> <input type="hidden" name="method" value=""> <input type="hidden" name="id" value="">
-    <td width='30%'><div align="right">³¡µØÃû³Æ£º</div></td>
+    <td width='30%'><div align="right">åœºåœ°åç§°ï¼š</div></td>
     <td ><input name="title" type="text" id="title" size="40" maxlength="100" value=""></td>
   </tr>
   <tr bgcolor='#FFFFFF'> 
-    <td width='30%'><div align="right">Ëõ&nbsp;ÂÔ&nbsp;Í¼£º</div></td>
-    <td ><input name="pic" type="file"   size="40" maxlength="150" >&nbsp;<font color=red>300KÒÔÏÂgif»òjpg¸ñÊ½Í¼Æ¬</font></td>
+    <td width='30%'><div align="right">ç¼©&nbsp;ç•¥&nbsp;å›¾ï¼š</div></td>
+    <td ><input name="pic" type="file"   size="40" maxlength="150" >&nbsp;<font color=red>300Kä»¥ä¸‹gifæˆ–jpgæ ¼å¼å›¾ç‰‡</font></td>
   </tr>
   <tr bgcolor='#FFFFFF'>  
-    <td width='30%'><div align="right">³ö×â¼ÛÎ»£º</div></td>
-    <td ><input name="dz" type="text" id="dz" size="10" maxlength="100" value=""  onkeyup="if(!(/^[\d]+\.?\d*$/.test(this.value))){alert('ÄúµÄÊäÈëÓĞÎó');this.value='';this.focus();}"> Ôª/Ğ¡Ê±</td>
+    <td width='30%'><div align="right">å‡ºç§Ÿä»·ä½ï¼š</div></td>
+    <td ><input name="dz" type="text" id="dz" size="10" maxlength="100" value=""  onkeyup="if(!(/^[\d]+\.?\d*$/.test(this.value))){alert('æ‚¨çš„è¾“å…¥æœ‰è¯¯');this.value='';this.focus();}"> å…ƒ/å°æ—¶</td>
   </tr>
   <tr bgcolor='#FFFFFF'> 
-    <td width='30%'><div align="right">¸º Ôğ ÈË£º</div></td>
-    <td ><input name="yb" type="text" id="yb" size="15" maxlength="100" value=""></td>
+    <td width='30%'><div align="right">è´Ÿ è´£ äººï¼š</div></td>
+    <td ><input  name="yb" type="text" id="yb" size="15" maxlength="100" value=""></td>
   </tr>
   <tr bgcolor='#FFFFFF'> 
-    <td width='30%'><div align="right">×ÉÑ¯µç»°£º</div></td>
+    <td width='30%'><div align="right">å’¨è¯¢ç”µè¯ï¼š</div></td>
     <td ><input name="dh" type="text" id="dh" size="20" maxlength="100" value=""> </TD>
   </tr>
   <tr bgcolor='#FFFFFF'> 
-    <td width='30%'><div align="right">ÈİÄÉÈËÊı£º</div></td>
+    <td width='30%'><div align="right">å®¹çº³äººæ•°ï¼š</div></td>
     <td ><input name="jd" type="text" id="jd" size="10" maxlength="100" value="" > </TD>
   </tr>
   <tr bgcolor='#FFFFFF' align=center> 
@@ -152,7 +152,7 @@ String message = (String)request.getAttribute("message");
     </tr>
   <tr bgcolor='#FFFFFF'> 
       <td colspan="2" align="center"> 
-        <input class=mmcinb type='button' name='button' value='Ìá½»Êı¾İ' onclick='sub()'>
+        <input class=mmcinb type='button' name='button' value='æäº¤æ•°æ®' onclick='sub()'>
       </td>
     </tr>
 	

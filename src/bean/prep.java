@@ -46,7 +46,7 @@ public class prep {
 
     private String member;
 
-    private Date addtime;
+    private String addtime;
 
     private String zt;
 
@@ -65,7 +65,7 @@ public class prep {
     }
 
     public void setTitle(String title) {
-        this.title = title == null ? null : title.trim();
+        this.title = title;
     }
 
     public Integer getRs() {
@@ -81,7 +81,7 @@ public class prep {
     }
 
     public void setSj(String sj) {
-        this.sj = sj == null ? null : sj.trim();
+        this.sj = sj;
     }
 
     public String getTs() {
@@ -89,7 +89,7 @@ public class prep {
     }
 
     public void setTs(String ts) {
-        this.ts = ts == null ? null : ts.trim();
+        this.ts = ts;
     }
 
     public String getLxr() {
@@ -97,7 +97,7 @@ public class prep {
     }
 
     public void setLxr(String lxr) {
-        this.lxr = lxr == null ? null : lxr.trim();
+        this.lxr = lxr;
     }
 
     public String getLxfs() {
@@ -105,14 +105,14 @@ public class prep {
     }
 
     public void setLxfs(String lxfs) {
-        this.lxfs = lxfs == null ? null : lxfs.trim();
+        this.lxfs = lxfs;
     }
 
-    public Date getAddtime() {
+    public String getAddtime() {
         return addtime;
     }
 
-    public void setAddtime(Date addtime) {
+    public void setAddtime(String addtime) {
         this.addtime = addtime;
     }
 
@@ -121,7 +121,7 @@ public class prep {
     }
 
     public void setZt(String zt) {
-        this.zt = zt == null ? null : zt.trim();
+        this.zt = zt;
     }
 
     public String getDdid() {
@@ -129,6 +129,6 @@ public class prep {
     }
 
     public void setDdid(String ddid) {
-        this.ddid = ddid == null ? null : ddid.trim();
+        this.ddid = ddid;
     }
 }
