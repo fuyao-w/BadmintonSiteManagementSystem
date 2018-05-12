@@ -5,6 +5,7 @@ import java.io.Serializable;
 public class comment implements Serializable{
     private Integer id;
    private String title;
+   private String a;
 
     public String getTitle() {
         return title;

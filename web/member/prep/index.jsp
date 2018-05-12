@@ -68,7 +68,7 @@ String message = (String)request.getAttribute("message");
       <td  align="center">删除</td>
     </tr>
     <%
-			if(!preps.isEmpty()){
+			if(!preps.isEmpty() && preps != null){
 				for(int i=0;i<preps.size();i++){
 
 			%>
@@ -93,6 +93,12 @@ String message = (String)request.getAttribute("message");
 </TD>
 </TR>
 </TBODY>
+    <%
+        if (!preps.isEmpty() && preps!=null)
+        {
+      %>
+
+
 </TABLE>
 <form action="/addDD?member=<%=preps.get(0).getMember()%>&ddid=<%=preps.get(0).getDdid()%>" method="post" name="form1" >
 <p align=center>付款方式：<input type=radio name=fkfs value="银行转账" checked> 银行转账 <input type=radio name=fkfs value="现场支付" > 现场支付
@@ -104,6 +110,9 @@ String message = (String)request.getAttribute("message");
     在线提交订单
 </button>
 </div>
+<%
+    }
+    %>
 <!-- 模态框（Modal） -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">

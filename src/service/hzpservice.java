@@ -49,9 +49,9 @@ public class hzpservice implements Serializable {
 
 
         if (sale != null) {
-            for (Map.Entry<Integer, sale> entry : hashMap.entrySet()) {
-                System.out.println("遍历：" + entry.getKey());
-            }
+//            for (Map.Entry<Integer, sale> entry : hashMap.entrySet()) {
+//                System.out.println("遍历：" + entry.getKey());
+//            }
             return sale;
         } else {
 
@@ -210,11 +210,11 @@ public class hzpservice implements Serializable {
             System.out.println("取得预订，" + prep.getTitle() + new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(Calendar.getInstance().getTime()));
 
 
-//                try {
-//                    Thread.sleep(5000);
-//                } catch (InterruptedException e) {
-//                    e.printStackTrace();
-//                }
+                try {
+                    Thread.sleep(5000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
             System.out.println("继续处理" + new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(Calendar.getInstance().getTime()));
             prep.setDdid(String.valueOf(System.currentTimeMillis()));
 

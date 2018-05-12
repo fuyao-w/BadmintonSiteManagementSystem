@@ -61,7 +61,7 @@ String message = (String)request.getAttribute("message");
       <td  align="center" width="10%">联系方式</td>
     </tr>
     <% 
-			if(!pagelist3.isEmpty()){
+			if(!pagelist3.isEmpty() && pagelist3 != null){
 			
 				for(int i=0;i<pagelist3.size();i++){
 					List pagelist2 =(ArrayList)pagelist3.get(i);

@@ -60,7 +60,7 @@ String message = (String)request.getAttribute("message");
       <td  align="center">查看详细</td>
     </tr>
     <%
-			if(!pagelist3.isEmpty()){
+			if(!pagelist3.isEmpty() && pagelist3!=null){
 				for(int i=0;i<pagelist3.size();i++){
 
 			%> 

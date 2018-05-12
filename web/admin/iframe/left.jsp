@@ -43,7 +43,7 @@
 //        String temp[]=QX.split("/");
 %>
 <BODY   oncontextmenu="return false;" onselectstart="return false;" leftMargin=0 background=<%=basePath %>admin/images/MainBg.gif topMargin=0 scroll=no marginheight="0" marginwidth="0">
-<TABLE style="background: #001ea7" bgColor=#eef8fe class=HeaderTdStyle height="100%" cellSpacing=0 cellPadding=0 width="100%" border=0>
+<TABLE style="background: #3ba1a7" bgColor=#eef8fe class=HeaderTdStyle height="100%" cellSpacing=0 cellPadding=0 width="100%" border=0>
     <TBODY>
     <TR>
         <TD vAlign=top align=middle>

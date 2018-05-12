@@ -67,6 +67,7 @@ public class mController implements Serializable {
         System.out.println("接受请求");
         System.out.println(this + " " + hzpservice);
         LinkedList<sale> sale1s = hzpservice.get5Mes();
+
         model.addAttribute("sales", sale1s);
 
         request.getSession().removeAttribute("member");
@@ -557,8 +558,11 @@ public class mController implements Serializable {
     public String addprep(@RequestParam("sid") int sid, prep prep, HttpServletRequest request) throws UnsupportedEncodingException {
 
 
+
         prep.setTitle(new String(prep.getTitle().getBytes("iso-8859-1"), "utf-8"));
         prep.setLxr(new String(prep.getLxr().getBytes("iso-8859-1"), "utf-8"));
+        prep.setTs(new String(prep.getTs().getBytes("iso-8859-1"), "utf-8"));
+
         prep.setAddtime(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(Calendar.getInstance().getTime()));
 
         request.setAttribute("message", hzpservice.prep(sid, prep));
