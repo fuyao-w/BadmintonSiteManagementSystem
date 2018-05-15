@@ -327,12 +327,15 @@ public class mController implements Serializable {
 
     }
     @RequestMapping(value = "/setdd1", method = RequestMethod.GET)
-    public String setdd1(@RequestParam("id") Integer id,HttpServletRequest request) {
+    public String setdd1(@RequestParam("id") Integer id,@RequestParam("ddid") String ddid, HttpServletRequest request) {
         System.out.println("处理场地预订");
         System.out.println(id);
+        System.out.println(ddid);
+
 
        if (saleMapper.updatedj(id)==1) {
 
+           hzpservice.delPrep(prepMapper.getid(ddid));
            request.setAttribute("message", "订单已完成");
 
        }

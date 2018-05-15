@@ -12,6 +12,7 @@ public interface prepMapper {
 
     int inprep(prep prep);
     int delprep(Integer id);
+    int getid(String ddid);
     int upprep(prep prep);
     int upzt(String zt);
     LinkedList<prep> getPrep();

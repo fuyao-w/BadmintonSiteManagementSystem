@@ -133,7 +133,7 @@ String message = (String)request.getAttribute("message");
                         '      <td  width="10%"  bgcolor="#FFFFFF"  style="border-bottom:1px dotted #ccc;" class="center">'+blogdata[i].zt+'</td>\n' +
                         '      <td width="10%"  bgcolor="#FFFFFF"  style="border-bottom:1px dotted #ccc;" class="center">'+blogdata[i].fkfs+'</td>\n' +
                         '      <td width="15%"  bgcolor="#FFFFFF"  style="border-bottom:1px dotted #ccc;" class="center">'+blogdata[i].addtime+'</td>\n' +
-                        '      <td width="10%"  bgcolor="#FFFFFF"  style="border-bottom:1px dotted #ccc;" class="center"><a href="/setdd1?id=' + blogdata[i].id + '">处理</a> </td>\n' +
+                        '      <td width="10%"  bgcolor="#FFFFFF"  style="border-bottom:1px dotted #ccc;" class="center"><a href="/setdd1?id=' + blogdata[i].id + '&ddid='+ blogdata[i].ddid+'">处理</a> </td>\n' +
 
                         '      <td width="10%" bgcolor="#FFFFFF"  style="border-bottom:1px dotted #ccc;" class="center"><a href="/deldd1?id=' + blogdata[i].id + '" >删除</a></td>\n' +
                         '    </tr>'

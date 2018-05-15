@@ -47,6 +47,7 @@ public class hzpservice implements Serializable {
     private sale getSale(int id) {
          sale sale = hashMap.get(id);
 
+        System.out.println("场地数："+hashMap.size());
 
         if (sale != null) {
 //            for (Map.Entry<Integer, sale> entry : hashMap.entrySet()) {
@@ -210,11 +211,11 @@ public class hzpservice implements Serializable {
             System.out.println("取得预订，" + prep.getTitle() + new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(Calendar.getInstance().getTime()));
 
 
-                try {
-                    Thread.sleep(5000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+//                try {
+//                    Thread.sleep(5000);
+//                } catch (InterruptedException e) {
+//                    e.printStackTrace();
+//                }
             System.out.println("继续处理" + new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(Calendar.getInstance().getTime()));
             prep.setDdid(String.valueOf(System.currentTimeMillis()));
 
@@ -235,4 +236,7 @@ public class hzpservice implements Serializable {
         return mes;
 }
 
+   public void delPrep(Integer id){
+        getSale(id).setDj(1);
+  }
 }

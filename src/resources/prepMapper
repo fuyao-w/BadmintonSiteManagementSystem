@@ -47,6 +47,15 @@ GROUP BY
   <select id="getxx" parameterType="java.lang.String" resultType="bean.prep">
    select sale.dz,prep.* from sale,prep where prep.ddid=#{ddid} and prep.title=sale.title order by prep.id desc
   </select>
+<select id="getid" parameterType="java.lang.String" resultType="java.lang.Integer">
+  SELECT
+	sale.id
+FROM
+	prep
+LEFT JOIN sale
+ON
+	prep.title = sale.title WHERE prep.ddid = #{ddid}
+  </select>
 
 
   <select id="getallprep" parameterType="java.lang.String" resultType="bean.prep">
