@@ -39,15 +39,10 @@ public class hzpservice implements Serializable {
     adminMapper adminMapper;
 
 
-    static volatile sale msale;
-
-
-    private static ConcurrentHashMap<Integer, sale> hashMap = new ConcurrentHashMap<>();
-
     private sale getSale(int id) {
-         sale sale = hashMap.get(id);
+        sale sale = conMap.getInstance().get(id);
 
-        System.out.println("场地数："+hashMap.size());
+        System.out.println("场地数：" + conMap.getInstance().size());
 
         if (sale != null) {
 //            for (Map.Entry<Integer, sale> entry : hashMap.entrySet()) {
@@ -58,14 +53,14 @@ public class hzpservice implements Serializable {
 
 
             sale = saleMapper.selByID(id);
-            hashMap.put(id, sale);
+            conMap.getInstance().put(id, sale);
 
             return sale;
         }
     }
 
     private void setSale(int id) {
-        hashMap.get(id).setDj(0);
+        conMap.getInstance().get(id).setDj(0);
     }
 
     public LinkedList<sale> get5Mes() {
@@ -92,7 +87,7 @@ public class hzpservice implements Serializable {
     public PageInfo<member> getMembers(int curPage) {
         System.out.println("开始查询会员" + curPage);
         int pagesize = 5;
-        PageHelper.startPage(curPage,pagesize);
+        PageHelper.startPage(curPage, pagesize);
         LinkedList<member> list = memberMapper.getAll();
         PageInfo<member> pageInfo = new PageInfo<>(list);
         list.stream().forEach(o -> o.getLastip());
@@ -196,19 +191,19 @@ public class hzpservice implements Serializable {
 
     public String prep(int id, prep prep) {
         System.out.println("执行方法");
-    String mes = "预订成功";
+        String mes = "预订成功";
 
-    msale = getSale(id);
+        sale msale = getSale(id);
 
         System.out.println(msale);
         System.out.println("场地信息" + msale.getDj());
-    synchronized (msale) {
-        System.out.println("获得锁");
-        if (msale.getDj() == 1) {
+        synchronized (msale) {
+            System.out.println("获得锁");
+            if (msale.getDj() == 1) {
 
 
-            prep.setTitle(msale.getTitle());
-            System.out.println("取得预订，" + prep.getTitle() + new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(Calendar.getInstance().getTime()));
+                prep.setTitle(msale.getTitle());
+                System.out.println("取得预订，" + prep.getTitle() + new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(Calendar.getInstance().getTime()));
 
 
 //                try {
@@ -216,27 +211,27 @@ public class hzpservice implements Serializable {
 //                } catch (InterruptedException e) {
 //                    e.printStackTrace();
 //                }
-            System.out.println("继续处理" + new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(Calendar.getInstance().getTime()));
-            prep.setDdid(String.valueOf(System.currentTimeMillis()));
+                System.out.println("继续处理" + new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(Calendar.getInstance().getTime()));
+                prep.setDdid(String.valueOf(System.currentTimeMillis()));
 
 
-            System.out.println("更新完成");
-            System.out.println("场地信息" + msale.getDj());
+                System.out.println("更新完成");
+                System.out.println("场地信息" + msale.getDj());
 
-            orderUtil.order(saleMapper, prepMapper, id, prep);
+                orderUtil.order(saleMapper, prepMapper, id, prep);
 
-            setSale(id);
+                setSale(id);
 
 
-        } else {
-            mes = "场地已被预订";
+            } else {
+                mes = "场地已被预订";
+            }
         }
-    }
 
         return mes;
-}
+    }
 
-   public void delPrep(Integer id){
+    public void delPrep(Integer id) {
         getSale(id).setDj(1);
-  }
+    }
 }
